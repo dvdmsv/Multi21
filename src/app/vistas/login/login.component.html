@@ -1,0 +1,21 @@
+<div class="login">
+  <p>Nombre de usuario</p>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="usuario.username" placeholder="Ingrese primer valor">
+  </mat-form-field>
+
+  <p>Contraseña</p>
+  <mat-form-field>
+      <input matInput type="password" [(ngModel)]="usuario.password" placeholder="Ingrese segundo valor">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="seleccionar(usuario.username)">Login</button>
+  <p>
+    username:<input type="text" [(ngModel)]="usuario.username" />
+  </p>
+  <p>
+    password:<input type="text" [(ngModel)]="usuario.password" />
+  </p>
+  <p id="usuario">{{ usuario.username }}</p>
+</div>
+
