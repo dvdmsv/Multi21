@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
+import { Md5 } from 'ts-md5';
 
 @Component({
   selector: 'app-login',

@@ -6,7 +6,8 @@
   $conexion = retornarConexion();
   $consulta = $conexion->prepare("select * from usuarios where username = ? and password = ?");
   $consulta->bindParam(1, $_GET['username']);
-  $consulta->bindParam(2, $_GET['password']);
+  $passEncrip = md5($_GET['password']);
+  $consulta->bindParam(2, $passEncrip);
   $consulta->execute();
   $registros = $consulta->rowCount();
   $vec = [];
