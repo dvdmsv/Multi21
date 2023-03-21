@@ -3,13 +3,16 @@
   header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
   require("db.php");
-  $con=retornarConexion();
-
-  $registros=mysqli_query($con,"select * from usuarios where username='$_GET[username]'");
-
-  if ($reg=mysqli_fetch_array($registros))
-  {
-    $vec[]=$reg;
+  $conexion = retornarConexion();
+  $consulta = $conexion->prepare("select * from usuarios where username = ? ");
+  $consulta->bindParam(1, $_GET['username']);
+  $consulta->execute();
+  $registros = $consulta->rowCount();
+  $vec = [];
+  if($registros>0){
+    $vec = "true";
+  }else{
+    $vec = "false";
   }
 
   $cad=json_encode($vec);

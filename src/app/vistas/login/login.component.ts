@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 @Component({
@@ -11,22 +12,28 @@ export class LoginComponent {
 
   nombre: String = "";
 
+  existe: String = "";
+
   usuario={
     id: 0,
     username: "",
     password: ""
   }
 
-  constructor(private usuariosServicio: UsuariosService){}
+  constructor(private usuariosServicio: UsuariosService, private router: Router){}
 
   ngOnInit(){
   }
 
-  seleccionar(username: string){
-    this.usuariosServicio.seleccionar(username).subscribe((result: any)=> this.usuario = result[0]);
+  login(username: string){
+    this.usuariosServicio.login(username).subscribe((result: any)=> {
+      this.existe = result;
+      if(this.existe == "true"){
+        this.router.navigate(['/registro']);
+      }
+    });
+
   }
 
-  hayRegistros() {
-    return true;
-  }
+
 }

@@ -13,7 +13,7 @@ export class UsuariosService {
     return this.http.post(`${this.url}alta.php`, JSON.stringify(usuario));
   }
 
-  seleccionar(username: string){
+  login(username: string){
     return this.http.get(`${this.url}login.php?username=${username}`);
   }
 }
