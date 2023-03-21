@@ -1,19 +1,29 @@
-<div class="login">
-  <p>Nombre de usuario</p>
-  <mat-form-field>
-    <input matInput type="text" placeholder="Ingrese primer valor">
-  </mat-form-field>
+<div>
+  <form class="login" #usuarioForm="ngForm">
+    <p>Nombre de usuario</p>
+    <mat-form-field>
+      <div *ngIf="nombre.invalid && nombre.dirty" class="alert">
+        <div *ngIf="nombre.errors?.['required']">Campo requerido</div>
+      </div>
+      <input matInput type="text" [(ngModel)]="usuario.username" name="username" #nombre="ngModel" required>
+    </mat-form-field>
 
-  <p>Contraseña</p>
-  <mat-form-field>
-      <input matInput type="password" placeholder="Ingrese segundo valor">
-  </mat-form-field>
+    <p>Contraseña</p>
+    <mat-form-field>
+        <input matInput type="password" [(ngModel)]="usuario.password" name="password" #contrasena="ngModel" required minlength="4">
+        <div *ngIf="contrasena.invalid && contrasena.dirty" class="alert">
+          <div *ngIf="contrasena.errors?.['required']">Campo requerido</div>
+          <div *ngIf="contrasena.errors?.['minlength']">Mínimo 4 caracteres</div>
+        </div>
+    </mat-form-field>
+    <div *ngIf="registrado == 'true'">El usuario ya existe</div>
 
-  <button mat-raised-button color="primary">Registrar</button>
-  <p>
-    username:<input type="text" />
-  </p>
-  <p>
-    password:<input type="text" />
-  </p>
+    <button mat-raised-button color="primary" (click)="registro(usuario.username, usuario.password)" [disabled]="!usuarioForm.form.valid">Registro</button>
+    <p>
+      username:<input type="text" [(ngModel)]="usuario.username" name="a"/>
+    </p>
+    <p>
+      password:<input type="text" [(ngModel)]="usuario.password" name="a"/>
+    </p>
+  </form>
 </div>

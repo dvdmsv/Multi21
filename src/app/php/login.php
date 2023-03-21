@@ -4,7 +4,7 @@
 
   require("db.php");
   $conexion = retornarConexion();
-  $consulta = $conexion->prepare("select * from usuarios where username = ? and password = ?");
+  $consulta = $conexion->prepare("SELECT * FROM usuarios WHERE username = ? AND password = ?");
   $consulta->bindParam(1, $_GET['username']);
   $passEncrip = md5($_GET['password']);
   $consulta->bindParam(2, $passEncrip);

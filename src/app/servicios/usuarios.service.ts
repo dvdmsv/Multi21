@@ -9,8 +9,8 @@ export class UsuariosService {
 
   constructor(private http: HttpClient) { }
 
-  registro(usuario:any) {
-    return this.http.post(`${this.url}registro.php`, JSON.stringify(usuario));
+  registro(username: string, password: string) {
+    return this.http.get(`${this.url}registro.php?username=${username}&password=${password}`);
   }
 
   login(username: string, password: string){
