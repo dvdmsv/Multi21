@@ -4,8 +4,9 @@
 
   require("db.php");
   $conexion = retornarConexion();
-  $consulta = $conexion->prepare("select * from usuarios where username = ? ");
+  $consulta = $conexion->prepare("select * from usuarios where username = ? and password = ?");
   $consulta->bindParam(1, $_GET['username']);
+  $consulta->bindParam(2, $_GET['password']);
   $consulta->execute();
   $registros = $consulta->rowCount();
   $vec = [];

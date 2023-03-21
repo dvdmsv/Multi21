@@ -9,11 +9,11 @@ export class UsuariosService {
 
   constructor(private http: HttpClient) { }
 
-  alta(usuario:any) {
-    return this.http.post(`${this.url}alta.php`, JSON.stringify(usuario));
+  registro(usuario:any) {
+    return this.http.post(`${this.url}registro.php`, JSON.stringify(usuario));
   }
 
-  login(username: string){
-    return this.http.get(`${this.url}login.php?username=${username}`);
+  login(username: string, password: string){
+    return this.http.get(`${this.url}login.php?username=${username}&password=${password}`);
   }
 }

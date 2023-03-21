@@ -25,8 +25,8 @@ export class LoginComponent {
   ngOnInit(){
   }
 
-  login(username: string){
-    this.usuariosServicio.login(username).subscribe((result: any)=> {
+  login(username: string, password: string){
+    this.usuariosServicio.login(username, password).subscribe((result: any)=> {
       this.existe = result;
       if(this.existe == "true"){
         this.router.navigate(['/registro']);
