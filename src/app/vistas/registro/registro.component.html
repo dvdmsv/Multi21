@@ -16,7 +16,7 @@
           <div *ngIf="contrasena.errors?.['minlength']">Mínimo 4 caracteres</div>
         </div>
     </mat-form-field>
-    <div *ngIf="registrado == 'true'">El usuario ya existe</div>
+    <div *ngIf="registrado == 'false'">El usuario ya existe</div>
 
     <button mat-raised-button color="primary" (click)="registro(usuario.username, usuario.password)" [disabled]="!usuarioForm.form.valid">Registro</button>
     <p>

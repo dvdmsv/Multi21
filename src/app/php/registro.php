@@ -38,6 +38,11 @@
       $cad=json_encode($vec);
       echo $cad;
       header('Content-Type: application/json');
+  }else{
+    $vec = "false";
+    $cad=json_encode($vec);
+    echo $cad;
+    header('Content-Type: application/json');
   }
 
 

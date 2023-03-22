@@ -26,7 +26,7 @@ export class RegistroComponent {
     this.usuariosServicio.registro(username, password).subscribe((result: any)=> {
       this.registrado = result;
       console.log(result);
-      if(this.registrado == "false"){
+      if(this.registrado == "true"){
         //this.router.navigate(['/']);
       }
     });
