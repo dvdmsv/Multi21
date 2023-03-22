@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Multi21';
+
+  login: string = "";
+
+  ngOnInit(){
+    if(localStorage.getItem("login") == null){
+      this.login = "false";
+    }
+  }
 }

@@ -29,6 +29,8 @@ export class LoginComponent {
     this.usuariosServicio.login(username, password).subscribe((result: any)=> {
       this.existe = result;
       if(this.existe == "true"){
+        localStorage.setItem("login", "true");
+        localStorage.setItem("username", this.usuario.username);
         this.router.navigate(['/']);
       }
     });

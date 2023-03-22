@@ -1,0 +1,23 @@
+<mat-form-field class="container">
+  <mat-select placeholder="Circuito" name="operacion" #round>
+    <mat-option *ngFor="let carrera of carreras.MRData.RaceTable.Races" [value]="carrera.round">
+      {{carrera.round}}º {{carrera.Circuit.circuitName}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="buscar(round.value)">Buscar</button>
+
+
+<table>
+  <tr><th>Posicion</th></tr>
+  <tr>
+    <td>ss</td>
+  </tr>
+  <tr *ngFor="let resultado of carreras.MRData.RaceTable.Races[0].Results">
+    <td>{{ resultado }}</td>
+  </tr>
+
+
+</table>
+
+

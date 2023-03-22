@@ -12,13 +12,19 @@ import {HttpClientModule} from '@angular/common/http';
 import { RegistroComponent } from './vistas/registro/registro.component';
 import { NavbarComponent } from './vistas/navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+import { TemporadaEnCursoComponent } from './vistas/temporada-en-curso/temporada-en-curso.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistroComponent,
-    NavbarComponent
+    NavbarComponent,
+    TemporadaEnCursoComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatMenuModule,
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

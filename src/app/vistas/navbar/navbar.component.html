@@ -1,6 +1,13 @@
 <mat-toolbar color="primary">
-  <span>Multi21</span>
+  <button mat-button routerLink="/">Multi21</button>
+  <mat-menu #menu="matMenu">
+    <button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button>
+  </mat-menu>
+
   <button mat-button routerLink="/login">Login</button>
   <button mat-button routerLink="/registro">Registro</button>
+  <button mat-button (click)="logoff()">Cerrar sesion</button>
+  <button mat-flat-button [matMenuTriggerFor]="menu" color="primary">Opciones del sitio</button>
+
 </mat-toolbar>
 <router-outlet></router-outlet>
