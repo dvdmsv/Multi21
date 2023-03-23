@@ -24,7 +24,7 @@ import { MatTableModule } from '@angular/material/table';
     LoginComponent,
     RegistroComponent,
     NavbarComponent,
-    TemporadaEnCursoComponent
+    TemporadaEnCursoComponent,
   ],
   imports: [
     BrowserModule,

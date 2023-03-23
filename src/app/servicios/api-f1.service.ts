@@ -9,7 +9,7 @@ export class ApiF1Service {
   constructor(private http: HttpClient) { }
 
   carrerasTempActual(){
-    return this.http.get("https://ergast.com/api/f1/current.json?limit=1000");
+    return this.http.get("https://ergast.com/api/f1/current.json?limit=50");
   }
 
   carreraSeleccionada(numCarrera: number){

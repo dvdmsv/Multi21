@@ -9,12 +9,14 @@
 
 
 <table>
-  <tr><th>Posicion</th></tr>
-  <tr>
-    <td>ss</td>
-  </tr>
-  <tr *ngFor="let resultado of carreras.MRData.RaceTable.Races[0].Results">
-    <td>{{ resultado }}</td>
+  <tr><th>Posicion</th><th>Piloto</th><th>Escudería</th><th>Pos. Salida</th><th>Status</th><th>Puntos</th></tr>
+  <tr *ngFor="let resultado of arrCarrSelec">
+    <td>{{ resultado.posicion }}</td>
+    <td>{{ resultado.piloto }}</td>
+    <td>{{ resultado.escuderia }}</td>
+    <td>{{ resultado.posSalida }}</td>
+    <td>{{ resultado.status }}</td>
+    <td>{{ resultado.puntos }}</td>
   </tr>
 
 
