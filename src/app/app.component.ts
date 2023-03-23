@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,12 @@ export class AppComponent {
 
   login: string = "";
 
+  constructor(private router: Router){}
+
   ngOnInit(){
     if(localStorage.getItem("login") == null){
       this.login = "false";
+      this.router.navigate(['/registro']);
     }
   }
 }
