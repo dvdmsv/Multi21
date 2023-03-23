@@ -23,6 +23,10 @@ export class LoginComponent {
   constructor(private usuariosServicio: UsuariosService, private router: Router){}
 
   ngOnInit(){
+    //Si el usuario está logueado redirige a la página principal
+    if(localStorage.getItem("login") != null){
+      this.router.navigate(['/']);
+    }
   }
 
   login(username: string, password: string){
@@ -31,7 +35,7 @@ export class LoginComponent {
       if(this.existe == "true"){
         localStorage.setItem("login", "true");
         localStorage.setItem("username", this.usuario.username);
-        this.router.navigate(['/']);
+        document.location.reload()
       }
     });
 

@@ -17,6 +17,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { TemporadaEnCursoComponent } from './vistas/temporada-en-curso/temporada-en-curso.component';
 import { MatTableModule } from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatTableModule } from '@angular/material/table';
     MatCardModule,
     MatMenuModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

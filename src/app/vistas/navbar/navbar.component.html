@@ -4,10 +4,12 @@
     <button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button>
   </mat-menu>
 
-  <button mat-button routerLink="/login">Login</button>
-  <button mat-button routerLink="/registro">Registro</button>
-  <button mat-button (click)="logoff()">Cerrar sesion</button>
-  <button mat-flat-button [matMenuTriggerFor]="menu" color="primary">Opciones del sitio</button>
+  <button mat-button routerLink="/login" *ngIf="login == null">Login<mat-icon>login</mat-icon></button>
+  <button mat-button routerLink="/registro" *ngIf="login == null">Registro<mat-icon>account_boxs</mat-icon></button>
+  <button mat-flat-button [matMenuTriggerFor]="menu" color="primary" *ngIf="login == 'true'">Opciones del sitio</button>
+  <button mat-button (click)="logoff()"><mat-icon>logout</mat-icon></button>
+  <mat-icon *ngIf="login == 'true'; else noLogin">done</mat-icon>
+  <ng-template #noLogin><mat-icon>clear</mat-icon></ng-template>
 
 </mat-toolbar>
 <router-outlet></router-outlet>

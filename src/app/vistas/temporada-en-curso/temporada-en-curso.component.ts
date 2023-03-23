@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { Clasificacion } from 'src/app/clases/clasificacion';
 import { Resultado } from 'src/app/clases/resultado';
 import { ApiF1Service } from 'src/app/servicios/api-f1.service';
@@ -10,7 +11,7 @@ import { ApiF1Service } from 'src/app/servicios/api-f1.service';
   styleUrls: ['./temporada-en-curso.component.css']
 })
 export class TemporadaEnCursoComponent {
-  constructor(private apiF1: ApiF1Service){}
+  constructor(private apiF1: ApiF1Service, private router: Router){}
 
   carreras: any;
 
@@ -24,6 +25,9 @@ export class TemporadaEnCursoComponent {
   columnasClasific: string[] = ['posicion', 'piloto', 'escuderia', 'puntos', 'victorias'];
 
   ngOnInit(){
+    if(localStorage.getItem("login") == null){
+      this.router.navigate(['/']);
+    }
     this.apiF1.carrerasTempActual().subscribe(resutl => this.carreras = resutl);
   }
 

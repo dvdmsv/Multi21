@@ -18,7 +18,7 @@
     </mat-form-field>
     <div *ngIf="existe == 'false'">Usuario o contraseña incorrectos</div>
 
-    <button mat-raised-button color="primary" (click)="login(usuario.username, usuario.password)" [disabled]="!usuarioForm.form.valid">Login</button>
+    <button mat-raised-button color="primary" (click)="login(usuario.username, usuario.password)" [disabled]="!usuarioForm.form.valid">Login<mat-icon>login</mat-icon></button>
     <p>
       username:<input type="text" [(ngModel)]="usuario.username" name="a"/>
     </p>

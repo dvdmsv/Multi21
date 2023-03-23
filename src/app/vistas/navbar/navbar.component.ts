@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  logoff(){
+  login: any = localStorage.getItem("login");
+
+  logoff(): void{
     localStorage.removeItem("login");
     localStorage.removeItem("username");
     window.location.reload();
   }
+
+
 }

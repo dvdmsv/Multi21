@@ -18,7 +18,7 @@
     </mat-form-field>
     <div *ngIf="registrado == 'false'">El usuario ya existe</div>
 
-    <button mat-raised-button color="primary" (click)="registro(usuario.username, usuario.password)" [disabled]="!usuarioForm.form.valid">Registro</button>
+    <button mat-raised-button color="primary" (click)="registro(usuario.username, usuario.password)" [disabled]="!usuarioForm.form.valid">Registro<mat-icon>account_boxs</mat-icon></button>
     <p>
       username:<input type="text" [(ngModel)]="usuario.username" name="a"/>
     </p>
