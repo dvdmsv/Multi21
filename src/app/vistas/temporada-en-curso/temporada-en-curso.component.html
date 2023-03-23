@@ -1,25 +1,69 @@
-<mat-form-field class="container">
-  <mat-select placeholder="Circuito" name="operacion" #round>
+
+<mat-form-field class="contendorSelector">
+  <p>Selecciona un GP de la temporada actual para visualizar el resultado y la clasificación.</p>
+  <mat-select placeholder="Circuito" name="operacion" #round (selectionChange)="buscar(round.value)">
     <mat-option *ngFor="let carrera of carreras.MRData.RaceTable.Races" [value]="carrera.round">
       {{carrera.round}}º {{carrera.Circuit.circuitName}}
     </mat-option>
   </mat-select>
 </mat-form-field>
-<button mat-raised-button color="primary" (click)="buscar(round.value)">Buscar</button>
 
+<div class="contenedorTabla">
+  <table mat-table [dataSource]="arrCarrSelec" class="mat-elevation-z8">
+    <caption>Resultado de carrera</caption>
+    <ng-container matColumnDef="posicion">
+      <th mat-header-cell *matHeaderCellDef> Posición </th>
+      <td mat-cell *matCellDef="let resultado"> {{resultado.posicion}} </td>
+    </ng-container>
+    <ng-container matColumnDef="piloto">
+      <th mat-header-cell *matHeaderCellDef> Piloto </th>
+      <td mat-cell *matCellDef="let resultado"> {{resultado.piloto}} </td>
+    </ng-container>
+    <ng-container matColumnDef="escuderia">
+      <th mat-header-cell *matHeaderCellDef> Escudería </th>
+      <td mat-cell *matCellDef="let resultado"> {{resultado.escuderia}} </td>
+    </ng-container>
+    <ng-container matColumnDef="pos. salida">
+      <th mat-header-cell *matHeaderCellDef> Pos. Salida </th>
+      <td mat-cell *matCellDef="let resultado"> {{resultado.posSalida}} </td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let resultado"> {{resultado.status}} </td>
+    </ng-container>
+    <ng-container matColumnDef="puntos">
+      <th mat-header-cell *matHeaderCellDef> Puntos </th>
+      <td mat-cell *matCellDef="let resultado"> {{resultado.puntos}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnasCarrera"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnasCarrera;"></tr>
+  </table>
 
-<table>
-  <tr><th>Posicion</th><th>Piloto</th><th>Escudería</th><th>Pos. Salida</th><th>Status</th><th>Puntos</th></tr>
-  <tr *ngFor="let resultado of arrCarrSelec">
-    <td>{{ resultado.posicion }}</td>
-    <td>{{ resultado.piloto }}</td>
-    <td>{{ resultado.escuderia }}</td>
-    <td>{{ resultado.posSalida }}</td>
-    <td>{{ resultado.status }}</td>
-    <td>{{ resultado.puntos }}</td>
-  </tr>
-
-
-</table>
+  <table mat-table [dataSource]="arrClasifSelec" class="mat-elevation-z8">
+    <caption>Clasificación</caption>
+    <ng-container matColumnDef="posicion">
+      <th mat-header-cell *matHeaderCellDef> Posición </th>
+      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.posicion}} </td>
+    </ng-container>
+    <ng-container matColumnDef="piloto">
+      <th mat-header-cell *matHeaderCellDef> Piloto </th>
+      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.piloto}} </td>
+    </ng-container>
+    <ng-container matColumnDef="escuderia">
+      <th mat-header-cell *matHeaderCellDef> Escudería </th>
+      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.escuderia}} </td>
+    </ng-container>
+    <ng-container matColumnDef="puntos">
+      <th mat-header-cell *matHeaderCellDef> Puntos </th>
+      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.puntos}} </td>
+    </ng-container>
+    <ng-container matColumnDef="victorias">
+      <th mat-header-cell *matHeaderCellDef> Vicotiras </th>
+      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.victorias}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnasClasific"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnasClasific;"></tr>
+  </table>
+</div>
 
 

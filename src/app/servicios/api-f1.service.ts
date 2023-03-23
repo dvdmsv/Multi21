@@ -15,4 +15,8 @@ export class ApiF1Service {
   carreraSeleccionada(numCarrera: number){
     return this.http.get(`https://ergast.com/api/f1/current/${numCarrera}/results.json`);
   }
+
+  clasificacion(numCarrera: number){
+    return this.http.get(`https://ergast.com/api/f1/current/${numCarrera}/driverStandings.json`);
+  }
 }
