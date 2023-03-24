@@ -1,8 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatTable } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { Clasificacion } from 'src/app/clases/clasificacion';
-import { Resultado } from 'src/app/clases/resultado';
+import { Clasificacion } from 'src/app/clases/clasificacion/clasificacion';
+import { Resultado } from 'src/app/clases/resultado/resultado';
 import { ApiF1Service } from 'src/app/servicios/api-f1/api-f1.service';
 
 @Component({
