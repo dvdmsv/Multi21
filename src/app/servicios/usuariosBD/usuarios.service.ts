@@ -20,4 +20,8 @@ export class UsuariosService {
   loginAdmin(username: string, password: string){
     return this.http.get(`${this.url}login_admin.php?username=${username}&password=${password}`);
   }
+
+  getUsuarios(){
+    return this.http.get(`${this.url}getUsuarios.php`);
+  }
 }

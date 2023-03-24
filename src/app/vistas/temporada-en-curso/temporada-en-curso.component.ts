@@ -27,11 +27,10 @@ export class TemporadaEnCursoComponent {
     if(localStorage.getItem("login") == null){
       this.router.navigate(['/']);
     }
-    this.apiF1.carrerasTempActual().subscribe(resutl => this.carreras = resutl);
+    this.apiF1.carrerasTempActual().subscribe(resutl => this.carreras = resutl); //Se ejecuta cuando se carga el componente para el desplegable de circuitos
   }
 
   buscar(numCarrera: number){
-
     //Almacenar en el array de la carrera seleccionada
     this.apiF1.carreraSeleccionada(numCarrera).subscribe(result => {
       this.carreraSeleccionada = result;
