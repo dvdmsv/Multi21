@@ -3,7 +3,7 @@ import { MatTable } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Clasificacion } from 'src/app/clases/clasificacion';
 import { Resultado } from 'src/app/clases/resultado';
-import { ApiF1Service } from 'src/app/servicios/api-f1.service';
+import { ApiF1Service } from 'src/app/servicios/api-f1/api-f1.service';
 
 @Component({
   selector: 'app-temporada-en-curso',

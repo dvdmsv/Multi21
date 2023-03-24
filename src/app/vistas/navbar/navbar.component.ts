@@ -7,11 +7,12 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   login: any = localStorage.getItem("login");
+  admin: any = localStorage.getItem("esAdmin");
 
   logoff(): void{
     localStorage.removeItem("login");
     localStorage.removeItem("username");
-    localStorage.removeItem("admin");
+    localStorage.removeItem("esAdmin");
     window.location.reload();
   }
 

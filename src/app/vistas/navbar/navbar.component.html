@@ -7,6 +7,7 @@
   <button mat-button routerLink="/login" *ngIf="login == null">Login<mat-icon>login</mat-icon></button>
   <button mat-button routerLink="/registro" *ngIf="login == null">Registro<mat-icon>account_boxs</mat-icon></button>
   <button mat-flat-button [matMenuTriggerFor]="menu" color="primary" *ngIf="login == 'true'">Opciones del sitio</button>
+  <button mat-flat-button color="primary" *ngIf="admin == 'true'">Panel de control admin</button>
   <button mat-button (click)="logoff()" *ngIf="login == 'true'"><mat-icon>logout</mat-icon></button>
   <mat-icon *ngIf="login == 'true'">done</mat-icon>
 </mat-toolbar>
