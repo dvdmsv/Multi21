@@ -16,7 +16,7 @@ export class AppComponent {
   ngOnInit(){
     if(localStorage.getItem("login") == null){
       this.login = "false";
-      this.router.navigate(['/registro']);
+      this.router.navigate(['/login']);
     }
   }
 }

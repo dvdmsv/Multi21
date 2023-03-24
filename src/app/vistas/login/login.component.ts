@@ -13,11 +13,13 @@ export class LoginComponent {
   nombre: String = "";
 
   existe: String = "";
+  admin: String = "";
 
   usuario={
     id: 0,
     username: "",
-    password: ""
+    password: "",
+    admin: ""
   }
 
   constructor(private usuariosServicio: UsuariosService, private router: Router){}
@@ -30,11 +32,19 @@ export class LoginComponent {
   }
 
   login(username: string, password: string){
-    this.usuariosServicio.login(username, password).subscribe((result: any)=> {
+    this.usuariosServicio.login(username, password).subscribe((result: any)=> { //Login del usuario
       this.existe = result;
-      if(this.existe == "true"){
-        localStorage.setItem("login", "true");
-        localStorage.setItem("username", this.usuario.username);
+      if(this.existe == "true"){ //Si existe se comprueba si es admin
+        localStorage.setItem("login", "true"); //Se guarda en localStorange que está logueado
+        localStorage.setItem("username", this.usuario.username); //Se guarda su username
+
+        this.usuariosServicio.loginAdmin(username, password).subscribe((result: any)=>{
+          this.admin = result;
+          if(this.admin == "true"){
+            localStorage.setItem("admin", "true");
+            console.log("Es admin");
+          }
+        });
         document.location.reload()
       }
     });

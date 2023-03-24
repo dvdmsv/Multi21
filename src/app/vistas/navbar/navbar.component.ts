@@ -11,6 +11,7 @@ export class NavbarComponent {
   logoff(): void{
     localStorage.removeItem("login");
     localStorage.removeItem("username");
+    localStorage.removeItem("admin");
     window.location.reload();
   }
 
