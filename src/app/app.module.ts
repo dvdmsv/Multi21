@@ -18,7 +18,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { TemporadaEnCursoComponent } from './vistas/temporada-en-curso/temporada-en-curso.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
-import { PanelAdminComponent } from './vistas/panel-admin/panel-admin.component';
+import { GestionarUsuariosComponent } from './vistas/gestionar-usuarios/gestionar-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { PanelAdminComponent } from './vistas/panel-admin/panel-admin.component'
     RegistroComponent,
     NavbarComponent,
     TemporadaEnCursoComponent,
-    PanelAdminComponent,
+    GestionarUsuariosComponent,
   ],
   imports: [
     BrowserModule,
