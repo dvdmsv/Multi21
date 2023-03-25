@@ -46,11 +46,10 @@ export class LoginComponent {
             localStorage.setItem("esAdmin", "false");
           }
         });
-        document.location.reload()
+        setTimeout(()=>{ //Se ejecuta el refresco de página un poco mas tarde para dar tiempo a que se guarden las credenciales en local storange
+          document.location.reload();
+        }, 100);
       }
     });
-
   }
-
-
 }
