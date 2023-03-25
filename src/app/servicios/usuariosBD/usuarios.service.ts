@@ -28,4 +28,12 @@ export class UsuariosService {
   borrarUsuario(id: number){
     return this.http.get(`${this.url}borrarUsuario.php?id=${id}`);
   }
+
+  hacerAdmin(id: number){
+    return this.http.get(`${this.url}hacerAdmin.php?id=${id}`);
+  }
+
+  quitarAdmin(id: number){
+    return this.http.get(`${this.url}quitarAdmin.php?id=${id}`);
+  }
 }
