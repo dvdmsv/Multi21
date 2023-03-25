@@ -12,7 +12,7 @@ export class GestionarUsuariosComponent {
 
   arrUsuarios: Usuario[] = [];
 
-  columnasUsuario: string[] = ['id', 'username', 'password', 'admin', 'borrar'];
+  columnasUsuario: string[] = ['id', 'username', 'password', 'admin', 'borrar', 'hacerAdmin'];
 
 
   constructor(private usuariosServicio: UsuariosService){}
@@ -35,4 +35,10 @@ export class GestionarUsuariosComponent {
       }
     });
   }
+
+  borrarUsuario(id: number){
+    this.usuariosServicio.borrarUsuario(id).subscribe((result:any)=> console.log("Usuario eliminado"));
+    document.location.reload();
+  }
+
 }

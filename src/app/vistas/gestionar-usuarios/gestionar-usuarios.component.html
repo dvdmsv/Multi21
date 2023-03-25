@@ -18,7 +18,11 @@
     </ng-container>
     <ng-container matColumnDef="borrar">
       <th mat-header-cell *matHeaderCellDef> Borrar usuario </th>
-      <td mat-cell *matCellDef="let usuario"> <button>Borrar</button> </td>
+      <td mat-cell *matCellDef="let usuario"><button mat-raised-button color="primary" (click)="borrarUsuario(usuario.id)"> Borrar </button> </td>
+    </ng-container>
+    <ng-container matColumnDef="hacerAdmin">
+      <th mat-header-cell *matHeaderCellDef> Habilitar admin </th>
+      <td mat-cell *matCellDef="let usuario"><button mat-raised-button color="primary"> Hacer admin </button> </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="columnasUsuario"></tr>
     <tr mat-row *matRowDef="let row; columns: columnasUsuario;"></tr>

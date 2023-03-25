@@ -24,4 +24,8 @@ export class UsuariosService {
   getUsuarios(){
     return this.http.get(`${this.url}getUsuarios.php`);
   }
+
+  borrarUsuario(id: number){
+    return this.http.get(`${this.url}borrarUsuario.php?id=${id}`);
+  }
 }
