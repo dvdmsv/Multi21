@@ -23,14 +23,36 @@ caption{
   margin: 2%;
 }
 
+.campoComentario{
+  width: 70%;
+  margin: auto;
+  padding-bottom: 25px;
+}
+
+.campoComentario>textarea{
+  width: 70%;
+  margin: 10px
+}
+
+.comentario{
+  border-bottom: solid grey 1px;
+}
+
 th, td{
   text-align: center;
+}
+
+.panelComentarios{
+  width: 70%;
+  margin: auto;
+  padding-bottom: 25px;
 }
 
 @media screen and (max-width: 1280px) {
   .contenedorTabla {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   table {

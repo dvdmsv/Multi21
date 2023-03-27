@@ -66,17 +66,27 @@
   </table>
 </div>
 
-<form *ngIf="round.value>0" #textoForm="ngForm">
+<form *ngIf="round.value>0" #textoForm="ngForm" class="campoComentario">
   <textarea matInput [(ngModel)]="comentario" cdkTextareaAutosize minlength="1" maxlength="200" name="texto" cdkAutosizeMinRows="10"  cdkAutosizeMaxRows="10" placeholder="Máximo 200 caracteres" required #texto="ngModel"></textarea>
   <div *ngIf="texto.invalid && texto.dirty" class="alert">
   </div>
   <button mat-raised-button color="primary" (click)="publicar(round.value)" [disabled]="!textoForm.form.valid"><mat-icon>send</mat-icon></button>
 </form>
 
-<div *ngFor="let comentario of arrComentSelec">
-  <h3> {{ comentario.username }}</h3>
-  <p> {{ comentario.texto }}</p>
-  <p> {{ comentario.fecha }}</p>
+<div class="panelComentarios" *ngIf="arrComentSelec.length">
+  <mat-accordion>
+      <mat-expansion-panel>
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+                  <h2>Comentarios</h2>
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngFor="let comentario of arrComentSelec" class="comentario">
+            <h3> {{ comentario.username }}</h3>
+            <p> {{ comentario.texto }}</p>
+            <p> {{ comentario.fecha }}</p>
+          </div>
+      </mat-expansion-panel>
+  </mat-accordion>
 </div>
-
 

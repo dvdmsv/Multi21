@@ -16,6 +16,7 @@ import { MatTableModule } from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 import { LoginComponent } from './vistas/login/login.component';
@@ -52,7 +53,8 @@ import { CardsInicioComponent } from './vistas/cards-inicio/cards-inicio.compone
     MatTableModule,
     MatIconModule,
     MatSnackBarModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
