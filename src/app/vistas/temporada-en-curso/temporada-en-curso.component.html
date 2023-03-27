@@ -66,4 +66,9 @@
   </table>
 </div>
 
+<div *ngIf="round.value>0">
+  <textarea matInput [(ngModel)]="comentario" cdkTextareaAutosize maxlength="200" cdkAutosizeMinRows="10"  cdkAutosizeMaxRows="10" placeholder="Máximo 200 caracteres"></textarea>
+  <button mat-raised-button color="primary" (click)="publicar(round.value)"><mat-icon>send</mat-icon></button>
+</div>
+
 

@@ -11,9 +11,6 @@ export class AppComponent {
 
   login: string = "";
 
-  reload: boolean = false;
-
-
   constructor(private router: Router){}
 
   ngOnInit(){
@@ -21,8 +18,8 @@ export class AppComponent {
       this.login = "false";
       this.router.navigate(['/login']);
     }else{
-      this.reload = true;
-      console.log("Logueado");
+      this.login = "true";
+      this.router.navigate(['/cards-inicio']);
     }
   }
 }

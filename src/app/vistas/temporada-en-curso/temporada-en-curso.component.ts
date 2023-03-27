@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Clasificacion } from 'src/app/clases/clasificacion/clasificacion';
 import { Resultado } from 'src/app/clases/resultado/resultado';
 import { ApiF1Service } from 'src/app/servicios/api-f1/api-f1.service';
+import { ComentarioService } from 'src/app/servicios/comentarioBD/comentario.service';
 
 @Component({
   selector: 'app-temporada-en-curso',
@@ -10,9 +11,10 @@ import { ApiF1Service } from 'src/app/servicios/api-f1/api-f1.service';
   styleUrls: ['./temporada-en-curso.component.css']
 })
 export class TemporadaEnCursoComponent {
-  constructor(private apiF1: ApiF1Service, private router: Router){}
+  constructor(private apiF1: ApiF1Service, private router: Router, private comentarioService: ComentarioService){}
 
   carreras: any;
+  comentario: string = "";
 
   carreraSeleccionada: any;
   clasificSeleccionada: any;
@@ -64,5 +66,10 @@ export class TemporadaEnCursoComponent {
           ));
       }
     });
+  }
+
+  publicar(numCarrera: number){
+    let username = localStorage.getItem("username");
+    this.comentarioService.publicar(username, numCarrera, this.comentario).subscribe((result) => console.log("Comentado"));
   }
 }

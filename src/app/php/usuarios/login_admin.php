@@ -2,7 +2,7 @@
   header('Access-Control-Allow-Origin: *');
   header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
-  require("db.php");
+  require("../db.php");
   $conexion = retornarConexion();
   $consulta = $conexion->prepare("SELECT * FROM usuarios WHERE username = ? AND password = ? AND admin = 1");
   $consulta->bindParam(1, $_GET['username']);

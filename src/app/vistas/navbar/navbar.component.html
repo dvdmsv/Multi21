@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <button mat-button routerLink="/">Multi21</button>
+  <button mat-button routerLink="/cards-inicio" *ngIf="login == 'true'">Multi21</button>
   <mat-menu #menu="matMenu">
     <button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button>
   </mat-menu>

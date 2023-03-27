@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsuariosService {
-  url = "http://localhost/TFG/Multi21/src/app/php/";
+  url = "http://localhost/TFG/Multi21/src/app/php/usuarios/";
 
   constructor(private http: HttpClient) { }
 
