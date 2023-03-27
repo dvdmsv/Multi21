@@ -3,6 +3,6 @@ create table comentarios_temporada_curso(
     username varchar(20) not null,
     carrera int not null,
     texto varchar(200) not null,
-    fecha date,
+    fecha varchar(20),
     FOREIGN KEY (username) REFERENCES usuarios(username) on DELETE CASCADE
 );

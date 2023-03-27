@@ -75,7 +75,10 @@ export class TemporadaEnCursoComponent {
   publicar(numCarrera: number){
     let username = localStorage.getItem("username");
     //Introducir fecha
-    this.comentarioService.publicar(username, numCarrera, this.comentario).subscribe((result) => console.log("Comentado"));
+    let hora = new Date().toLocaleTimeString('es-ES');
+    let fecha = new Date().toLocaleDateString('es-ES');
+    let fechaCompleta = `${hora} ${fecha}`;
+    this.comentarioService.publicar(username, numCarrera, this.comentario, fechaCompleta).subscribe((result) => console.log("Comentado"));
     //window.location.reload();
     this.comentario = "";
   }
@@ -91,7 +94,7 @@ export class TemporadaEnCursoComponent {
             comentario.username,
             comentario.carrera,
             comentario.texto,
-            comentario.date
+            comentario.fecha
           )
         );
       }

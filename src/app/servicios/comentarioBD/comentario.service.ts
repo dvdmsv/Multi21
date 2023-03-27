@@ -10,8 +10,8 @@ export class ComentarioService {
 
   constructor(private http: HttpClient) {}
 
-  publicar(username: any, carrera: number, texto: string) {
-    return this.http.get(`${this.url}setComentario.php?username=${username}&carrera=${carrera}&texto=${texto}`);
+  publicar(username: any, carrera: number, texto: string, fecha: string) {
+    return this.http.get(`${this.url}setComentario.php?username=${username}&carrera=${carrera}&texto=${texto}&fecha=${fecha}`);
   }
 
   getComentarios(carrera: number){
