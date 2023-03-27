@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AnadirUsuariosComponent } from './vistas/anadir-usuarios/anadir-usuarios.component';
 import { GestionarUsuariosComponent } from './vistas/gestionar-usuarios/gestionar-usuarios.component';
 import { LoginComponent } from './vistas/login/login.component';
 import { RegistroComponent } from './vistas/registro/registro.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'gestionar-usuarios',
     component: GestionarUsuariosComponent
+  },
+  {
+    path: 'anadir-usuarios',
+    component: AnadirUsuariosComponent
   }
 ];
 

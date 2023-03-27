@@ -38,13 +38,13 @@ export class LoginComponent {
       if(this.existe == "true"){ //Si existe se comprueba si es admin
         localStorage.setItem("login", "true"); //Se guarda en localStorange que está logueado
         localStorage.setItem("username", this.usuario.username); //Se guarda su username
-        let notificacion = this.snackBar.open(`${username} logueado!`);
+        let notificacion = this.snackBar.open(`${username} logueado!`); //Notificacion
 
         this.usuariosServicio.loginAdmin(username, password).subscribe((result: any)=>{ //Comprobar si el usuario es admin
           this.admin = result;
           if(this.admin == "true"){ //Si es admin
             localStorage.setItem("esAdmin", "true"); //Se guarda en localStorange que es admin
-            let notificacion = this.snackBar.open(`${username} logueado con permisos de administrador`);
+            let notificacion = this.snackBar.open(`${username} logueado con permisos de administrador`); //Notificacion
           }else if(this.admin == "false"){
             localStorage.setItem("esAdmin", "false");
           }

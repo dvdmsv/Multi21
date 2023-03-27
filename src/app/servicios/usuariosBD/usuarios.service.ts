@@ -13,6 +13,16 @@ export class UsuariosService {
     return this.http.get(`${this.url}registro.php?username=${username}&password=${password}`);
   }
 
+  registroAdmin(username: string, password: string, admin: boolean) {
+    let esAdmin: string;
+    if(admin == true){
+      esAdmin = "1"
+    }else{
+      esAdmin = "0"
+    }
+    return this.http.get(`${this.url}registroAdmin.php?username=${username}&password=${password}&admin=${esAdmin}`);
+  }
+
   login(username: string, password: string){
     return this.http.get(`${this.url}login.php?username=${username}&password=${password}`);
   }

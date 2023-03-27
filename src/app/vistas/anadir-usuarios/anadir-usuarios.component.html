@@ -1,0 +1,23 @@
+<div>
+  <form class="login" #usuarioForm="ngForm">
+    <p>Nombre de usuario</p>
+    <mat-form-field>
+      <input matInput type="text" [(ngModel)]="usuario.username" name="username" #nombre="ngModel" required>
+      <div *ngIf="nombre.invalid && nombre.dirty" class="alert">
+        <div *ngIf="nombre.errors?.['required']">Campo requerido</div>
+      </div>
+    </mat-form-field>
+
+    <p>Contraseña</p>
+    <mat-form-field>
+      <input matInput type="password" [(ngModel)]="usuario.password" name="password" #contrasena="ngModel" required minlength="4">
+      <div *ngIf="contrasena.invalid && contrasena.dirty" class="alert">
+        <div *ngIf="contrasena.errors?.['required']">Campo requerido</div>
+        <div *ngIf="contrasena.errors?.['minlength']">Mínimo 4 caracteres</div>
+      </div>
+    </mat-form-field>
+    <mat-checkbox [(ngModel)]="usuario.admin" name="admin">Hacer admin</mat-checkbox>
+    <div *ngIf="registrado == 'false'">El usuario ya existe</div>
+    <button mat-raised-button color="primary" (click)="registro()" [disabled]="!usuarioForm.form.valid">Registro<mat-icon>account_boxs</mat-icon></button>
+  </form>
+</div>

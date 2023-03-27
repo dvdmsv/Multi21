@@ -22,10 +22,11 @@
   $vec = [];
   if(usuExiste() == false){
       $conexion = retornarConexion();
-      $consulta = $conexion->prepare('INSERT INTO usuarios(username, password) VALUES (?, ?)');
+      $consulta = $conexion->prepare('INSERT INTO usuarios(username, password, admin) VALUES (?, ?, ?)');
       $consulta->bindParam(1, $_GET['username']);
       $passEncrip = md5($_GET['password']);
       $consulta->bindParam(2, $passEncrip);
+      $consulta->bindParam(3, $_GET['admin']);
       $consulta->execute();
       $registros = $consulta->rowCount();
 
