@@ -19,6 +19,7 @@ import { TemporadaEnCursoComponent } from './vistas/temporada-en-curso/temporada
 import { MatTableModule } from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { GestionarUsuariosComponent } from './vistas/gestionar-usuarios/gestionar-usuarios.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { GestionarUsuariosComponent } from './vistas/gestionar-usuarios/gestiona
     MatMenuModule,
     MatSelectModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
