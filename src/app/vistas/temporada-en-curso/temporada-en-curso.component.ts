@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Clasificacion } from 'src/app/clases/clasificacion/clasificacion';
+import { Comentario } from 'src/app/clases/comentario/comentario';
 import { Resultado } from 'src/app/clases/resultado/resultado';
 import { ApiF1Service } from 'src/app/servicios/api-f1/api-f1.service';
 import { ComentarioService } from 'src/app/servicios/comentarioBD/comentario.service';
@@ -18,9 +19,11 @@ export class TemporadaEnCursoComponent {
 
   carreraSeleccionada: any;
   clasificSeleccionada: any;
+  comentariosRecibidos: any;
 
   arrCarrSelec: Resultado[] = [];
   arrClasifSelec: Clasificacion[] = [];
+  arrComentSelec: Comentario[] = [];
 
   columnasCarrera: string[] = ['posicion', 'piloto', 'escuderia', 'pos. salida', 'status', 'puntos'];
   columnasClasific: string[] = ['posicion', 'piloto', 'escuderia', 'puntos', 'victorias'];
@@ -66,10 +69,32 @@ export class TemporadaEnCursoComponent {
           ));
       }
     });
+    this.getComentarios(numCarrera);
   }
 
   publicar(numCarrera: number){
     let username = localStorage.getItem("username");
+    //Introducir fecha
     this.comentarioService.publicar(username, numCarrera, this.comentario).subscribe((result) => console.log("Comentado"));
+    //window.location.reload();
+    this.comentario = "";
+  }
+
+  getComentarios(numCarrera: number){
+    this.comentarioService.getComentarios(numCarrera).subscribe(result => {
+      this.comentariosRecibidos = result;
+      this.arrComentSelec = [];
+      for(const comentario of this.comentariosRecibidos){
+        this.arrComentSelec.push(
+          new Comentario(
+            comentario.id,
+            comentario.username,
+            comentario.carrera,
+            comentario.texto,
+            comentario.date
+          )
+        );
+      }
+    });
   }
 }

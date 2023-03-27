@@ -13,4 +13,8 @@ export class ComentarioService {
   publicar(username: any, carrera: number, texto: string) {
     return this.http.get(`${this.url}setComentario.php?username=${username}&carrera=${carrera}&texto=${texto}`);
   }
+
+  getComentarios(carrera: number){
+    return this.http.get(`${this.url}getComentarios.php?carrera=${carrera}`)
+  }
 }
