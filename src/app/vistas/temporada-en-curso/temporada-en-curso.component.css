@@ -31,7 +31,8 @@ caption{
 
 .campoComentario>textarea{
   width: 70%;
-  margin: 10px
+  margin: 10px;
+  font-family: sans-serif;
 }
 
 .comentario{

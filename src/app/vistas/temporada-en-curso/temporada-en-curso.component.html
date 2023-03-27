@@ -68,8 +68,6 @@
 
 <form *ngIf="round.value>0" #textoForm="ngForm" class="campoComentario">
   <textarea matInput [(ngModel)]="comentario" cdkTextareaAutosize minlength="1" maxlength="200" name="texto" cdkAutosizeMinRows="10"  cdkAutosizeMaxRows="10" placeholder="Máximo 200 caracteres" required #texto="ngModel"></textarea>
-  <div *ngIf="texto.invalid && texto.dirty" class="alert">
-  </div>
   <button mat-raised-button color="primary" (click)="publicar(round.value)" [disabled]="!textoForm.form.valid"><mat-icon>send</mat-icon></button>
 </form>
 
