@@ -1,0 +1,822 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>multi21 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">multi21 documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  GestionarUsuariosComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/vistas/gestionar-usuarios/gestionar-usuarios.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-gestionar-usuarios</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./gestionar-usuarios.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./gestionar-usuarios.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#arrUsuarios" >arrUsuarios</a>
+                            </li>
+                            <li>
+                                <a href="#columnasUsuario" >columnasUsuario</a>
+                            </li>
+                            <li>
+                                <a href="#usuarios" >usuarios</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#borrarUsuario" >borrarUsuario</a>
+                            </li>
+                            <li>
+                                <a href="#hacerAdmin" >hacerAdmin</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#quitarAdmin" >quitarAdmin</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(usuariosServicio: <a href="../injectables/UsuariosService.html" target="_self">UsuariosService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/vistas/gestionar-usuarios/gestionar-usuarios.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>usuariosServicio</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsuariosService.html" target="_self" >UsuariosService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="borrarUsuario"></a>
+                    <span class="name">
+                        <span ><b>borrarUsuario</b></span>
+                        <a href="#borrarUsuario"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>borrarUsuario(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/vistas/gestionar-usuarios/gestionar-usuarios.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hacerAdmin"></a>
+                    <span class="name">
+                        <span ><b>hacerAdmin</b></span>
+                        <a href="#hacerAdmin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hacerAdmin(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/vistas/gestionar-usuarios/gestionar-usuarios.component.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/vistas/gestionar-usuarios/gestionar-usuarios.component.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="quitarAdmin"></a>
+                    <span class="name">
+                        <span ><b>quitarAdmin</b></span>
+                        <a href="#quitarAdmin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>quitarAdmin(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/vistas/gestionar-usuarios/gestionar-usuarios.component.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="arrUsuarios"></a>
+                    <span class="name">
+                        <span ><b>arrUsuarios</b></span>
+                        <a href="#arrUsuarios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Usuario.html" target="_self" >Usuario[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/vistas/gestionar-usuarios/gestionar-usuarios.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="columnasUsuario"></a>
+                    <span class="name">
+                        <span ><b>columnasUsuario</b></span>
+                        <a href="#columnasUsuario"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&#x27;id&#x27;, &#x27;username&#x27;, &#x27;password&#x27;, &#x27;admin&#x27;, &#x27;borrar&#x27;, &#x27;hacerAdmin&#x27;, &#x27;quitarAdmin&#x27;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/vistas/gestionar-usuarios/gestionar-usuarios.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="usuarios"></a>
+                    <span class="name">
+                        <span ><b>usuarios</b></span>
+                        <a href="#usuarios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/vistas/gestionar-usuarios/gestionar-usuarios.component.ts:11</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { Usuario } from &#x27;src/app/clases/usuario/usuario&#x27;;
+import { UsuariosService } from &#x27;src/app/servicios/usuariosBD/usuarios.service&#x27;;
+
+@Component({
+  selector: &#x27;app-gestionar-usuarios&#x27;,
+  templateUrl: &#x27;./gestionar-usuarios.component.html&#x27;,
+  styleUrls: [&#x27;./gestionar-usuarios.component.css&#x27;]
+})
+export class GestionarUsuariosComponent {
+  usuarios: any; //Contiene los usuarios de la base de datos
+
+  arrUsuarios: Usuario[] &#x3D; [];
+
+  columnasUsuario: string[] &#x3D; [&#x27;id&#x27;, &#x27;username&#x27;, &#x27;password&#x27;, &#x27;admin&#x27;, &#x27;borrar&#x27;, &#x27;hacerAdmin&#x27;, &#x27;quitarAdmin&#x27;];
+
+
+  constructor(private usuariosServicio: UsuariosService){}
+
+  ngOnInit(){
+    this.usuariosServicio.getUsuarios().subscribe((result: any)&#x3D;&gt;{
+      this.usuarios &#x3D; result;
+      this.arrUsuarios &#x3D; [] //Vaciar el array de usuarios antes de introducir los nuevos datos
+      for(const usuario of this.usuarios){
+        if(usuario.username !&#x3D; localStorage.getItem(&#x27;username&#x27;)){
+          this.arrUsuarios.push(
+            new Usuario(
+              usuario.id,
+              usuario.username,
+              usuario.password,
+              usuario.admin
+            )
+          );
+        }
+      }
+    });
+  }
+
+  borrarUsuario(id: number){
+    this.usuariosServicio.borrarUsuario(id).subscribe((result:any)&#x3D;&gt; console.log(&quot;Usuario eliminado&quot;));
+    document.location.reload();
+  }
+
+  hacerAdmin(id: number){
+    this.usuariosServicio.hacerAdmin(id).subscribe((result:any)&#x3D;&gt; console.log(&quot;Usuario admin&quot;));
+    document.location.reload();
+  }
+
+  quitarAdmin(id: number){
+    this.usuariosServicio.quitarAdmin(id).subscribe((result:any)&#x3D;&gt; console.log(&quot;Usuario no admin&quot;));
+    document.location.reload();
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;contenedorTabla&quot;&gt;
+  &lt;table mat-table [dataSource]&#x3D;&quot;arrUsuarios&quot; class&#x3D;&quot;mat-elevation-z8&quot;&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;id&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; id &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let usuario&quot;&gt; {{usuario.id}} &lt;/td&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;username&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; Username &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let usuario&quot;&gt; {{usuario.username}} &lt;/td&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;password&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; Password &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let usuario&quot;&gt; {{usuario.password}} &lt;/td&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;admin&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; Admin &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let usuario&quot;&gt; {{usuario.admin}} &lt;/td&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;borrar&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; Borrar usuario &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let usuario&quot;&gt;&lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;borrarUsuario(usuario.id)&quot;&gt; Borrar &lt;/button&gt; &lt;/td&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;hacerAdmin&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; Habilitar admin &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let usuario&quot;&gt;&lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;hacerAdmin(usuario.id)&quot;&gt; Hacer admin &lt;/button&gt; &lt;/td&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;quitarAdmin&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; Deshabilitar admin &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let usuario&quot;&gt;&lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;quitarAdmin(usuario.id)&quot;&gt; Quitar admin &lt;/button&gt; &lt;/td&gt;
+    &lt;/ng-container&gt;
+    &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;columnasUsuario&quot;&gt;&lt;/tr&gt;
+    &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: columnasUsuario;&quot;&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./gestionar-usuarios.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.contendorSelector{
+  margin: 50px;
+  margin-bottom: 0px;
+  width: 400px;
+}
+
+table {
+  width: 100%;
+  margin:1rem auto;
+}
+
+caption{
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contenedorTabla {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+
+th, td{
+  text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .contenedorTabla {
+    display: flex;
+    flex-direction: column;
+  }
+
+  table {
+    width: 80%;
+    margin:1rem auto;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="contenedorTabla">  <table mat-table [dataSource]="arrUsuarios" class="mat-elevation-z8">    <ng-container matColumnDef="id">      <th mat-header-cell *matHeaderCellDef> id </th>      <td mat-cell *matCellDef="let usuario"> {{usuario.id}} </td>    </ng-container>    <ng-container matColumnDef="username">      <th mat-header-cell *matHeaderCellDef> Username </th>      <td mat-cell *matCellDef="let usuario"> {{usuario.username}} </td>    </ng-container>    <ng-container matColumnDef="password">      <th mat-header-cell *matHeaderCellDef> Password </th>      <td mat-cell *matCellDef="let usuario"> {{usuario.password}} </td>    </ng-container>    <ng-container matColumnDef="admin">      <th mat-header-cell *matHeaderCellDef> Admin </th>      <td mat-cell *matCellDef="let usuario"> {{usuario.admin}} </td>    </ng-container>    <ng-container matColumnDef="borrar">      <th mat-header-cell *matHeaderCellDef> Borrar usuario </th>      <td mat-cell *matCellDef="let usuario"><button mat-raised-button color="primary" (click)="borrarUsuario(usuario.id)"> Borrar </button> </td>    </ng-container>    <ng-container matColumnDef="hacerAdmin">      <th mat-header-cell *matHeaderCellDef> Habilitar admin </th>      <td mat-cell *matCellDef="let usuario"><button mat-raised-button color="primary" (click)="hacerAdmin(usuario.id)"> Hacer admin </button> </td>    </ng-container>    <ng-container matColumnDef="quitarAdmin">      <th mat-header-cell *matHeaderCellDef> Deshabilitar admin </th>      <td mat-cell *matCellDef="let usuario"><button mat-raised-button color="primary" (click)="quitarAdmin(usuario.id)"> Quitar admin </button> </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="columnasUsuario"></tr>    <tr mat-row *matRowDef="let row; columns: columnasUsuario;"></tr>  </table></div></div>'
+    var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'GestionarUsuariosComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'GestionarUsuariosComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
