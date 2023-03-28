@@ -151,7 +151,8 @@ export class TemporadaEnCursoComponent {
             comentario.username,
             comentario.carrera,
             comentario.texto,
-            comentario.fecha
+            comentario.fecha,
+            comentario.eliminado
           )
         );
       }

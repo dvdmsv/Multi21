@@ -9,6 +9,7 @@ export class Comentario {
    * @param carrera carrera sobre la que se realizó el comentario
    * @param texto texto escrito en el comentario
    * @param fecha fecha en la que se escribió el comentario
+   * @param eliminado indica si el comentario está marcado para ser eliminado o no
    */
-  constructor(public id: number, public username: string, public carrera: number, public texto: string, public fecha: string){}
+  constructor(public id: number, public username: string, public carrera: number, public texto: string, public fecha: string, public eliminado: number){}
 }
