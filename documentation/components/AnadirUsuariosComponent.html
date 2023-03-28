@@ -171,12 +171,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/vistas/anadir-usuarios/anadir-usuarios.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/vistas/anadir-usuarios/anadir-usuarios.component.ts:12</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor de AnadirUsuariosComponent</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -185,6 +187,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -199,6 +202,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>servicio que contiene los métodos para conectarse con la base de datos en lo relativo a usuarios</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -238,14 +245,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/app/vistas/anadir-usuarios/anadir-usuarios.component.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/vistas/anadir-usuarios/anadir-usuarios.component.ts:34</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Método que registra el usuario</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -285,10 +294,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/vistas/anadir-usuarios/anadir-usuarios.component.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/vistas/anadir-usuarios/anadir-usuarios.component.ts:22</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable que contiene true o false si el usuario está ya registrado o no</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -320,10 +335,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/vistas/anadir-usuarios/anadir-usuarios.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/vistas/anadir-usuarios/anadir-usuarios.component.ts:26</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Objeto usuario que se modifica en la vista HTML con los datos introducidos en el forumulario</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -341,17 +362,31 @@ import { UsuariosService } from &#x27;src/app/servicios/usuariosBD/usuarios.serv
   templateUrl: &#x27;./anadir-usuarios.component.html&#x27;,
   styleUrls: [&#x27;./anadir-usuarios.component.css&#x27;]
 })
+/**
+ * Componente para usuarios administradores que permiten añadir más usuarios
+ */
 export class AnadirUsuariosComponent {
+  /**
+   * Constructor de AnadirUsuariosComponent
+   * @param usuariosServicio servicio que contiene los métodos para conectarse con la base de datos en lo relativo a usuarios
+   */
   constructor(private usuariosServicio: UsuariosService){}
 
+  /**
+   * Variable que contiene true o false si el usuario está ya registrado o no
+   */
   registrado: string &#x3D; &quot;&quot;;
-
+  /**
+   * Objeto usuario que se modifica en la vista HTML con los datos introducidos en el forumulario
+   */
   usuario &#x3D; {
     username : &quot;&quot;,
     password: &quot;&quot;,
     admin : false
   }
-
+  /**
+   * Método que registra el usuario
+   */
   registro(){
     this.usuariosServicio.registroAdmin(this.usuario.username, this.usuario.password, this.usuario.admin).subscribe((result)&#x3D;&gt;console.log(&quot;Registrado&quot;));
   }

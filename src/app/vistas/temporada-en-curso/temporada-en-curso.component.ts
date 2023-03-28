@@ -11,30 +11,73 @@ import { ComentarioService } from 'src/app/servicios/comentarioBD/comentario.ser
   templateUrl: './temporada-en-curso.component.html',
   styleUrls: ['./temporada-en-curso.component.css']
 })
+/**
+ * Componente que contiene la temporada en curso
+ */
 export class TemporadaEnCursoComponent {
+  /**
+   * Constructor de TemporadaEnCursoComponent
+   * @param apiF1 servicio que se comunica con el servido de F1
+   * @param router habilita la navegación
+   * @param comentarioService  servicio que contiene los métodos para conectarse con la base de datos en lo relativo a comentarios
+   */
   constructor(private apiF1: ApiF1Service, private router: Router, private comentarioService: ComentarioService){}
 
+  /**
+   * Variable que contiene las carreras de la temporada
+   */
   carreras: any;
+  /**
+   * Variable que contiene el comentario escrito en la visya
+   */
   comentario: string = "";
 
+  /**
+   * Variable que contiene la carrera seleccionada
+   */
   carreraSeleccionada: any;
+  /**
+   * Varioable que contiene la clasificación seleccionada
+   */
   clasificSeleccionada: any;
+  /**
+   * Variable que contiene los comentarios
+   */
   comentariosRecibidos: any;
 
+  /**
+   * Array con los resultados de la carrera seleccionada
+   */
   arrCarrSelec: Resultado[] = [];
+  /**
+   * Array con la clasificacion seleccionada
+   */
   arrClasifSelec: Clasificacion[] = [];
+  /**
+   * Array con los comentarios
+   */
   arrComentSelec: Comentario[] = [];
-
+  /**
+   * Columna de la tabla carreras
+   */
   columnasCarrera: string[] = ['posicion', 'piloto', 'escuderia', 'pos. salida', 'status', 'puntos'];
+  /**
+   * Columna de la tabla clasificacion
+   */
   columnasClasific: string[] = ['posicion', 'piloto', 'escuderia', 'puntos', 'victorias'];
-
+  /**
+   * Funcion que se ejecuta cuando se carga el componente
+   */
   ngOnInit(){
     if(localStorage.getItem("login") == null){
       this.router.navigate(['/']);
     }
     this.apiF1.carrerasTempActual().subscribe(resutl => this.carreras = resutl); //Se ejecuta cuando se carga el componente para el desplegable de circuitos
   }
-
+  /**
+   * Metodo que busca la carrera seleccionada en el desplegable
+   * @param numCarrera numero de la carrera seleccionada
+   */
   buscar(numCarrera: number){
     //Almacenar en el array de la carrera seleccionada
     this.apiF1.carreraSeleccionada(numCarrera).subscribe(result => {
@@ -69,9 +112,12 @@ export class TemporadaEnCursoComponent {
           ));
       }
     });
-    this.getComentarios(numCarrera);
+    this.getComentarios(numCarrera); //Obtiene los comentarios de esa carrera
   }
-
+  /**
+   * Funcion para publicar comentarios en la carrera seleccionada
+   * @param numCarrera numero de la carrera para publicar el comentario
+   */
   publicar(numCarrera: number){
     let username = localStorage.getItem("username");
     //Introducir fecha
@@ -82,7 +128,10 @@ export class TemporadaEnCursoComponent {
     //window.location.reload();
     this.comentario = "";
   }
-
+  /**
+   * Función para obtener todos los comentarios de esa carrera
+   * @param numCarrera numero de la carrera para mostrar los comentarios
+   */
   getComentarios(numCarrera: number){
     this.comentarioService.getComentarios(numCarrera).subscribe(result => {
       this.comentariosRecibidos = result;

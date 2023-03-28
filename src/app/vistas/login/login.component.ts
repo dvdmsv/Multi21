@@ -8,30 +8,52 @@ import { UsuariosService } from 'src/app/servicios/usuariosBD/usuarios.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+/**
+ * Componente que permite el login para acceder a la web
+ */
 export class LoginComponent {
+  /**
+   * Variable que contiene true o false si el usuario está ya registrado o no
+   */
   usuarios: any;
-
-  nombre: String = "";
-
+  /**
+   * Variable que almacena si el usuario existe o no
+   */
   existe: String = "";
+  /**
+   * Variable que almacena si el usuario es admin o no
+   */
   admin: String = "";
-
+  /**
+   * Objeto usuario que se modifica en la vista HTML con los datos introducidos en el forumulario
+   */
   usuario={
     id: 0,
     username: "",
     password: "",
     admin: ""
   }
-
+  /**
+   * Constructor del componente LoginComponent
+   * @param usuariosServicio servicio que contiene los métodos para conectarse con la base de datos en lo relativo a usuarios
+   * @param router habilita la navegación
+   * @param snackBar habilita los mensajes popup
+   */
   constructor(private usuariosServicio: UsuariosService, private router: Router, private snackBar: MatSnackBar){}
-
+  /**
+   * Función que se ejecuta cuando se carga el componente
+   */
   ngOnInit(){
     //Si el usuario está logueado redirige a la página principal
     if(localStorage.getItem("login") != null){
       this.router.navigate(['/']);
     }
   }
-
+  /**
+   * Función que realiza el login en la base de datos
+   * @param username nombre de usuario
+   * @param password contraseña del usuario
+   */
   login(username: string, password: string){
     this.usuariosServicio.login(username, password).subscribe((result: any)=> { //Login del usuario
       this.existe = result;

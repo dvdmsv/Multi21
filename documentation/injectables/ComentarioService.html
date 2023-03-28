@@ -121,7 +121,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -135,6 +135,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -149,6 +150,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>método para obtener datos de un servidor</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -184,14 +189,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="17"
-                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:17</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:36</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Función que se encarga de obtener todos los comentarios de la base de datos según la carrera</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -202,6 +209,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -216,6 +224,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>carrera seleccionada para mostrar los comentarios</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -227,7 +239,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>devuelve un observable con los datos solicitados</p>
+
                     </div>
                 </td>
             </tr>
@@ -253,14 +266,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:28</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Función que se encarga de insertar un comentario en la base de datos</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -271,6 +286,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -285,6 +301,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>nombre del usuario que va a publicar el comentario</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>carrera</td>
@@ -297,6 +317,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>carrera sobre la que se escribe el comentario</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>texto</td>
@@ -309,6 +333,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>texto escrito por el usuario</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>fecha</td>
@@ -321,6 +349,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>fecha en la que se ha escrito el comentario</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -332,7 +364,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>devuelve un observable con los datos solicitados</p>
+
                     </div>
                 </td>
             </tr>
@@ -368,10 +401,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:14</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>URL donde se almacenan los php que se comunican con la base de datos</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -387,18 +426,37 @@ import { Injectable } from &#x27;@angular/core&#x27;;
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
+/**
+ * Clase que se comunica con la base de datos en todo lo relativo a comentarios
+ */
 export class ComentarioService {
-
+  /**
+   * URL donde se almacenan los php que se comunican con la base de datos
+   */
   url &#x3D; &quot;http://localhost/TFG/Multi21/src/app/php/comentarios/&quot;;
-
+  /**
+   *
+   * @param http método para obtener datos de un servidor
+   */
   constructor(private http: HttpClient) {}
-
+  /**
+   * Función que se encarga de insertar un comentario en la base de datos
+   * @param username nombre del usuario que va a publicar el comentario
+   * @param carrera carrera sobre la que se escribe el comentario
+   * @param texto texto escrito por el usuario
+   * @param fecha fecha en la que se ha escrito el comentario
+   * @returns devuelve un observable con los datos solicitados
+   */
   publicar(username: any, carrera: number, texto: string, fecha: string) {
     return this.http.get(&#x60;${this.url}setComentario.php?username&#x3D;${username}&amp;carrera&#x3D;${carrera}&amp;texto&#x3D;${texto}&amp;fecha&#x3D;${fecha}&#x60;);
   }
-
+  /**
+   * Función que se encarga de obtener todos los comentarios de la base de datos según la carrera
+   * @param carrera carrera seleccionada para mostrar los comentarios
+   * @returns devuelve un observable con los datos solicitados
+   */
   getComentarios(carrera: number){
-    return this.http.get(&#x60;${this.url}getComentarios.php?carrera&#x3D;${carrera}&#x60;)
+    return this.http.get(&#x60;${this.url}getComentarios.php?carrera&#x3D;${carrera}&#x60;);
   }
 }
 </code></pre>

@@ -190,14 +190,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/vistas/navbar/navbar.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app/vistas/navbar/navbar.component.ts:23</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Función que hace de logoff al usuario eliminando todos los tokens del localStorange</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -237,10 +239,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/vistas/navbar/navbar.component.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/vistas/navbar/navbar.component.ts:19</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable que contiene si el usuario es admin en el localStorange</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -268,10 +276,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/vistas/navbar/navbar.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/vistas/navbar/navbar.component.ts:15</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable que contiene si el usuario se ha logueado en el localStorange</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -288,18 +302,27 @@
   templateUrl: &#x27;./navbar.component.html&#x27;,
   styleUrls: [&#x27;./navbar.component.css&#x27;]
 })
+/**
+ * Componente que contiene la barra de navegación
+ */
 export class NavbarComponent {
+  /**
+   * Variable que contiene si el usuario se ha logueado en el localStorange
+   */
   login: any &#x3D; localStorage.getItem(&quot;login&quot;);
+  /**
+   * Variable que contiene si el usuario es admin en el localStorange
+   */
   admin: any &#x3D; localStorage.getItem(&quot;esAdmin&quot;);
-
+  /**
+   * Función que hace de logoff al usuario eliminando todos los tokens del localStorange
+   */
   logoff(): void{
     localStorage.removeItem(&quot;login&quot;);
     localStorage.removeItem(&quot;username&quot;);
     localStorage.removeItem(&quot;esAdmin&quot;);
     window.location.reload();
   }
-
-
 }
 </code></pre>
     </div>

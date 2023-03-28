@@ -66,6 +66,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Clase que representa a un usuario de la base de datos</p>
+
+            </p>
 
 
 
@@ -122,12 +129,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="1" class="link-to-prism">src/app/clases/usuario/usuario.ts:1</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="4" class="link-to-prism">src/app/clases/usuario/usuario.ts:4</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor de la clase Usuario</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -136,6 +145,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -150,6 +160,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>numero identificativo del usuario</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>username</td>
@@ -162,6 +176,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>nombre de usuario</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>password</td>
@@ -174,6 +192,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>contraseña del usuario</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>admin</td>
@@ -186,6 +208,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>parámetro que almacena 0 si el usuario no es administrador y 1 si es administrador</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -221,10 +247,15 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="2" class="link-to-prism">src/app/clases/usuario/usuario.ts:2</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/clases/usuario/usuario.ts:12</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">parámetro que almacena 0 si el usuario no es administrador y 1 si es administrador</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -248,10 +279,15 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="2" class="link-to-prism">src/app/clases/usuario/usuario.ts:2</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/clases/usuario/usuario.ts:12</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">numero identificativo del usuario</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -275,10 +311,15 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="2" class="link-to-prism">src/app/clases/usuario/usuario.ts:2</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/clases/usuario/usuario.ts:12</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">contraseña del usuario</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -302,10 +343,15 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="2" class="link-to-prism">src/app/clases/usuario/usuario.ts:2</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/clases/usuario/usuario.ts:12</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">nombre de usuario</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -322,6 +368,13 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class Usuario {
+  /**
+   * Constructor de la clase Usuario
+   * @param id numero identificativo del usuario
+   * @param username nombre de usuario
+   * @param password contraseña del usuario
+   * @param admin parámetro que almacena 0 si el usuario no es administrador y 1 si es administrador
+   */
   constructor(public id: number, public username: string, public password: string, public admin: number){}
 }
 </code></pre>

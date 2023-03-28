@@ -146,9 +146,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit" >ngOnInit</a>
-                            </li>
-                            <li>
                                 <a href="#registro" >registro</a>
                             </li>
                         </ul>
@@ -174,12 +171,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/vistas/registro/registro.component.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/vistas/registro/registro.component.ts:26</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor de RegistroComponent</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -188,6 +187,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -202,6 +202,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>servicio que contiene los métodos para conectarse con la base de datos en lo relativo a usuarios</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>router</td>
@@ -214,6 +218,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>habilita la navegación</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -237,43 +245,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/app/vistas/registro/registro.component.ts:22</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="registro"></a>
                     <span class="name">
                         <span ><b>registro</b></span>
@@ -290,14 +261,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app/vistas/registro/registro.component.ts:25</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/vistas/registro/registro.component.ts:43</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Función que registra un usuario en la base de datos</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -308,6 +281,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -322,6 +296,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>nombre del usuario</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>password</td>
@@ -334,6 +312,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>contraseña del usuario</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -381,10 +363,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/vistas/registro/registro.component.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/vistas/registro/registro.component.ts:17</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable que indica si el suaurio que se va a registra existe ya en la base de datos</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -416,10 +404,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/vistas/registro/registro.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/vistas/registro/registro.component.ts:22</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Objeto usuario que se modifica en la vista HTML con los datos introducidos en el forumulario</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -438,21 +432,39 @@ import { UsuariosService } from &#x27;src/app/servicios/usuariosBD/usuarios.serv
   templateUrl: &#x27;./registro.component.html&#x27;,
   styleUrls: [&#x27;./registro.component.css&#x27;]
 })
+/**
+ * Componente que contiene el registro de usuarios
+ */
 export class RegistroComponent {
-
+  /**
+   * Variable que indica si el suaurio que se va a registra existe ya en la base de datos
+   */
   registrado: string &#x3D; &quot;&quot;;
 
+  /**
+   * Objeto usuario que se modifica en la vista HTML con los datos introducidos en el forumulario
+   */
   usuario&#x3D;{
     id: 0,
     username: &quot;&quot;,
     password: &quot;&quot;
   }
-
+  /**
+   * Constructor de RegistroComponent
+   * @param usuariosServicio servicio que contiene los métodos para conectarse con la base de datos en lo relativo a usuarios
+   * @param router habilita la navegación
+   */
   constructor(private usuariosServicio: UsuariosService, private router: Router){}
-
+  /**
+   * @ignore
+   */
   ngOnInit(){
   }
-
+  /**
+   * Función que registra un usuario en la base de datos
+   * @param username nombre del usuario
+   * @param password contraseña del usuario
+   */
   registro(username: string, password: string){
     this.usuariosServicio.registro(username, password).subscribe((result: any)&#x3D;&gt; {
       this.registrado &#x3D; result;
