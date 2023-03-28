@@ -32,6 +32,10 @@ const routes: Routes = [
   {
     path: 'cards-inicio',
     component: CardsInicioComponent
+  },
+  {
+    path: '',
+    component: CardsInicioComponent
   }
 ];
 

@@ -19,7 +19,6 @@ export class AppComponent {
       this.router.navigate(['/login']);
     }else{
       this.login = "true";
-      this.router.navigate(['/cards-inicio']);
     }
   }
 }
