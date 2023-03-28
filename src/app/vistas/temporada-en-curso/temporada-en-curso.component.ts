@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Clasificacion } from 'src/app/clases/clasificacion/clasificacion';
 import { Comentario } from 'src/app/clases/comentario/comentario';
@@ -20,8 +21,9 @@ export class TemporadaEnCursoComponent {
    * @param apiF1 servicio que se comunica con el servido de F1
    * @param router habilita la navegación
    * @param comentarioService  servicio que contiene los métodos para conectarse con la base de datos en lo relativo a comentarios
+   * @param snackBar habilita los mensajes popup
    */
-  constructor(private apiF1: ApiF1Service, private router: Router, private comentarioService: ComentarioService){}
+  constructor(private apiF1: ApiF1Service, private router: Router, private comentarioService: ComentarioService, private snackBar: MatSnackBar){}
 
   /**
    * Variable que contiene las carreras de la temporada
@@ -31,7 +33,10 @@ export class TemporadaEnCursoComponent {
    * Variable que contiene el comentario escrito en la visya
    */
   comentario: string = "";
-
+  /**
+   * Variable que contiene el nombre de usuario que se ha logueado
+   */
+  nombreUsuarioLogueado: any = localStorage.getItem("username");
   /**
    * Variable que contiene la carrera seleccionada
    */
@@ -125,8 +130,11 @@ export class TemporadaEnCursoComponent {
     let fecha = new Date().toLocaleDateString('es-ES');
     let fechaCompleta = `${hora} ${fecha}`;
     this.comentarioService.publicar(username, numCarrera, this.comentario, fechaCompleta).subscribe((result) => console.log("Comentado"));
-    //window.location.reload();
     this.comentario = "";
+    this.snackBar.open(`${username} ha enviado un comentario!`); //Notificacion
+    setTimeout(()=>{ //Se ejecuta el refresco de página un poco mas tarde para dar tiempo a que se muestre el popup
+      document.location.reload();
+    }, 1000);
   }
   /**
    * Función para obtener todos los comentarios de esa carrera
@@ -148,5 +156,9 @@ export class TemporadaEnCursoComponent {
         );
       }
     });
+  }
+
+  eliminarComentario(id: number){
+    this.comentarioService.eliminarComentario(id).subscribe((result)=> console.log("Elimnado"));
   }
 }

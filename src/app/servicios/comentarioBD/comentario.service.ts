@@ -36,4 +36,8 @@ export class ComentarioService {
   getComentarios(carrera: number){
     return this.http.get(`${this.url}getComentarios.php?carrera=${carrera}`);
   }
+
+  eliminarComentario(id: number){
+    return this.http.get(`${this.url}eliminarComentario.php?id=${id}`);
+  }
 }

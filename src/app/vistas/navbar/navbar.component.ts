@@ -20,10 +20,8 @@ export class NavbarComponent {
   /**
    * Función que hace de logoff al usuario eliminando todos los tokens del localStorange
    */
-  logoff(): void{
-    localStorage.removeItem("login");
-    localStorage.removeItem("username");
-    localStorage.removeItem("esAdmin");
+  logoff(){
+    localStorage.clear();
     window.location.reload();
   }
 }

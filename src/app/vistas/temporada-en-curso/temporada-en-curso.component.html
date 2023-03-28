@@ -83,6 +83,7 @@
             <h3> {{ comentario.username }}</h3>
             <p> {{ comentario.texto }}</p>
             <p> {{ comentario.fecha }}</p>
+            <button mat-raised-button color="primary" *ngIf="comentario.username == nombreUsuarioLogueado" (click)="eliminarComentario(comentario.id)" >Eliminar</button>
           </div>
       </mat-expansion-panel>
   </mat-accordion>
