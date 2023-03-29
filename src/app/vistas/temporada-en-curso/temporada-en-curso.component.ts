@@ -161,5 +161,6 @@ export class TemporadaEnCursoComponent {
 
   eliminarComentario(id: number){
     this.comentarioService.eliminarComentario(id).subscribe((result)=> console.log("Elimnado"));
+    window.location.reload();
   }
 }
