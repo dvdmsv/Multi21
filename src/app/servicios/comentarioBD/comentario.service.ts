@@ -36,8 +36,29 @@ export class ComentarioService {
   getComentarios(carrera: number){
     return this.http.get(`${this.url}getComentarios.php?carrera=${carrera}`);
   }
-
+  /**
+   * Función que se encarga de marcar como eliminado un comentario en la base de datos
+   * @param id numero identificativo del comentario a marcar
+   */
   eliminarComentario(id: number){
     return this.http.get(`${this.url}eliminarComentario.php?id=${id}`);
+  }
+  /**
+   * Función que devuelve a un usuario administrador los comentarios marcados como eliminados
+   */
+  getComentariosEliminados(){
+    return this.http.get(`${this.url}getComentariosEliminados.php`);
+  }
+  /**
+   * Funcion que elimina definitivamente un comentario a partir de su id
+   * @param id numero identificativo del comentario
+   * @returns
+   */
+  eliminarComentarioDefinitivamente(id: number){
+    return this.http.get(`${this.url}eliminarComentarioDefinitivamente.php?id=${id}`);
+  }
+
+  publicarComentarioDeNuevo(id: number){
+    return this.http.get(`${this.url}publicarComentarioDeNuevo.php?id=${id}`);
   }
 }

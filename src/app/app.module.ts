@@ -26,6 +26,7 @@ import { TemporadaEnCursoComponent } from './vistas/temporada-en-curso/temporada
 import { GestionarUsuariosComponent } from './vistas/gestionar-usuarios/gestionar-usuarios.component';
 import { AnadirUsuariosComponent } from './vistas/anadir-usuarios/anadir-usuarios.component';
 import { CardsInicioComponent } from './vistas/cards-inicio/cards-inicio.component';
+import { RevisarComentariosEliminadosComponent } from './vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CardsInicioComponent } from './vistas/cards-inicio/cards-inicio.compone
     GestionarUsuariosComponent,
     AnadirUsuariosComponent,
     CardsInicioComponent,
+    RevisarComentariosEliminadosComponent,
   ],
   imports: [
     BrowserModule,

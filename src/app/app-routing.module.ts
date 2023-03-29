@@ -5,6 +5,7 @@ import { CardsInicioComponent } from './vistas/cards-inicio/cards-inicio.compone
 import { GestionarUsuariosComponent } from './vistas/gestionar-usuarios/gestionar-usuarios.component';
 import { LoginComponent } from './vistas/login/login.component';
 import { RegistroComponent } from './vistas/registro/registro.component';
+import { RevisarComentariosEliminadosComponent } from './vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component';
 import { TemporadaEnCursoComponent } from './vistas/temporada-en-curso/temporada-en-curso.component';
 
 const routes: Routes = [
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: '',
     component: CardsInicioComponent
+  },
+  {
+    path: 'revisar-comentarios-eliminados',
+    component: RevisarComentariosEliminadosComponent
   }
 ];
 

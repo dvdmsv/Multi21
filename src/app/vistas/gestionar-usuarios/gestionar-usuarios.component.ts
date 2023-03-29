@@ -24,7 +24,7 @@ export class GestionarUsuariosComponent {
    */
   columnasUsuario: string[] = ['id', 'username', 'password', 'admin', 'borrar', 'hacerAdmin', 'quitarAdmin'];
   /**
-   *
+   *  Constructor de GestionarUsuariosComponent
    * @param usuariosServicio servicio que contiene los métodos para conectarse con la base de datos en lo relativo a usuarios
    */
   constructor(private usuariosServicio: UsuariosService){}

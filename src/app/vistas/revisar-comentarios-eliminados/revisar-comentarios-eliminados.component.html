@@ -1,0 +1,34 @@
+<div class="contenedorTabla">
+  <table mat-table [dataSource]="arrComentarios" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> id </th>
+      <td mat-cell *matCellDef="let comentario"> {{comentario.id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef> Username </th>
+      <td mat-cell *matCellDef="let comentario"> {{comentario.username}} </td>
+    </ng-container>
+    <ng-container matColumnDef="carrera">
+      <th mat-header-cell *matHeaderCellDef> Carrera </th>
+      <td mat-cell *matCellDef="let comentario"> {{comentario.carrera}} </td>
+    </ng-container>
+    <ng-container matColumnDef="texto">
+      <th mat-header-cell *matHeaderCellDef> Texto </th>
+      <td mat-cell *matCellDef="let comentario"> {{comentario.texto}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell *matHeaderCellDef> Fecha </th>
+      <td mat-cell *matCellDef="let comentario"> {{comentario.fecha}} </td>
+    </ng-container>
+    <ng-container matColumnDef="borrar">
+      <th mat-header-cell *matHeaderCellDef> Borrar definitivamente </th>
+      <td mat-cell *matCellDef="let comentario"><button mat-raised-button color="primary" (click)="eliminarComentarioDefinitivamente(comentario.id)"> Borrar </button> </td>
+    </ng-container>
+    <ng-container matColumnDef="publicar">
+      <th mat-header-cell *matHeaderCellDef> Publicar de nuevo </th>
+      <td mat-cell *matCellDef="let comentario"><button mat-raised-button color="primary" (click)="publicarComentarioDeNuevo(comentario.id)"> Publicar </button> </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnasComentario"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnasComentario;"></tr>
+  </table>
+</div>
