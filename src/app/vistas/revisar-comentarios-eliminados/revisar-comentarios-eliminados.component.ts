@@ -7,6 +7,9 @@ import { ComentarioService } from 'src/app/servicios/comentarioBD/comentario.ser
   templateUrl: './revisar-comentarios-eliminados.component.html',
   styleUrls: ['./revisar-comentarios-eliminados.component.css']
 })
+/**
+ * Componente que permite a los usuarios administradores revisar los comentarios eliminados
+ */
 export class RevisarComentariosEliminadosComponent {
 /**
    * Variable que contiene todos los comentarios de la base de datos
