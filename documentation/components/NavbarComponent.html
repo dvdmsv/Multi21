@@ -317,10 +317,8 @@ export class NavbarComponent {
   /**
    * Función que hace de logoff al usuario eliminando todos los tokens del localStorange
    */
-  logoff(): void{
-    localStorage.removeItem(&quot;login&quot;);
-    localStorage.removeItem(&quot;username&quot;);
-    localStorage.removeItem(&quot;esAdmin&quot;);
+  logoff(){
+    localStorage.clear();
     window.location.reload();
   }
 }
@@ -336,6 +334,8 @@ export class NavbarComponent {
   &lt;mat-menu #adminMenu&#x3D;&quot;matMenu&quot;&gt;
     &lt;button mat-button routerLink&#x3D;&quot;/gestionar-usuarios&quot;&gt;Gestionar usuarios&lt;/button&gt;
     &lt;button mat-button routerLink&#x3D;&quot;/anadir-usuarios&quot;&gt;Añadir usuarios&lt;/button&gt;
+    &lt;button mat-button routerLink&#x3D;&quot;/revisar-comentarios-eliminados&quot;&gt;Revisar comentarios eliminados&lt;/button&gt;
+    &lt;button mat-button routerLink&#x3D;&quot;/revisar-comentarios&quot;&gt;Revisar comentarios publicados&lt;/button&gt;
   &lt;/mat-menu&gt;
 
   &lt;button mat-button routerLink&#x3D;&quot;/login&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; null&quot;&gt;Login&lt;mat-icon&gt;login&lt;/mat-icon&gt;&lt;/button&gt;
@@ -381,8 +381,8 @@ export class NavbarComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary">  <button mat-button routerLink="/cards-inicio" *ngIf="login == \'true\'">Multi21</button>  <mat-menu #menu="matMenu">    <button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button>  </mat-menu>  <mat-menu #adminMenu="matMenu">    <button mat-button routerLink="/gestionar-usuarios">Gestionar usuarios</button>    <button mat-button routerLink="/anadir-usuarios">Añadir usuarios</button>  </mat-menu>  <button mat-button routerLink="/login" *ngIf="login == null">Login<mat-icon>login</mat-icon></button>  <button mat-button routerLink="/registro" *ngIf="login == null">Registro<mat-icon>account_boxs</mat-icon></button>  <button mat-flat-button [matMenuTriggerFor]="menu" color="primary" *ngIf="login == \'true\'">Opciones del sitio</button>  <button mat-flat-button [matMenuTriggerFor]="adminMenu" color="primary" *ngIf="admin == \'true\'">Panel de control admin</button>  <button mat-button (click)="logoff()" *ngIf="login == \'true\'"><mat-icon>logout</mat-icon></button>  <mat-icon *ngIf="login == \'true\'">done</mat-icon></mat-toolbar><router-outlet></router-outlet></div>'
-    var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary">  <button mat-button routerLink="/cards-inicio" *ngIf="login == \'true\'">Multi21</button>  <mat-menu #menu="matMenu">    <button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button>  </mat-menu>  <mat-menu #adminMenu="matMenu">    <button mat-button routerLink="/gestionar-usuarios">Gestionar usuarios</button>    <button mat-button routerLink="/anadir-usuarios">Añadir usuarios</button>    <button mat-button routerLink="/revisar-comentarios-eliminados">Revisar comentarios eliminados</button>    <button mat-button routerLink="/revisar-comentarios">Revisar comentarios publicados</button>  </mat-menu>  <button mat-button routerLink="/login" *ngIf="login == null">Login<mat-icon>login</mat-icon></button>  <button mat-button routerLink="/registro" *ngIf="login == null">Registro<mat-icon>account_boxs</mat-icon></button>  <button mat-flat-button [matMenuTriggerFor]="menu" color="primary" *ngIf="login == \'true\'">Opciones del sitio</button>  <button mat-flat-button [matMenuTriggerFor]="adminMenu" color="primary" *ngIf="admin == \'true\'">Panel de control admin</button>  <button mat-button (click)="logoff()" *ngIf="login == \'true\'"><mat-icon>logout</mat-icon></button>  <mat-icon *ngIf="login == \'true\'">done</mat-icon></mat-toolbar><router-outlet></router-outlet></div>'
+    var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'RevisarComentariosComponent', 'selector': 'app-revisar-comentarios'},{'name': 'RevisarComentariosEliminadosComponent', 'selector': 'app-revisar-comentarios-eliminados'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};
 </script>

@@ -59,13 +59,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link" >AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-8951e71b36115b0098beb5f1de35ce5dda2df55672a4a193d38ae9da5dd99cea87af9fe2adf038739f5d7c20a727ab2944ae5637d14493b44389c30bafbdeaf6"' : 'data-target="#xs-components-links-module-AppModule-8951e71b36115b0098beb5f1de35ce5dda2df55672a4a193d38ae9da5dd99cea87af9fe2adf038739f5d7c20a727ab2944ae5637d14493b44389c30bafbdeaf6"' }>
+                                            'data-target="#components-links-module-AppModule-e5954d35d9a13a6ae9ba0ca5595e01bd76cde445d41b2ae9d84e512aee8ac5ec757654ef3e0a5158af8a813ee87d959b014446f5d14806aa4139a33c4af675fd"' : 'data-target="#xs-components-links-module-AppModule-e5954d35d9a13a6ae9ba0ca5595e01bd76cde445d41b2ae9d84e512aee8ac5ec757654ef3e0a5158af8a813ee87d959b014446f5d14806aa4139a33c4af675fd"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-8951e71b36115b0098beb5f1de35ce5dda2df55672a4a193d38ae9da5dd99cea87af9fe2adf038739f5d7c20a727ab2944ae5637d14493b44389c30bafbdeaf6"' :
-                                            'id="xs-components-links-module-AppModule-8951e71b36115b0098beb5f1de35ce5dda2df55672a4a193d38ae9da5dd99cea87af9fe2adf038739f5d7c20a727ab2944ae5637d14493b44389c30bafbdeaf6"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-e5954d35d9a13a6ae9ba0ca5595e01bd76cde445d41b2ae9d84e512aee8ac5ec757654ef3e0a5158af8a813ee87d959b014446f5d14806aa4139a33c4af675fd"' :
+                                            'id="xs-components-links-module-AppModule-e5954d35d9a13a6ae9ba0ca5595e01bd76cde445d41b2ae9d84e512aee8ac5ec757654ef3e0a5158af8a813ee87d959b014446f5d14806aa4139a33c4af675fd"' }>
                                             <li class="link">
                                                 <a href="components/AnadirUsuariosComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AnadirUsuariosComponent</a>
                                             </li>
@@ -86,6 +86,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             </li>
                                             <li class="link">
                                                 <a href="components/RegistroComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >RegistroComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/RevisarComentariosComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >RevisarComentariosComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/RevisarComentariosEliminadosComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >RevisarComentariosEliminadosComponent</a>
                                             </li>
                                             <li class="link">
                                                 <a href="components/TemporadaEnCursoComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >TemporadaEnCursoComponent</a>

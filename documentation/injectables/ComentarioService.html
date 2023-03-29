@@ -93,10 +93,25 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#getComentarios" >getComentarios</a>
+                                <a href="#eliminarComentario" >eliminarComentario</a>
+                            </li>
+                            <li>
+                                <a href="#eliminarComentarioDefinitivamente" >eliminarComentarioDefinitivamente</a>
+                            </li>
+                            <li>
+                                <a href="#getComentariosCarrera" >getComentariosCarrera</a>
+                            </li>
+                            <li>
+                                <a href="#getComentariosEliminados" >getComentariosEliminados</a>
+                            </li>
+                            <li>
+                                <a href="#getComentariosPublicados" >getComentariosPublicados</a>
                             </li>
                             <li>
                                 <a href="#publicar" >publicar</a>
+                            </li>
+                            <li>
+                                <a href="#publicarComentarioDeNuevo" >publicarComentarioDeNuevo</a>
                             </li>
                         </ul>
                     </td>
@@ -173,16 +188,168 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getComentarios"></a>
+                    <a name="eliminarComentario"></a>
                     <span class="name">
-                        <span ><b>getComentarios</b></span>
-                        <a href="#getComentarios"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>eliminarComentario</b></span>
+                        <a href="#eliminarComentario"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getComentarios(carrera: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+<code>eliminarComentario(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Función que se encarga de marcar como eliminado un comentario en la base de datos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>numero identificativo del comentario a marcar</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="eliminarComentarioDefinitivamente"></a>
+                    <span class="name">
+                        <span ><b>eliminarComentarioDefinitivamente</b></span>
+                        <a href="#eliminarComentarioDefinitivamente"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>eliminarComentarioDefinitivamente(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Funcion que elimina definitivamente un comentario a partir de su id</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>numero identificativo del comentario</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getComentariosCarrera"></a>
+                    <span class="name">
+                        <span ><b>getComentariosCarrera</b></span>
+                        <a href="#getComentariosCarrera"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getComentariosCarrera(carrera: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
@@ -241,6 +408,89 @@
                     <div class="io-description">
                         <p>devuelve un observable con los datos solicitados</p>
 
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getComentariosEliminados"></a>
+                    <span class="name">
+                        <span ><b>getComentariosEliminados</b></span>
+                        <a href="#getComentariosEliminados"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getComentariosEliminados()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Función que devuelve a un usuario administrador los comentarios marcados como eliminados</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getComentariosPublicados"></a>
+                    <span class="name">
+                        <span ><b>getComentariosPublicados</b></span>
+                        <a href="#getComentariosPublicados"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getComentariosPublicados()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Función que devuelve todos los comentarios publicados</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -371,6 +621,82 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="publicarComentarioDeNuevo"></a>
+                    <span class="name">
+                        <span ><b>publicarComentarioDeNuevo</b></span>
+                        <a href="#publicarComentarioDeNuevo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>publicarComentarioDeNuevo(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Funcion que publica de nuevo un comentario marcado como eliminado por el usuario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>numero identificativo del comentario</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
             <section>
     
@@ -455,8 +781,44 @@ export class ComentarioService {
    * @param carrera carrera seleccionada para mostrar los comentarios
    * @returns devuelve un observable con los datos solicitados
    */
-  getComentarios(carrera: number){
-    return this.http.get(&#x60;${this.url}getComentarios.php?carrera&#x3D;${carrera}&#x60;);
+  getComentariosCarrera(carrera: number){
+    return this.http.get(&#x60;${this.url}getComentariosCarrera.php?carrera&#x3D;${carrera}&#x60;);
+  }
+  /**
+   * Función que devuelve todos los comentarios publicados
+   * @returns
+   */
+  getComentariosPublicados(){
+    return this.http.get(&#x60;${this.url}getComentariosPublicados.php&#x60;);
+  }
+  /**
+   * Función que se encarga de marcar como eliminado un comentario en la base de datos
+   * @param id numero identificativo del comentario a marcar
+   */
+  eliminarComentario(id: number){
+    return this.http.get(&#x60;${this.url}eliminarComentario.php?id&#x3D;${id}&#x60;);
+  }
+  /**
+   * Función que devuelve a un usuario administrador los comentarios marcados como eliminados
+   */
+  getComentariosEliminados(){
+    return this.http.get(&#x60;${this.url}getComentariosEliminados.php&#x60;);
+  }
+  /**
+   * Funcion que elimina definitivamente un comentario a partir de su id
+   * @param id numero identificativo del comentario
+   * @returns
+   */
+  eliminarComentarioDefinitivamente(id: number){
+    return this.http.get(&#x60;${this.url}eliminarComentarioDefinitivamente.php?id&#x3D;${id}&#x60;);
+  }
+  /**
+   * Funcion que publica de nuevo un comentario marcado como eliminado por el usuario
+   * @param id numero identificativo del comentario
+   * @returns
+   */
+  publicarComentarioDeNuevo(id: number){
+    return this.http.get(&#x60;${this.url}publicarComentarioDeNuevo.php?id&#x3D;${id}&#x60;);
   }
 }
 </code></pre>

@@ -157,6 +157,9 @@
                             <li>
                                 <a href="#comentariosRecibidos" >comentariosRecibidos</a>
                             </li>
+                            <li>
+                                <a href="#nombreUsuarioLogueado" >nombreUsuarioLogueado</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -173,7 +176,10 @@
                                 <a href="#buscar" >buscar</a>
                             </li>
                             <li>
-                                <a href="#getComentarios" >getComentarios</a>
+                                <a href="#eliminarComentario" >eliminarComentario</a>
+                            </li>
+                            <li>
+                                <a href="#getComentariosCarrera" >getComentariosCarrera</a>
                             </li>
                             <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
@@ -199,12 +205,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(apiF1: <a href="../injectables/ApiF1Service.html" target="_self">ApiF1Service</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, comentarioService: <a href="../injectables/ComentarioService.html" target="_self">ComentarioService</a>)</code>
+<code>constructor(apiF1: <a href="../injectables/ApiF1Service.html" target="_self">ApiF1Service</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, comentarioService: <a href="../injectables/ComentarioService.html" target="_self">ComentarioService</a>, snackBar: MatSnackBar)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -272,6 +278,22 @@
 
                                                         </td>
                                                 </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatSnackBar</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>habilita los mensajes popup</p>
+
+                                                        </td>
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -310,8 +332,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="81"
-                            class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:81</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:86</a></div>
                 </td>
             </tr>
 
@@ -370,24 +392,93 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getComentarios"></a>
+                    <a name="eliminarComentario"></a>
                     <span class="name">
-                        <span ><b>getComentarios</b></span>
-                        <a href="#getComentarios"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>eliminarComentario</b></span>
+                        <a href="#eliminarComentario"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getComentarios(numCarrera: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+<code>eliminarComentario(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="135"
-                            class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:135</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="162"
+                            class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:162</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getComentariosCarrera"></a>
+                    <span class="name">
+                        <span ><b>getComentariosCarrera</b></span>
+                        <a href="#getComentariosCarrera"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getComentariosCarrera(numCarrera: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="143"
+                            class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:143</a></div>
                 </td>
             </tr>
 
@@ -462,8 +553,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="71"
-                            class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:71</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:76</a></div>
                 </td>
             </tr>
 
@@ -501,8 +592,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="121"
-                            class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:121</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:126</a></div>
                 </td>
             </tr>
 
@@ -587,7 +678,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:51</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:56</a></div>
                         </td>
                     </tr>
 
@@ -624,7 +715,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:55</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:60</a></div>
                         </td>
                     </tr>
 
@@ -661,7 +752,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:59</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:64</a></div>
                         </td>
                     </tr>
 
@@ -693,7 +784,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -725,7 +816,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:38</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:43</a></div>
                         </td>
                     </tr>
 
@@ -757,7 +848,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:42</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:47</a></div>
                         </td>
                     </tr>
 
@@ -794,7 +885,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:63</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:68</a></div>
                         </td>
                     </tr>
 
@@ -831,7 +922,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:67</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:72</a></div>
                         </td>
                     </tr>
 
@@ -868,7 +959,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:35</a></div>
                         </td>
                     </tr>
 
@@ -900,13 +991,50 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:46</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:51</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Variable que contiene los comentarios</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nombreUsuarioLogueado"></a>
+                    <span class="name">
+                        <span ><b>nombreUsuarioLogueado</b></span>
+                        <a href="#nombreUsuarioLogueado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>localStorage.getItem(&quot;username&quot;)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/vistas/temporada-en-curso/temporada-en-curso.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable que contiene el nombre de usuario que se ha logueado</p>
 </div>
                 </td>
             </tr>
@@ -920,6 +1048,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ViewChild } from &#x27;@angular/core&#x27;;
+import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
 import { Clasificacion } from &#x27;src/app/clases/clasificacion/clasificacion&#x27;;
 import { Comentario } from &#x27;src/app/clases/comentario/comentario&#x27;;
@@ -941,8 +1070,9 @@ export class TemporadaEnCursoComponent {
    * @param apiF1 servicio que se comunica con el servido de F1
    * @param router habilita la navegación
    * @param comentarioService  servicio que contiene los métodos para conectarse con la base de datos en lo relativo a comentarios
+   * @param snackBar habilita los mensajes popup
    */
-  constructor(private apiF1: ApiF1Service, private router: Router, private comentarioService: ComentarioService){}
+  constructor(private apiF1: ApiF1Service, private router: Router, private comentarioService: ComentarioService, private snackBar: MatSnackBar){}
 
   /**
    * Variable que contiene las carreras de la temporada
@@ -952,7 +1082,10 @@ export class TemporadaEnCursoComponent {
    * Variable que contiene el comentario escrito en la visya
    */
   comentario: string &#x3D; &quot;&quot;;
-
+  /**
+   * Variable que contiene el nombre de usuario que se ha logueado
+   */
+  nombreUsuarioLogueado: any &#x3D; localStorage.getItem(&quot;username&quot;);
   /**
    * Variable que contiene la carrera seleccionada
    */
@@ -1033,7 +1166,7 @@ export class TemporadaEnCursoComponent {
           ));
       }
     });
-    this.getComentarios(numCarrera); //Obtiene los comentarios de esa carrera
+    this.getComentariosCarrera(numCarrera); //Obtiene los comentarios de esa carrera
   }
   /**
    * Funcion para publicar comentarios en la carrera seleccionada
@@ -1046,15 +1179,18 @@ export class TemporadaEnCursoComponent {
     let fecha &#x3D; new Date().toLocaleDateString(&#x27;es-ES&#x27;);
     let fechaCompleta &#x3D; &#x60;${hora} ${fecha}&#x60;;
     this.comentarioService.publicar(username, numCarrera, this.comentario, fechaCompleta).subscribe((result) &#x3D;&gt; console.log(&quot;Comentado&quot;));
-    //window.location.reload();
     this.comentario &#x3D; &quot;&quot;;
+    this.snackBar.open(&#x60;${username} ha enviado un comentario!&#x60;); //Notificacion
+    setTimeout(()&#x3D;&gt;{ //Se ejecuta el refresco de página un poco mas tarde para dar tiempo a que se muestre el popup
+      document.location.reload();
+    }, 1000);
   }
   /**
    * Función para obtener todos los comentarios de esa carrera
    * @param numCarrera numero de la carrera para mostrar los comentarios
    */
-  getComentarios(numCarrera: number){
-    this.comentarioService.getComentarios(numCarrera).subscribe(result &#x3D;&gt; {
+  getComentariosCarrera(numCarrera: number){
+    this.comentarioService.getComentariosCarrera(numCarrera).subscribe(result &#x3D;&gt; {
       this.comentariosRecibidos &#x3D; result;
       this.arrComentSelec &#x3D; [];
       for(const comentario of this.comentariosRecibidos){
@@ -1064,11 +1200,17 @@ export class TemporadaEnCursoComponent {
             comentario.username,
             comentario.carrera,
             comentario.texto,
-            comentario.fecha
+            comentario.fecha,
+            comentario.eliminado
           )
         );
       }
     });
+  }
+
+  eliminarComentario(id: number){
+    this.comentarioService.eliminarComentario(id).subscribe((result)&#x3D;&gt; console.log(&quot;Elimnado&quot;));
+    window.location.reload();
   }
 }
 </code></pre>
@@ -1158,8 +1300,10 @@ export class TemporadaEnCursoComponent {
           &lt;/mat-expansion-panel-header&gt;
           &lt;div *ngFor&#x3D;&quot;let comentario of arrComentSelec&quot; class&#x3D;&quot;comentario&quot;&gt;
             &lt;h3&gt; {{ comentario.username }}&lt;/h3&gt;
-            &lt;p&gt; {{ comentario.texto }}&lt;/p&gt;
+            &lt;p *ngIf&#x3D;&quot;comentario.eliminado &#x3D;&#x3D; 0; else borrado&quot;&gt; {{ comentario.texto }}&lt;/p&gt;
+            &lt;ng-template #borrado &gt;&lt;p style&#x3D;&quot;font-style: italic;&quot;&gt;El usuario ha eliminado el comentario&lt;/p&gt;&lt;/ng-template&gt;
             &lt;p&gt; {{ comentario.fecha }}&lt;/p&gt;
+            &lt;button mat-raised-button color&#x3D;&quot;primary&quot; *ngIf&#x3D;&quot;comentario.username &#x3D;&#x3D; nombreUsuarioLogueado &amp;&amp; comentario.eliminado &#x3D;&#x3D; 0&quot; (click)&#x3D;&quot;eliminarComentario(comentario.id)&quot; &gt;Eliminar&lt;/button&gt;
           &lt;/div&gt;
       &lt;/mat-expansion-panel&gt;
   &lt;/mat-accordion&gt;
@@ -1210,6 +1354,7 @@ caption{
 }
 
 .comentario{
+  padding-bottom: 15px;
   border-bottom: solid grey 1px;
 }
 
@@ -1268,8 +1413,8 @@ th, td{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-form-field class="contendorSelector">  <p>Selecciona un GP de la temporada actual para visualizar el resultado y la clasificación.</p>  <mat-select placeholder="Circuito" name="operacion" #round (selectionChange)="buscar(round.value)">    <mat-option *ngFor="let carrera of carreras.MRData.RaceTable.Races" [value]="carrera.round">      {{carrera.round}}º {{carrera.Circuit.circuitName}}    </mat-option>  </mat-select></mat-form-field><div class="contenedorTabla">  <table mat-table [dataSource]="arrCarrSelec" class="mat-elevation-z8">    <caption>Resultado de carrera</caption>    <ng-container matColumnDef="posicion">      <th mat-header-cell *matHeaderCellDef> Posición </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.posicion}} </td>    </ng-container>    <ng-container matColumnDef="piloto">      <th mat-header-cell *matHeaderCellDef> Piloto </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.piloto}} </td>    </ng-container>    <ng-container matColumnDef="escuderia">      <th mat-header-cell *matHeaderCellDef> Escudería </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.escuderia}} </td>    </ng-container>    <ng-container matColumnDef="pos. salida">      <th mat-header-cell *matHeaderCellDef> Pos. Salida </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.posSalida}} </td>    </ng-container>    <ng-container matColumnDef="status">      <th mat-header-cell *matHeaderCellDef> Status </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.status}} </td>    </ng-container>    <ng-container matColumnDef="puntos">      <th mat-header-cell *matHeaderCellDef> Puntos </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.puntos}} </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="columnasCarrera"></tr>    <tr mat-row *matRowDef="let row; columns: columnasCarrera;"></tr>  </table>  <table mat-table [dataSource]="arrClasifSelec" class="mat-elevation-z8">    <caption>Clasificación</caption>    <ng-container matColumnDef="posicion">      <th mat-header-cell *matHeaderCellDef> Posición </th>      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.posicion}} </td>    </ng-container>    <ng-container matColumnDef="piloto">      <th mat-header-cell *matHeaderCellDef> Piloto </th>      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.piloto}} </td>    </ng-container>    <ng-container matColumnDef="escuderia">      <th mat-header-cell *matHeaderCellDef> Escudería </th>      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.escuderia}} </td>    </ng-container>    <ng-container matColumnDef="puntos">      <th mat-header-cell *matHeaderCellDef> Puntos </th>      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.puntos}} </td>    </ng-container>    <ng-container matColumnDef="victorias">      <th mat-header-cell *matHeaderCellDef> Vicotiras </th>      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.victorias}} </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="columnasClasific"></tr>    <tr mat-row *matRowDef="let row; columns: columnasClasific;"></tr>  </table></div><form *ngIf="round.value>0" #textoForm="ngForm" class="campoComentario">  <textarea matInput [(ngModel)]="comentario" cdkTextareaAutosize minlength="1" maxlength="200" name="texto" cdkAutosizeMinRows="10"  cdkAutosizeMaxRows="10" placeholder="Máximo 200 caracteres" required #texto="ngModel"></textarea>  <button mat-raised-button color="primary" (click)="publicar(round.value)" [disabled]="!textoForm.form.valid"><mat-icon>send</mat-icon></button></form><div class="panelComentarios" *ngIf="arrComentSelec.length">  <mat-accordion>      <mat-expansion-panel>          <mat-expansion-panel-header>              <mat-panel-title>                  <h2>Comentarios</h2>              </mat-panel-title>          </mat-expansion-panel-header>          <div *ngFor="let comentario of arrComentSelec" class="comentario">            <h3> {{ comentario.username }}</h3>            <p> {{ comentario.texto }}</p>            <p> {{ comentario.fecha }}</p>          </div>      </mat-expansion-panel>  </mat-accordion></div></div>'
-    var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
+        var COMPONENT_TEMPLATE = '<div><mat-form-field class="contendorSelector">  <p>Selecciona un GP de la temporada actual para visualizar el resultado y la clasificación.</p>  <mat-select placeholder="Circuito" name="operacion" #round (selectionChange)="buscar(round.value)">    <mat-option *ngFor="let carrera of carreras.MRData.RaceTable.Races" [value]="carrera.round">      {{carrera.round}}º {{carrera.Circuit.circuitName}}    </mat-option>  </mat-select></mat-form-field><div class="contenedorTabla">  <table mat-table [dataSource]="arrCarrSelec" class="mat-elevation-z8">    <caption>Resultado de carrera</caption>    <ng-container matColumnDef="posicion">      <th mat-header-cell *matHeaderCellDef> Posición </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.posicion}} </td>    </ng-container>    <ng-container matColumnDef="piloto">      <th mat-header-cell *matHeaderCellDef> Piloto </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.piloto}} </td>    </ng-container>    <ng-container matColumnDef="escuderia">      <th mat-header-cell *matHeaderCellDef> Escudería </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.escuderia}} </td>    </ng-container>    <ng-container matColumnDef="pos. salida">      <th mat-header-cell *matHeaderCellDef> Pos. Salida </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.posSalida}} </td>    </ng-container>    <ng-container matColumnDef="status">      <th mat-header-cell *matHeaderCellDef> Status </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.status}} </td>    </ng-container>    <ng-container matColumnDef="puntos">      <th mat-header-cell *matHeaderCellDef> Puntos </th>      <td mat-cell *matCellDef="let resultado"> {{resultado.puntos}} </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="columnasCarrera"></tr>    <tr mat-row *matRowDef="let row; columns: columnasCarrera;"></tr>  </table>  <table mat-table [dataSource]="arrClasifSelec" class="mat-elevation-z8">    <caption>Clasificación</caption>    <ng-container matColumnDef="posicion">      <th mat-header-cell *matHeaderCellDef> Posición </th>      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.posicion}} </td>    </ng-container>    <ng-container matColumnDef="piloto">      <th mat-header-cell *matHeaderCellDef> Piloto </th>      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.piloto}} </td>    </ng-container>    <ng-container matColumnDef="escuderia">      <th mat-header-cell *matHeaderCellDef> Escudería </th>      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.escuderia}} </td>    </ng-container>    <ng-container matColumnDef="puntos">      <th mat-header-cell *matHeaderCellDef> Puntos </th>      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.puntos}} </td>    </ng-container>    <ng-container matColumnDef="victorias">      <th mat-header-cell *matHeaderCellDef> Vicotiras </th>      <td mat-cell *matCellDef="let clasificacion"> {{clasificacion.victorias}} </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="columnasClasific"></tr>    <tr mat-row *matRowDef="let row; columns: columnasClasific;"></tr>  </table></div><form *ngIf="round.value>0" #textoForm="ngForm" class="campoComentario">  <textarea matInput [(ngModel)]="comentario" cdkTextareaAutosize minlength="1" maxlength="200" name="texto" cdkAutosizeMinRows="10"  cdkAutosizeMaxRows="10" placeholder="Máximo 200 caracteres" required #texto="ngModel"></textarea>  <button mat-raised-button color="primary" (click)="publicar(round.value)" [disabled]="!textoForm.form.valid"><mat-icon>send</mat-icon></button></form><div class="panelComentarios" *ngIf="arrComentSelec.length">  <mat-accordion>      <mat-expansion-panel>          <mat-expansion-panel-header>              <mat-panel-title>                  <h2>Comentarios</h2>              </mat-panel-title>          </mat-expansion-panel-header>          <div *ngFor="let comentario of arrComentSelec" class="comentario">            <h3> {{ comentario.username }}</h3>            <p *ngIf="comentario.eliminado == 0; else borrado"> {{ comentario.texto }}</p>            <ng-template #borrado ><p style="font-style: italic;">El usuario ha eliminado el comentario</p></ng-template>            <p> {{ comentario.fecha }}</p>            <button mat-raised-button color="primary" *ngIf="comentario.username == nombreUsuarioLogueado && comentario.eliminado == 0" (click)="eliminarComentario(comentario.id)" >Eliminar</button>          </div>      </mat-expansion-panel>  </mat-accordion></div></div>'
+    var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'RevisarComentariosComponent', 'selector': 'app-revisar-comentarios'},{'name': 'RevisarComentariosEliminadosComponent', 'selector': 'app-revisar-comentarios-eliminados'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'TemporadaEnCursoComponent'};
 </script>

@@ -79,6 +79,8 @@ import { CardsInicioComponent } from &#x27;./vistas/cards-inicio/cards-inicio.co
 import { GestionarUsuariosComponent } from &#x27;./vistas/gestionar-usuarios/gestionar-usuarios.component&#x27;;
 import { LoginComponent } from &#x27;./vistas/login/login.component&#x27;;
 import { RegistroComponent } from &#x27;./vistas/registro/registro.component&#x27;;
+import { RevisarComentariosEliminadosComponent } from &#x27;./vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component&#x27;;
+import { RevisarComentariosComponent } from &#x27;./vistas/revisar-comentarios/revisar-comentarios.component&#x27;;
 import { TemporadaEnCursoComponent } from &#x27;./vistas/temporada-en-curso/temporada-en-curso.component&#x27;;
 
 const routes: Routes &#x3D; [
@@ -106,6 +108,18 @@ const routes: Routes &#x3D; [
   {
     path: &#x27;cards-inicio&#x27;,
     component: CardsInicioComponent
+  },
+  {
+    path: &#x27;&#x27;,
+    component: CardsInicioComponent
+  },
+  {
+    path: &#x27;revisar-comentarios-eliminados&#x27;,
+    component: RevisarComentariosEliminadosComponent
+  },
+  {
+    path: &#x27;revisar-comentarios&#x27;,
+    component: RevisarComentariosComponent
   }
 ];
 
