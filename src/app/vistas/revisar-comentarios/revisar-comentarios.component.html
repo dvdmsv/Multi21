@@ -20,9 +20,9 @@
       <th mat-header-cell *matHeaderCellDef> Borrar definitivamente </th>
       <td mat-cell *matCellDef="let comentario"><button mat-raised-button color="primary" (click)="eliminarComentarioDefinitivamente(comentario.id)"> Borrar </button> </td>
     </ng-container>
-    <ng-container matColumnDef="publicar">
-      <th mat-header-cell *matHeaderCellDef> Publicar de nuevo </th>
-      <td mat-cell *matCellDef="let comentario"><button mat-raised-button color="primary" (click)="publicarComentarioDeNuevo(comentario.id)"> Publicar </button> </td>
+    <ng-container matColumnDef="marcarBorrado">
+      <th mat-header-cell *matHeaderCellDef> Marcar como borrado </th>
+      <td mat-cell *matCellDef="let comentario"><button mat-raised-button color="primary" (click)="marcarComoBorrado(comentario.id)"> Marcar </button> </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="columnasComentario"></tr>
     <tr mat-row *matRowDef="let row; columns: columnasComentario;"></tr>

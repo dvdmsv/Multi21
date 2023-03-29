@@ -27,6 +27,7 @@ import { GestionarUsuariosComponent } from './vistas/gestionar-usuarios/gestiona
 import { AnadirUsuariosComponent } from './vistas/anadir-usuarios/anadir-usuarios.component';
 import { CardsInicioComponent } from './vistas/cards-inicio/cards-inicio.component';
 import { RevisarComentariosEliminadosComponent } from './vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component';
+import { RevisarComentariosComponent } from './vistas/revisar-comentarios/revisar-comentarios.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { RevisarComentariosEliminadosComponent } from './vistas/revisar-comentar
     AnadirUsuariosComponent,
     CardsInicioComponent,
     RevisarComentariosEliminadosComponent,
+    RevisarComentariosComponent,
   ],
   imports: [
     BrowserModule,

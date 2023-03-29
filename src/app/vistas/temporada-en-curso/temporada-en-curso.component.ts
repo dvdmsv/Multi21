@@ -117,7 +117,7 @@ export class TemporadaEnCursoComponent {
           ));
       }
     });
-    this.getComentarios(numCarrera); //Obtiene los comentarios de esa carrera
+    this.getComentariosCarrera(numCarrera); //Obtiene los comentarios de esa carrera
   }
   /**
    * Funcion para publicar comentarios en la carrera seleccionada
@@ -140,8 +140,8 @@ export class TemporadaEnCursoComponent {
    * Función para obtener todos los comentarios de esa carrera
    * @param numCarrera numero de la carrera para mostrar los comentarios
    */
-  getComentarios(numCarrera: number){
-    this.comentarioService.getComentarios(numCarrera).subscribe(result => {
+  getComentariosCarrera(numCarrera: number){
+    this.comentarioService.getComentariosCarrera(numCarrera).subscribe(result => {
       this.comentariosRecibidos = result;
       this.arrComentSelec = [];
       for(const comentario of this.comentariosRecibidos){

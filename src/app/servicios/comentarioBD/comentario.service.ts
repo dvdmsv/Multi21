@@ -33,8 +33,15 @@ export class ComentarioService {
    * @param carrera carrera seleccionada para mostrar los comentarios
    * @returns devuelve un observable con los datos solicitados
    */
-  getComentarios(carrera: number){
-    return this.http.get(`${this.url}getComentarios.php?carrera=${carrera}`);
+  getComentariosCarrera(carrera: number){
+    return this.http.get(`${this.url}getComentariosCarrera.php?carrera=${carrera}`);
+  }
+  /**
+   * Función que devuelve todos los comentarios publicados
+   * @returns
+   */
+  getComentariosPublicados(){
+    return this.http.get(`${this.url}getComentariosPublicados.php`);
   }
   /**
    * Función que se encarga de marcar como eliminado un comentario en la base de datos
@@ -57,7 +64,11 @@ export class ComentarioService {
   eliminarComentarioDefinitivamente(id: number){
     return this.http.get(`${this.url}eliminarComentarioDefinitivamente.php?id=${id}`);
   }
-
+  /**
+   * Funcion que publica de nuevo un comentario marcado como eliminado por el usuario
+   * @param id numero identificativo del comentario
+   * @returns
+   */
   publicarComentarioDeNuevo(id: number){
     return this.http.get(`${this.url}publicarComentarioDeNuevo.php?id=${id}`);
   }
