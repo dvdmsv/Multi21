@@ -1,20 +1,41 @@
-<mat-toolbar color="primary">
-  <button mat-button routerLink="/cards-inicio" *ngIf="login == 'true'">Multi21</button>
-  <mat-menu #menu="matMenu">
-    <button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button>
-  </mat-menu>
-  <mat-menu #adminMenu="matMenu">
-    <button mat-button routerLink="/gestionar-usuarios">Gestionar usuarios</button>
-    <button mat-button routerLink="/anadir-usuarios">Añadir usuarios</button>
-    <button mat-button routerLink="/revisar-comentarios-eliminados">Revisar comentarios eliminados</button>
-    <button mat-button routerLink="/revisar-comentarios">Revisar comentarios publicados</button>
-  </mat-menu>
+<div>
+  <mat-toolbar color="primary" class="toolbar" class="mat-elevation-z10">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
 
-  <button mat-button routerLink="/login" *ngIf="login == null">Login<mat-icon>login</mat-icon></button>
-  <button mat-button routerLink="/registro" *ngIf="login == null">Registro<mat-icon>account_boxs</mat-icon></button>
-  <button mat-flat-button [matMenuTriggerFor]="menu" color="primary" *ngIf="login == 'true'">Opciones del sitio</button>
-  <button mat-flat-button [matMenuTriggerFor]="adminMenu" color="primary" *ngIf="admin == 'true'">Panel de control admin</button>
-  <button mat-button (click)="logoff()" *ngIf="login == 'true'"><mat-icon>logout</mat-icon></button>
-  <mat-icon *ngIf="login == 'true'">done</mat-icon>
-</mat-toolbar>
-<router-outlet></router-outlet>
+    <button mat-button routerLink="/cards-inicio" *ngIf="login == 'true'"><img src="/assets/img/logo_1.png" id="logo"></button>
+    <button mat-button (click)="logoff()" *ngIf="login == 'true'">
+      <mat-icon>logout</mat-icon>
+    </button>
+    <mat-icon *ngIf="login == 'true'">done</mat-icon>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill class="sidenav">
+    <mat-sidenav color="primary" #sidenav fxLayout="column">
+      <div class=".mat-sidenav-content" fxLayout="column">
+        <button mat-button routerLink="/login" *ngIf="login == null">Login<mat-icon>login</mat-icon></button>
+        <button mat-button routerLink="/registro" *ngIf="login == null">Registro<mat-icon>account_boxs</mat-icon></button>
+        <button mat-flat-button [matMenuTriggerFor]="menu" *ngIf="login == 'true'">Opciones del sitio</button>
+        <button mat-flat-button [matMenuTriggerFor]="adminMenu" *ngIf="admin == 'true'">Panel de control admin</button>
+
+      </div>
+
+      <mat-menu #adminMenu="matMenu" class="mat-menu" >
+        <button mat-button routerLink="/gestionar-usuarios">Gestionar usuarios</button>
+        <button mat-button routerLink="/anadir-usuarios">Añadir usuarios</button>
+        <button mat-button routerLink="/revisar-comentarios-eliminados">Comentarios eliminados</button>
+        <button mat-button routerLink="/revisar-comentarios">Comentarios publicados</button>
+      </mat-menu>
+
+      <mat-menu #menu="matMenu">
+        <button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button>
+      </mat-menu>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+  </mat-sidenav-container>
+</div>
+
+

@@ -17,6 +17,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 import { LoginComponent } from './vistas/login/login.component';
@@ -58,7 +59,8 @@ import { RevisarComentariosComponent } from './vistas/revisar-comentarios/revisa
     MatIconModule,
     MatSnackBarModule,
     MatCheckboxModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
