@@ -1,0 +1,24 @@
+<h1>Todos los pilotos de la presente temporada de F1</h1>
+<h3>Sigue a tus pilotos favoritos y visualiza la progresión de su temporada</h3>
+<div class="contenedorTabla">
+  <table mat-table [dataSource]="arrPilotos" class="mat-elevation-z8">
+    <ng-container matColumnDef="driverID">
+      <th mat-header-cell *matHeaderCellDef> id </th>
+      <td mat-cell *matCellDef="let piloto"> {{piloto.id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="familyName">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let piloto"> {{piloto.nombre}} </td>
+    </ng-container>
+    <ng-container matColumnDef="nationality">
+      <th mat-header-cell *matHeaderCellDef> Nacionalidad </th>
+      <td mat-cell *matCellDef="let piloto"> {{piloto.nacionalidad}} </td>
+    </ng-container>
+    <ng-container matColumnDef="seguir">
+      <th mat-header-cell *matHeaderCellDef> Seguir piloto </th>
+      <td mat-cell *matCellDef="let piloto"> <button mat-raised-button color="primary">Seguir</button> </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnasPiloto"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnasPiloto;"></tr>
+  </table>
+</div>

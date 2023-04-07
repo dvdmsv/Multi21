@@ -8,6 +8,7 @@ import { RegistroComponent } from './vistas/registro/registro.component';
 import { RevisarComentariosEliminadosComponent } from './vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component';
 import { RevisarComentariosComponent } from './vistas/revisar-comentarios/revisar-comentarios.component';
 import { TemporadaEnCursoComponent } from './vistas/temporada-en-curso/temporada-en-curso.component';
+import { PilotosComponent } from './vistas/pilotos/pilotos.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'revisar-comentarios',
     component: RevisarComentariosComponent
+  },
+  {
+    path: 'pilotos',
+    component: PilotosComponent
   }
 ];
 

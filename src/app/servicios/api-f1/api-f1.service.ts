@@ -36,4 +36,11 @@ export class ApiF1Service {
   clasificacion(numCarrera: number){
     return this.http.get(`https://ergast.com/api/f1/current/${numCarrera}/driverStandings.json`);
   }
+  /**
+   * Solicita al servidor los pilotos de la presente temporada de F1
+   * @returns observabe con los datos solicitados
+   */
+  getPilotos(){
+    return this.http.get('https://ergast.com/api/f1/current/drivers.json');
+  }
 }
