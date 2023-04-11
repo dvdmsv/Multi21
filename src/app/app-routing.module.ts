@@ -10,6 +10,7 @@ import { RevisarComentariosComponent } from './vistas/revisar-comentarios/revisa
 import { TemporadaEnCursoComponent } from './vistas/temporada-en-curso/temporada-en-curso.component';
 import { PilotosComponent } from './vistas/pilotos/pilotos.component';
 import { PilotosSeguidosComponent } from './vistas/pilotos-seguidos/pilotos-seguidos.component';
+import { ClasificacionActualizadaComponent } from './vistas/clasificacion-actualizada/clasificacion-actualizada.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,10 @@ const routes: Routes = [
   {
     path: 'pilotos-seguidos',
     component: PilotosSeguidosComponent
+  },
+  {
+    path: 'clasificacion-actualizada',
+    component: ClasificacionActualizadaComponent
   }
 ];
 

@@ -31,6 +31,7 @@ import { RevisarComentariosEliminadosComponent } from './vistas/revisar-comentar
 import { RevisarComentariosComponent } from './vistas/revisar-comentarios/revisar-comentarios.component';
 import { PilotosComponent } from './vistas/pilotos/pilotos.component';
 import { PilotosSeguidosComponent } from './vistas/pilotos-seguidos/pilotos-seguidos.component';
+import { ClasificacionActualizadaComponent } from './vistas/clasificacion-actualizada/clasificacion-actualizada.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { PilotosSeguidosComponent } from './vistas/pilotos-seguidos/pilotos-segu
     RevisarComentariosComponent,
     PilotosComponent,
     PilotosSeguidosComponent,
+    ClasificacionActualizadaComponent,
   ],
   imports: [
     BrowserModule,

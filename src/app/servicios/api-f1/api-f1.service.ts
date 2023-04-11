@@ -47,4 +47,8 @@ export class ApiF1Service {
   resultadosPiloto(pilotoId: string){
     return this.http.get(`https://ergast.com/api/f1/current/drivers/${pilotoId}/results.json`);
   }
+
+  clasificacionActualizada(){
+    return this.http.get(`https://ergast.com/api/f1/current/driverStandings.json`);
+  }
 }
