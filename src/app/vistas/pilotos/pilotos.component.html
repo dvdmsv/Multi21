@@ -8,7 +8,7 @@
     </ng-container>
     <ng-container matColumnDef="seguir">
       <th mat-header-cell *matHeaderCellDef> Seguir piloto </th>
-      <td mat-cell *matCellDef="let piloto"> <button mat-raised-button color="primary" (click)="seguir(piloto.id)">Seguir</button> </td>
+      <td mat-cell *matCellDef="let piloto"> <button mat-raised-button color="primary" (click)="seguir(piloto.id, piloto.nombre)">Seguir</button> </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="columnasPiloto"></tr>
     <tr mat-row *matRowDef="let row; columns: columnasPiloto;"></tr>

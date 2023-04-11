@@ -55,9 +55,11 @@ export class PilotosComponent {
     });
   }
 
-  seguir(piloto: string){
+  seguir(pilotoId: string, nombrePiloto: string){
     let usuario = localStorage.getItem("username");
-    this.seguimientoPilotosService.seguirPiloto(usuario, piloto).subscribe((result)=> console.log("Seguido"));
-    window.location.reload();
+    this.seguimientoPilotosService.seguirPiloto(usuario, pilotoId, nombrePiloto).subscribe((result)=> console.log("Seguido"));
+    setTimeout(()=>{ //Se ejecuta el refresco de página un poco mas tarde para dar tiempo a que se guarde el piloto
+      document.location.reload();
+    }, 500);
   }
 }

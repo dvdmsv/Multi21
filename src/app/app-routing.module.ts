@@ -9,6 +9,7 @@ import { RevisarComentariosEliminadosComponent } from './vistas/revisar-comentar
 import { RevisarComentariosComponent } from './vistas/revisar-comentarios/revisar-comentarios.component';
 import { TemporadaEnCursoComponent } from './vistas/temporada-en-curso/temporada-en-curso.component';
 import { PilotosComponent } from './vistas/pilotos/pilotos.component';
+import { PilotosSeguidosComponent } from './vistas/pilotos-seguidos/pilotos-seguidos.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'pilotos',
     component: PilotosComponent
+  },
+  {
+    path: 'pilotos-seguidos',
+    component: PilotosSeguidosComponent
   }
 ];
 

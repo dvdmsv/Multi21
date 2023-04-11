@@ -1,0 +1,26 @@
+<div class="panelComentarios" *ngIf="arrPilotosSeguidos.length; else noSeguidos">
+  <mat-accordion>
+      <mat-expansion-panel *ngFor="let piloto of arrPilotosSeguidos" (opened)="resultadosPiloto(piloto.piloto)">
+          <mat-expansion-panel-header>
+              <mat-panel-title >
+                  <h2>{{ piloto.nombre_piloto }}</h2>
+                  <button mat-raised-button (click)="dejarDeSeguir(piloto.id)">Dejar de seguir</button>
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngFor="let resultado of arrResultadosPiloto" class="resultado">
+            <h2>Carrera {{ resultado.ronda }}: {{ resultado.carrera }} {{ resultado.fecha }}</h2>
+            <h3>Posicion en la parrilla:</h3>
+            <p>{{ resultado.posicionParrilla }}</p>
+            <h3>Posicion final:</h3>
+            <p>{{ resultado.posicionFinal }}</p>
+            <h3>Status final de carrera:</h3>
+            <p>{{ resultado.status }}</p>
+            <h3>Puntos:</h3>
+            <p>{{ resultado.puntos }}</p>
+          </div>
+      </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<ng-template #noSeguidos>
+  <h1>No hay pilotos seguidos</h1>
+</ng-template>

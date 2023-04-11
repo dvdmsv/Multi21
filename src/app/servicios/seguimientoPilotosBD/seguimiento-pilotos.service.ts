@@ -10,8 +10,12 @@ export class SeguimientoPilotosService {
 
   constructor(private http: HttpClient) { }
 
-  seguirPiloto(username: string | null, piloto: string){
-    return this.http.get(`${this.url}seguirPiloto.php?username=${username}&piloto=${piloto}`);
+  seguirPiloto(username: string | null, pilotoId: string, nombrePiloto: string){
+    return this.http.get(`${this.url}seguirPiloto.php?username=${username}&pilotoId=${pilotoId}&nombrePiloto=${nombrePiloto}`);
+  }
+
+  dejarDeSeguir(username: string | null, idSeguimiento: string){
+    return this.http.get(`${this.url}dejarDeSeguir.php?username=${username}&idSeguimiento=${idSeguimiento}`);
   }
 
   getPilotosSeguidos(username: string | null){

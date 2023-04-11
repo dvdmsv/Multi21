@@ -16,11 +16,12 @@
   <mat-sidenav-container fxFlexFill class="sidenav">
     <mat-sidenav color="primary" #sidenav fxLayout="column">
       <div class=".mat-sidenav-content" fxLayout="column">
-        <button mat-button routerLink="/login" *ngIf="login == null">Login<mat-icon>login</mat-icon></button>
-        <button mat-button routerLink="/registro" *ngIf="login == null">Registro<mat-icon>account_boxs</mat-icon></button>
-        <button mat-flat-button [matMenuTriggerFor]="menu" *ngIf="login == 'true'">Opciones del sitio</button>
-        <button mat-flat-button [matMenuTriggerFor]="adminMenu" *ngIf="admin == 'true'">Panel de control admin</button>
-
+        <ul>
+          <li><button mat-button routerLink="/login" *ngIf="login == null">Login<mat-icon>login</mat-icon></button></li>
+          <li><button mat-button routerLink="/registro" *ngIf="login == null">Registro<mat-icon>account_boxs</mat-icon></button></li>
+          <li><button mat-flat-button [matMenuTriggerFor]="menu" *ngIf="login == 'true'">Opciones del sitio</button></li>
+          <li><button mat-flat-button [matMenuTriggerFor]="adminMenu" *ngIf="admin == 'true'">Panel de control admin</button></li>
+        </ul>
       </div>
 
       <mat-menu #adminMenu="matMenu" class="mat-menu" >
@@ -30,9 +31,12 @@
         <button mat-button routerLink="/revisar-comentarios">Comentarios publicados</button>
       </mat-menu>
 
-      <mat-menu #menu="matMenu">
-        <button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button>
-        <button mat-button routerLink="/pilotos">Pilotos</button>
+      <mat-menu #menu="matMenu" class="mat-menu">
+        <ul>
+          <li><button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button></li>
+          <li><button mat-button routerLink="/pilotos">Pilotos</button></li>
+          <li><button mat-button routerLink="/pilotos-seguidos">Pilotos Seguidos</button></li>
+        </ul>
       </mat-menu>
     </mat-sidenav>
     <router-outlet></router-outlet>

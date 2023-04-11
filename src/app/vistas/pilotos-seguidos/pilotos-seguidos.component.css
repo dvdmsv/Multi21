@@ -1,0 +1,18 @@
+.resultado{
+  padding-bottom: 15px;
+  border-bottom: solid grey 1px;
+}
+
+h1{
+  text-align: center;
+}
+
+.panelComentarios{
+  width: 70%;
+  margin: auto;
+  padding: 25px;
+}
+
+button{
+  margin-left:1%;
+}

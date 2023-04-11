@@ -30,6 +30,7 @@ import { CardsInicioComponent } from './vistas/cards-inicio/cards-inicio.compone
 import { RevisarComentariosEliminadosComponent } from './vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component';
 import { RevisarComentariosComponent } from './vistas/revisar-comentarios/revisar-comentarios.component';
 import { PilotosComponent } from './vistas/pilotos/pilotos.component';
+import { PilotosSeguidosComponent } from './vistas/pilotos-seguidos/pilotos-seguidos.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { PilotosComponent } from './vistas/pilotos/pilotos.component';
     RevisarComentariosEliminadosComponent,
     RevisarComentariosComponent,
     PilotosComponent,
+    PilotosSeguidosComponent,
   ],
   imports: [
     BrowserModule,

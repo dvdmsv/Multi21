@@ -43,4 +43,8 @@ export class ApiF1Service {
   getPilotos(){
     return this.http.get('https://ergast.com/api/f1/current/drivers.json');
   }
+
+  resultadosPiloto(pilotoId: string){
+    return this.http.get(`https://ergast.com/api/f1/current/drivers/${pilotoId}/results.json`);
+  }
 }

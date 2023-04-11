@@ -15,9 +15,15 @@ a {
 }
 
 
-button {
+.mat-menu>button {
   font-size: 110%;
-  min-width: min-content;
+  width: 100%;
+  text-align: left;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0%;
 }
 
 
