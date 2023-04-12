@@ -19,6 +19,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 import { LoginComponent } from './vistas/login/login.component';
 import { RegistroComponent } from './vistas/registro/registro.component';
@@ -68,7 +70,7 @@ import { ClasificacionActualizadaComponent } from './vistas/clasificacion-actual
     MatExpansionModule,
     MatSidenavModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
