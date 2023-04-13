@@ -11,7 +11,7 @@ export class UsuariosService {
   /**
    * Variable que contiene la URL donde se encuentran los archivos php que se comunican con la base de datos
    */
-  url = "http://localhost/TFG/Multi21/src/app/php/usuarios/";
+  url = "http://localhost/Multi21/src/assets/php/usuarios/";
   /**
    *
    * @param http método para obtener datos de un servidor
