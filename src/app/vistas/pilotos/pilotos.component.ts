@@ -21,6 +21,10 @@ export class PilotosComponent {
   constructor(private apiF1: ApiF1Service, private seguimientoPilotosService: SeguimientoPilotosService){}
 
   ngOnInit(){
+    this.pilotosInicio();
+  }
+
+  pilotosInicio(){
     let usuario = localStorage.getItem("username");
     //Se obtienen todos los pilotos que ya sigue el usuario
     this.seguimientoPilotosService.getPilotosSeguidos(usuario).subscribe(result=>{
@@ -60,6 +64,6 @@ export class PilotosComponent {
     this.seguimientoPilotosService.seguirPiloto(usuario, pilotoId, nombrePiloto).subscribe((result)=> console.log("Seguido"));
     setTimeout(()=>{ //Se ejecuta el refresco de página un poco mas tarde para dar tiempo a que se guarde el piloto
       document.location.reload();
-    }, 500);
+    }, 1000);
   }
 }
