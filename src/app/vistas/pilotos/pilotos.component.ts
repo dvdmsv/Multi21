@@ -37,7 +37,7 @@ export class PilotosComponent {
     this.apiF1.getPilotos().subscribe(result =>{
       this.pilotos = result;
       this.arrPilotos = [];
-      let existe: boolean = false;
+      let existe: boolean;
       for(const piloto of this.pilotos.MRData.DriverTable.Drivers){
         //Comprobar los pilotos que ya sigue
         existe = false;
