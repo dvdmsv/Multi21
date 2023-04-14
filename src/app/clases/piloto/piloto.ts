@@ -9,5 +9,5 @@ export class Piloto {
    * @param nacionalidad nacinalidad del piloto
    * @param url de la wikipedia del piloto
    */
-  constructor(private id: string, private nombre: string, private nacionalidad: string, private url: string){}
+  constructor(public id: string, public nombre: string, public nacionalidad: string, public url: string, public seguido: boolean){}
 }
