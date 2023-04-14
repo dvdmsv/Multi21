@@ -2,3 +2,5 @@ https://fahmidasclassroom.com/register-and-login-system-using-angular-8-php-and-
 https://www.tutorialesprogramacionya.com/angularya/detalleconcepto.php?punto=5&codigo=5&inicio=0
 https://codingpotions.com/angular-login-sesion
 https://klarsys.github.io/angular-material-icons/
+https://diagramasuml.com/casos-de-uso/?utm_content=cmp-true
+https://www.lucidchart.com/pages/es/que-es-un-diagrama-de-flujo
