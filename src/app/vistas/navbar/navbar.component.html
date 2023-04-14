@@ -17,26 +17,26 @@
     <mat-sidenav color="primary" #sidenav fxLayout="column">
       <div class=".mat-sidenav-content" fxLayout="column">
         <ul>
-          <li><button mat-button routerLink="/login" *ngIf="login == null">Login<mat-icon>login</mat-icon></button></li>
-          <li><button mat-button routerLink="/registro" *ngIf="login == null">Registro<mat-icon>account_boxs</mat-icon></button></li>
+          <li><button mat-button routerLink="/login" *ngIf="login == null" (click)="sidenav.close()">Login<mat-icon>login</mat-icon></button></li>
+          <li><button mat-button routerLink="/registro" *ngIf="login == null" (click)="sidenav.close()">Registro<mat-icon>account_boxs</mat-icon></button></li>
           <li><button mat-flat-button [matMenuTriggerFor]="menu" *ngIf="login == 'true'">Opciones del sitio</button></li>
           <li><button mat-flat-button [matMenuTriggerFor]="adminMenu" *ngIf="admin == 'true'">Panel de control admin</button></li>
         </ul>
       </div>
 
       <mat-menu #adminMenu="matMenu" class="mat-menu" >
-        <button mat-button routerLink="/gestionar-usuarios">Gestionar usuarios</button>
-        <button mat-button routerLink="/anadir-usuarios">Añadir usuarios</button>
-        <button mat-button routerLink="/revisar-comentarios-eliminados">Comentarios eliminados</button>
-        <button mat-button routerLink="/revisar-comentarios">Comentarios publicados</button>
+        <button mat-button routerLink="/gestionar-usuarios" (click)="sidenav.close()">Gestionar usuarios</button>
+        <button mat-button routerLink="/anadir-usuarios" (click)="sidenav.close()">Añadir usuarios</button>
+        <button mat-button routerLink="/revisar-comentarios-eliminados" (click)="sidenav.close()">Comentarios eliminados</button>
+        <button mat-button routerLink="/revisar-comentarios" (click)="sidenav.close()">Comentarios publicados</button>
       </mat-menu>
 
       <mat-menu #menu="matMenu" class="mat-menu">
         <ul>
-          <li><button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button></li>
-          <li><button mat-button routerLink="/pilotos">Pilotos</button></li>
-          <li><button mat-button routerLink="/pilotos-seguidos">Pilotos Seguidos</button></li>
-          <li><button mat-button routerLink="/clasificacion-actualizada">Clasificacion actualizada</button></li>
+          <li><button mat-button routerLink="/temporadaEnCurso" (click)="sidenav.close()">Temporada en curso</button></li>
+          <li><button mat-button routerLink="/pilotos" (click)="sidenav.close()">Pilotos</button></li>
+          <li><button mat-button routerLink="/pilotos-seguidos" (click)="sidenav.close()">Pilotos Seguidos</button></li>
+          <li><button mat-button routerLink="/clasificacion-actualizada" (click)="sidenav.close()">Clasificacion actualizada</button></li>
         </ul>
       </mat-menu>
     </mat-sidenav>
