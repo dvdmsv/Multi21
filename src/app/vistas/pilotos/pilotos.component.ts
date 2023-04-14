@@ -16,12 +16,15 @@ export class PilotosComponent {
 
   arrPilotosSeguidos: any = [];
 
-  columnasPiloto = ['familyName', 'seguir'];
+  columnasPiloto = ['familyName', 'seguido','seguir'];
 
   constructor(private apiF1: ApiF1Service, private seguimientoPilotosService: SeguimientoPilotosService){}
 
   ngOnInit(){
     this.pilotosInicio();
+    for (const piloto of this.arrPilotos) {
+      console.log(piloto);
+    }
   }
 
   pilotosInicio(){
@@ -29,34 +32,32 @@ export class PilotosComponent {
     //Se obtienen todos los pilotos que ya sigue el usuario
     this.seguimientoPilotosService.getPilotosSeguidos(usuario).subscribe(result=>{
       this.arrPilotosSeguidos = result;
-      for (const piloto of this.arrPilotosSeguidos) {
-        //console.log(piloto.piloto);
-      }
     });
+
+    //---------------------------------------------
 
     this.apiF1.getPilotos().subscribe(result =>{
       this.pilotos = result;
       this.arrPilotos = [];
-      let existe: boolean;
-      for(const piloto of this.pilotos.MRData.DriverTable.Drivers){
-        //Comprobar los pilotos que ya sigue
-        existe = false;
-        for (const pilotoSeguido of this.arrPilotosSeguidos) {
+      let seguido: boolean = false;
+      for(const piloto of this.pilotos.MRData.DriverTable.Drivers){ //Se recorren los pilotos de la API
+        seguido = false; //Antes de comprobar un piloto seguido se stablece en false
+        for (const pilotoSeguido of this.arrPilotosSeguidos) { //Se recorren los pilotos que sigue el usuario
           if(pilotoSeguido.piloto == piloto.driverId){ //Se encuentra en el array de seguidos
-            existe = true; //Se establece la variable en true
+            seguido = true;
           }
         }
-        if(existe == false){ //Si la variable ha permanecido false se introduce el piloto en el array
-          this.arrPilotos.push(
-          new Piloto(
-            piloto.driverId,
-            piloto.familyName,
-            piloto.nationality,
-            piloto.url
-          ));
-        }
+        this.arrPilotos.push(
+        new Piloto(
+          piloto.driverId,
+          piloto.familyName,
+          piloto.nationality,
+          piloto.url,
+          seguido
+        ));
       }
     });
+
   }
 
   seguir(pilotoId: string, nombrePiloto: string){
