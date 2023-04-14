@@ -11,7 +11,7 @@ export class ComentarioService {
   /**
    * URL donde se almacenan los php que se comunican con la base de datos
    */
-  url = "http://localhost/Multi21/src/assets/php/comentarios/";
+  url = "/assets/php/comentarios/";
   /**
    *
    * @param http método para obtener datos de un servidor

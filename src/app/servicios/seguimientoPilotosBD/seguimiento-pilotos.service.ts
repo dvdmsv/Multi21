@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class SeguimientoPilotosService {
 
-  url = "http://localhost/Multi21/src/assets/php/seguimiento/";
+  url = "/assets/php/seguimiento/";
 
   constructor(private http: HttpClient) { }
 
