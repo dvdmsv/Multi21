@@ -8,24 +8,24 @@
   height: 7vh;
 }
 
-a {
-  text-decoration: none;
-  font-size: 110%;
-  white-space: normal;
-}
-
-
 .mat-menu>button {
   font-size: 110%;
   width: 100%;
   text-align: left;
 }
 
+.listaBotones>li>button{
+  width: 100%;
+}
+
+.listaBotones{
+  margin: 0;
+}
+
 ul{
   list-style-type: none;
   padding: 0%;
 }
-
 
 .mat-sidenav-container{
   min-height: 93vh !important;
