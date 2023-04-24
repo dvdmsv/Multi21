@@ -326,26 +326,55 @@ export class NavbarComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar color&#x3D;&quot;primary&quot;&gt;
-  &lt;button mat-button routerLink&#x3D;&quot;/cards-inicio&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; &#x27;true&#x27;&quot;&gt;Multi21&lt;/button&gt;
-  &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
-    &lt;button mat-button routerLink&#x3D;&quot;/temporadaEnCurso&quot;&gt;Temporada en curso&lt;/button&gt;
-  &lt;/mat-menu&gt;
-  &lt;mat-menu #adminMenu&#x3D;&quot;matMenu&quot;&gt;
-    &lt;button mat-button routerLink&#x3D;&quot;/gestionar-usuarios&quot;&gt;Gestionar usuarios&lt;/button&gt;
-    &lt;button mat-button routerLink&#x3D;&quot;/anadir-usuarios&quot;&gt;Añadir usuarios&lt;/button&gt;
-    &lt;button mat-button routerLink&#x3D;&quot;/revisar-comentarios-eliminados&quot;&gt;Revisar comentarios eliminados&lt;/button&gt;
-    &lt;button mat-button routerLink&#x3D;&quot;/revisar-comentarios&quot;&gt;Revisar comentarios publicados&lt;/button&gt;
-  &lt;/mat-menu&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div&gt;
+  &lt;mat-toolbar color&#x3D;&quot;primary&quot; class&#x3D;&quot;toolbar&quot; class&#x3D;&quot;mat-elevation-z10&quot;&gt;
+    &lt;div fxShow&#x3D;&quot;true&quot; fxHide.gt-sm&#x3D;&quot;true&quot;&gt;
+      &lt;button mat-icon-button (click)&#x3D;&quot;sidenav.toggle()&quot;&gt;
+        &lt;mat-icon&gt;menu&lt;/mat-icon&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
 
-  &lt;button mat-button routerLink&#x3D;&quot;/login&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; null&quot;&gt;Login&lt;mat-icon&gt;login&lt;/mat-icon&gt;&lt;/button&gt;
-  &lt;button mat-button routerLink&#x3D;&quot;/registro&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; null&quot;&gt;Registro&lt;mat-icon&gt;account_boxs&lt;/mat-icon&gt;&lt;/button&gt;
-  &lt;button mat-flat-button [matMenuTriggerFor]&#x3D;&quot;menu&quot; color&#x3D;&quot;primary&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; &#x27;true&#x27;&quot;&gt;Opciones del sitio&lt;/button&gt;
-  &lt;button mat-flat-button [matMenuTriggerFor]&#x3D;&quot;adminMenu&quot; color&#x3D;&quot;primary&quot; *ngIf&#x3D;&quot;admin &#x3D;&#x3D; &#x27;true&#x27;&quot;&gt;Panel de control admin&lt;/button&gt;
-  &lt;button mat-button (click)&#x3D;&quot;logoff()&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; &#x27;true&#x27;&quot;&gt;&lt;mat-icon&gt;logout&lt;/mat-icon&gt;&lt;/button&gt;
-  &lt;mat-icon *ngIf&#x3D;&quot;login &#x3D;&#x3D; &#x27;true&#x27;&quot;&gt;done&lt;/mat-icon&gt;
-&lt;/mat-toolbar&gt;
-&lt;router-outlet&gt;&lt;/router-outlet&gt;
+    &lt;button mat-button routerLink&#x3D;&quot;/cards-inicio&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; &#x27;true&#x27;&quot;&gt;&lt;img src&#x3D;&quot;/assets/img/logo_1.png&quot; id&#x3D;&quot;logo&quot;&gt;&lt;/button&gt;
+    &lt;button mat-button (click)&#x3D;&quot;logoff()&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; &#x27;true&#x27;&quot;&gt;
+      &lt;mat-icon&gt;logout&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;mat-icon *ngIf&#x3D;&quot;login &#x3D;&#x3D; &#x27;true&#x27;&quot;&gt;done&lt;/mat-icon&gt;
+  &lt;/mat-toolbar&gt;
+
+  &lt;mat-sidenav-container fxFlexFill class&#x3D;&quot;sidenav&quot;&gt;
+    &lt;mat-sidenav color&#x3D;&quot;primary&quot; #sidenav fxLayout&#x3D;&quot;column&quot;&gt;
+      &lt;div class&#x3D;&quot;.mat-sidenav-content&quot; fxLayout&#x3D;&quot;column&quot;&gt;
+        &lt;ul class&#x3D;&quot;listaBotones&quot;&gt;
+          &lt;li&gt;&lt;button mat-button routerLink&#x3D;&quot;/login&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; null&quot; (click)&#x3D;&quot;sidenav.close()&quot;&gt;Login&lt;mat-icon&gt;login&lt;/mat-icon&gt;&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button mat-button routerLink&#x3D;&quot;/registro&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; null&quot; (click)&#x3D;&quot;sidenav.close()&quot;&gt;Registro&lt;mat-icon&gt;account_boxs&lt;/mat-icon&gt;&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button mat-flat-button [matMenuTriggerFor]&#x3D;&quot;menu&quot; *ngIf&#x3D;&quot;login &#x3D;&#x3D; &#x27;true&#x27;&quot;&gt;Opciones del sitio&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button mat-flat-button [matMenuTriggerFor]&#x3D;&quot;adminMenu&quot; *ngIf&#x3D;&quot;admin &#x3D;&#x3D; &#x27;true&#x27;&quot;&gt;Panel de control admin&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+
+      &lt;mat-menu #adminMenu&#x3D;&quot;matMenu&quot; class&#x3D;&quot;mat-menu&quot;&gt;
+        &lt;ul class&#x3D;&quot;listaBotones&quot;&gt;
+          &lt;li&gt;&lt;button mat-button routerLink&#x3D;&quot;/gestionar-usuarios&quot; (click)&#x3D;&quot;sidenav.close()&quot;&gt;Gestionar usuarios&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button mat-button routerLink&#x3D;&quot;/anadir-usuarios&quot; (click)&#x3D;&quot;sidenav.close()&quot;&gt;Añadir usuarios&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button mat-button routerLink&#x3D;&quot;/revisar-comentarios-eliminados&quot; (click)&#x3D;&quot;sidenav.close()&quot;&gt;Comentarios eliminados&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button mat-button routerLink&#x3D;&quot;/revisar-comentarios&quot; (click)&#x3D;&quot;sidenav.close()&quot;&gt;Comentarios publicados&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/mat-menu&gt;
+
+      &lt;mat-menu #menu&#x3D;&quot;matMenu&quot; class&#x3D;&quot;mat-menu&quot;&gt;
+        &lt;ul class&#x3D;&quot;listaBotones&quot;&gt;
+          &lt;li&gt;&lt;button mat-button routerLink&#x3D;&quot;/temporadaEnCurso&quot; (click)&#x3D;&quot;sidenav.close()&quot;&gt;Temporada en curso&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button mat-button routerLink&#x3D;&quot;/pilotos&quot; (click)&#x3D;&quot;sidenav.close()&quot;&gt;Pilotos&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button mat-button routerLink&#x3D;&quot;/pilotos-seguidos&quot; (click)&#x3D;&quot;sidenav.close()&quot;&gt;Pilotos Seguidos&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button mat-button routerLink&#x3D;&quot;/clasificacion-actualizada&quot; (click)&#x3D;&quot;sidenav.close()&quot;&gt;Clasificacion actualizada&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/mat-menu&gt;
+    &lt;/mat-sidenav&gt;
+    &lt;router-outlet&gt;&lt;/router-outlet&gt;
+  &lt;/mat-sidenav-container&gt;
+&lt;/div&gt;
+
+
 </code></pre>
     </div>
 
@@ -353,7 +382,39 @@ export class NavbarComponent {
                 <p class="comment">
                     <code>./navbar.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">#logo {
+  width: 250px;
+  padding: 0;
+  margin: 0
+}
+
+.mat-toolbar {
+  height: 7vh;
+}
+
+.mat-menu&gt;button {
+  font-size: 110%;
+  width: 100%;
+  text-align: left;
+}
+
+.listaBotones&gt;li&gt;button{
+  width: 100%;
+}
+
+.listaBotones{
+  margin: 0;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0%;
+}
+
+.mat-sidenav-container{
+  min-height: 93vh !important;
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -381,8 +442,8 @@ export class NavbarComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary">  <button mat-button routerLink="/cards-inicio" *ngIf="login == \'true\'">Multi21</button>  <mat-menu #menu="matMenu">    <button mat-button routerLink="/temporadaEnCurso">Temporada en curso</button>  </mat-menu>  <mat-menu #adminMenu="matMenu">    <button mat-button routerLink="/gestionar-usuarios">Gestionar usuarios</button>    <button mat-button routerLink="/anadir-usuarios">Añadir usuarios</button>    <button mat-button routerLink="/revisar-comentarios-eliminados">Revisar comentarios eliminados</button>    <button mat-button routerLink="/revisar-comentarios">Revisar comentarios publicados</button>  </mat-menu>  <button mat-button routerLink="/login" *ngIf="login == null">Login<mat-icon>login</mat-icon></button>  <button mat-button routerLink="/registro" *ngIf="login == null">Registro<mat-icon>account_boxs</mat-icon></button>  <button mat-flat-button [matMenuTriggerFor]="menu" color="primary" *ngIf="login == \'true\'">Opciones del sitio</button>  <button mat-flat-button [matMenuTriggerFor]="adminMenu" color="primary" *ngIf="admin == \'true\'">Panel de control admin</button>  <button mat-button (click)="logoff()" *ngIf="login == \'true\'"><mat-icon>logout</mat-icon></button>  <mat-icon *ngIf="login == \'true\'">done</mat-icon></mat-toolbar><router-outlet></router-outlet></div>'
-    var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'RevisarComentariosComponent', 'selector': 'app-revisar-comentarios'},{'name': 'RevisarComentariosEliminadosComponent', 'selector': 'app-revisar-comentarios-eliminados'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
+        var COMPONENT_TEMPLATE = '<div><div>  <mat-toolbar color="primary" class="toolbar" class="mat-elevation-z10">    <div fxShow="true" fxHide.gt-sm="true">      <button mat-icon-button (click)="sidenav.toggle()">        <mat-icon>menu</mat-icon>      </button>    </div>    <button mat-button routerLink="/cards-inicio" *ngIf="login == \'true\'"><img src="/assets/img/logo_1.png" id="logo"></button>    <button mat-button (click)="logoff()" *ngIf="login == \'true\'">      <mat-icon>logout</mat-icon>    </button>    <mat-icon *ngIf="login == \'true\'">done</mat-icon>  </mat-toolbar>  <mat-sidenav-container fxFlexFill class="sidenav">    <mat-sidenav color="primary" #sidenav fxLayout="column">      <div class=".mat-sidenav-content" fxLayout="column">        <ul class="listaBotones">          <li><button mat-button routerLink="/login" *ngIf="login == null" (click)="sidenav.close()">Login<mat-icon>login</mat-icon></button></li>          <li><button mat-button routerLink="/registro" *ngIf="login == null" (click)="sidenav.close()">Registro<mat-icon>account_boxs</mat-icon></button></li>          <li><button mat-flat-button [matMenuTriggerFor]="menu" *ngIf="login == \'true\'">Opciones del sitio</button></li>          <li><button mat-flat-button [matMenuTriggerFor]="adminMenu" *ngIf="admin == \'true\'">Panel de control admin</button></li>        </ul>      </div>      <mat-menu #adminMenu="matMenu" class="mat-menu">        <ul class="listaBotones">          <li><button mat-button routerLink="/gestionar-usuarios" (click)="sidenav.close()">Gestionar usuarios</button></li>          <li><button mat-button routerLink="/anadir-usuarios" (click)="sidenav.close()">Añadir usuarios</button></li>          <li><button mat-button routerLink="/revisar-comentarios-eliminados" (click)="sidenav.close()">Comentarios eliminados</button></li>          <li><button mat-button routerLink="/revisar-comentarios" (click)="sidenav.close()">Comentarios publicados</button></li>        </ul>      </mat-menu>      <mat-menu #menu="matMenu" class="mat-menu">        <ul class="listaBotones">          <li><button mat-button routerLink="/temporadaEnCurso" (click)="sidenav.close()">Temporada en curso</button></li>          <li><button mat-button routerLink="/pilotos" (click)="sidenav.close()">Pilotos</button></li>          <li><button mat-button routerLink="/pilotos-seguidos" (click)="sidenav.close()">Pilotos Seguidos</button></li>          <li><button mat-button routerLink="/clasificacion-actualizada" (click)="sidenav.close()">Clasificacion actualizada</button></li>        </ul>      </mat-menu>    </mat-sidenav>    <router-outlet></router-outlet>  </mat-sidenav-container></div></div>'
+    var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'ClasificacionActualizadaComponent', 'selector': 'app-clasificacion-actualizada'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PilotosComponent', 'selector': 'app-pilotos'},{'name': 'PilotosSeguidosComponent', 'selector': 'app-pilotos-seguidos'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'RevisarComentariosComponent', 'selector': 'app-revisar-comentarios'},{'name': 'RevisarComentariosEliminadosComponent', 'selector': 'app-revisar-comentarios-eliminados'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};
 </script>

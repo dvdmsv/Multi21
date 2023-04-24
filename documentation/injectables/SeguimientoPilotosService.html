@@ -40,7 +40,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li >ComentarioService</li>
+  <li >SeguimientoPilotosService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,7 +58,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/servicios/comentarioBD/comentario.service.ts</code>
+            <code>src/app/servicios/seguimientoPilotosBD/seguimiento-pilotos.service.ts</code>
         </p>
 
 
@@ -93,25 +93,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#eliminarComentario" >eliminarComentario</a>
+                                <a href="#dejarDeSeguir" >dejarDeSeguir</a>
                             </li>
                             <li>
-                                <a href="#eliminarComentarioDefinitivamente" >eliminarComentarioDefinitivamente</a>
+                                <a href="#getPilotosSeguidos" >getPilotosSeguidos</a>
                             </li>
                             <li>
-                                <a href="#getComentariosCarrera" >getComentariosCarrera</a>
-                            </li>
-                            <li>
-                                <a href="#getComentariosEliminados" >getComentariosEliminados</a>
-                            </li>
-                            <li>
-                                <a href="#getComentariosPublicados" >getComentariosPublicados</a>
-                            </li>
-                            <li>
-                                <a href="#publicar" >publicar</a>
-                            </li>
-                            <li>
-                                <a href="#publicarComentarioDeNuevo" >publicarComentarioDeNuevo</a>
+                                <a href="#seguirPiloto" >seguirPiloto</a>
                             </li>
                         </ul>
                     </td>
@@ -136,7 +124,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/servicios/seguimientoPilotosBD/seguimiento-pilotos.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -188,343 +176,31 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="eliminarComentario"></a>
+                    <a name="dejarDeSeguir"></a>
                     <span class="name">
-                        <span ><b>eliminarComentario</b></span>
-                        <a href="#eliminarComentario"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>dejarDeSeguir</b></span>
+                        <a href="#dejarDeSeguir"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>eliminarComentario(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+<code>dejarDeSeguir(username: string | null, idSeguimiento: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/servicios/seguimientoPilotosBD/seguimiento-pilotos.service.ts:34</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Función que se encarga de marcar como eliminado un comentario en la base de datos</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>id</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>numero identificativo del comentario a marcar</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="eliminarComentarioDefinitivamente"></a>
-                    <span class="name">
-                        <span ><b>eliminarComentarioDefinitivamente</b></span>
-                        <a href="#eliminarComentarioDefinitivamente"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>eliminarComentarioDefinitivamente(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:64</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Funcion que elimina definitivamente un comentario a partir de su id</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>id</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>numero identificativo del comentario</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getComentariosCarrera"></a>
-                    <span class="name">
-                        <span ><b>getComentariosCarrera</b></span>
-                        <a href="#getComentariosCarrera"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getComentariosCarrera(carrera: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:36</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Función que se encarga de obtener todos los comentarios de la base de datos según la carrera</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>carrera</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>carrera seleccionada para mostrar los comentarios</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>devuelve un observable con los datos solicitados</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getComentariosEliminados"></a>
-                    <span class="name">
-                        <span ><b>getComentariosEliminados</b></span>
-                        <a href="#getComentariosEliminados"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getComentariosEliminados()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:56</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Función que devuelve a un usuario administrador los comentarios marcados como eliminados</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getComentariosPublicados"></a>
-                    <span class="name">
-                        <span ><b>getComentariosPublicados</b></span>
-                        <a href="#getComentariosPublicados"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getComentariosPublicados()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:43</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Función que devuelve todos los comentarios publicados</p>
-</div>
-
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="publicar"></a>
-                    <span class="name">
-                        <span ><b>publicar</b></span>
-                        <a href="#publicar"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>publicar(username: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, carrera: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, texto: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, fecha: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:28</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Función que se encarga de insertar un comentario en la base de datos</p>
+                    <div class="io-description"><p>Función que se encarga de dejar de seguir a un piloto y reflejarlo en la base de datos</p>
 </div>
 
                     <div class="io-description">
@@ -543,7 +219,7 @@
                                 <tr>
                                     <td>username</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <code>string | null</code>
                                     </td>
 
                                     <td>
@@ -552,28 +228,12 @@
 
 
                                     <td>
-                                        <p>nombre del usuario que va a publicar el comentario</p>
+                                        <p>nombre del usuario</p>
 
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>carrera</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>carrera sobre la que se escribe el comentario</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>texto</td>
+                                    <td>idSeguimiento</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -584,23 +244,7 @@
 
 
                                     <td>
-                                        <p>texto escrito por el usuario</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>fecha</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>fecha en la que se ha escrito el comentario</p>
+                                        <p>id del seguimiento</p>
 
                                     </td>
                                 </tr>
@@ -614,8 +258,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>devuelve un observable con los datos solicitados</p>
-
+                        
                     </div>
                 </td>
             </tr>
@@ -625,31 +268,31 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="publicarComentarioDeNuevo"></a>
+                    <a name="getPilotosSeguidos"></a>
                     <span class="name">
-                        <span ><b>publicarComentarioDeNuevo</b></span>
-                        <a href="#publicarComentarioDeNuevo"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>getPilotosSeguidos</b></span>
+                        <a href="#getPilotosSeguidos"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>publicarComentarioDeNuevo(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+<code>getPilotosSeguidos(username: string | null)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="72"
-                            class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:72</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/servicios/seguimientoPilotosBD/seguimiento-pilotos.service.ts:42</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Funcion que publica de nuevo un comentario marcado como eliminado por el usuario</p>
+                    <div class="io-description"><p>Función que se encagra de obtener todos los pilotos que sigue un usuario</p>
 </div>
 
                     <div class="io-description">
@@ -666,9 +309,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>id</td>
+                                    <td>username</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <code>string | null</code>
                                     </td>
 
                                     <td>
@@ -677,7 +320,116 @@
 
 
                                     <td>
-                                        <p>numero identificativo del comentario</p>
+                                        <p>nombre del usuario</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observable con los datos</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="seguirPiloto"></a>
+                    <span class="name">
+                        <span ><b>seguirPiloto</b></span>
+                        <a href="#seguirPiloto"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>seguirPiloto(username: string | null, pilotoId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, nombrePiloto: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/servicios/seguimientoPilotosBD/seguimiento-pilotos.service.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Función que se encarga de hacer el seguimiento de un piloto y reflejarlo en la base de datos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                            <code>string | null</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>nombre del usuario</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>pilotoId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id del piloto a seguir</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>nombrePiloto</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>nombre del piloto a seguir</p>
 
                                     </td>
                                 </tr>
@@ -722,12 +474,12 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;http://localhost/Multi21/src/assets/php/comentarios/&quot;</code>
+                        <i>Default value : </i><code>&quot;http://localhost/Multi21/src/assets/php/seguimiento/&quot;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/servicios/comentarioBD/comentario.service.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/servicios/seguimientoPilotosBD/seguimiento-pilotos.service.ts:14</a></div>
                         </td>
                     </tr>
 
@@ -753,72 +505,42 @@ import { Injectable } from &#x27;@angular/core&#x27;;
   providedIn: &#x27;root&#x27;
 })
 /**
- * Clase que se comunica con la base de datos en todo lo relativo a comentarios
+ * Clase que se comunica con la base de datos en todo lo relativo al seguimiento de pilotos
  */
-export class ComentarioService {
+export class SeguimientoPilotosService {
   /**
    * URL donde se almacenan los php que se comunican con la base de datos
    */
-  url &#x3D; &quot;http://localhost/Multi21/src/assets/php/comentarios/&quot;;
+  url &#x3D; &quot;http://localhost/Multi21/src/assets/php/seguimiento/&quot;;
   /**
    *
    * @param http método para obtener datos de un servidor
    */
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   /**
-   * Función que se encarga de insertar un comentario en la base de datos
-   * @param username nombre del usuario que va a publicar el comentario
-   * @param carrera carrera sobre la que se escribe el comentario
-   * @param texto texto escrito por el usuario
-   * @param fecha fecha en la que se ha escrito el comentario
-   * @returns devuelve un observable con los datos solicitados
+   * Función que se encarga de hacer el seguimiento de un piloto y reflejarlo en la base de datos
+   * @param username nombre del usuario
+   * @param pilotoId id del piloto a seguir
+   * @param nombrePiloto nombre del piloto a seguir
    */
-  publicar(username: any, carrera: number, texto: string, fecha: string) {
-    return this.http.get(&#x60;${this.url}setComentario.php?username&#x3D;${username}&amp;carrera&#x3D;${carrera}&amp;texto&#x3D;${texto}&amp;fecha&#x3D;${fecha}&#x60;);
+  seguirPiloto(username: string | null, pilotoId: string, nombrePiloto: string){
+    return this.http.get(&#x60;${this.url}seguirPiloto.php?username&#x3D;${username}&amp;pilotoId&#x3D;${pilotoId}&amp;nombrePiloto&#x3D;${nombrePiloto}&#x60;);
   }
   /**
-   * Función que se encarga de obtener todos los comentarios de la base de datos según la carrera
-   * @param carrera carrera seleccionada para mostrar los comentarios
-   * @returns devuelve un observable con los datos solicitados
+   * Función que se encarga de dejar de seguir a un piloto y reflejarlo en la base de datos
+   * @param username nombre del usuario
+   * @param idSeguimiento id del seguimiento
    */
-  getComentariosCarrera(carrera: number){
-    return this.http.get(&#x60;${this.url}getComentariosCarrera.php?carrera&#x3D;${carrera}&#x60;);
+  dejarDeSeguir(username: string | null, idSeguimiento: string){
+    return this.http.get(&#x60;${this.url}dejarDeSeguir.php?username&#x3D;${username}&amp;idSeguimiento&#x3D;${idSeguimiento}&#x60;);
   }
   /**
-   * Función que devuelve todos los comentarios publicados
-   * @returns
+   * Función que se encagra de obtener todos los pilotos que sigue un usuario
+   * @param username nombre del usuario
+   * @returns observable con los datos
    */
-  getComentariosPublicados(){
-    return this.http.get(&#x60;${this.url}getComentariosPublicados.php&#x60;);
-  }
-  /**
-   * Función que se encarga de marcar como eliminado un comentario en la base de datos
-   * @param id numero identificativo del comentario a marcar
-   */
-  eliminarComentario(id: number){
-    return this.http.get(&#x60;${this.url}eliminarComentario.php?id&#x3D;${id}&#x60;);
-  }
-  /**
-   * Función que devuelve a un usuario administrador los comentarios marcados como eliminados
-   */
-  getComentariosEliminados(){
-    return this.http.get(&#x60;${this.url}getComentariosEliminados.php&#x60;);
-  }
-  /**
-   * Funcion que elimina definitivamente un comentario a partir de su id
-   * @param id numero identificativo del comentario
-   * @returns
-   */
-  eliminarComentarioDefinitivamente(id: number){
-    return this.http.get(&#x60;${this.url}eliminarComentarioDefinitivamente.php?id&#x3D;${id}&#x60;);
-  }
-  /**
-   * Funcion que publica de nuevo un comentario marcado como eliminado por el usuario
-   * @param id numero identificativo del comentario
-   * @returns
-   */
-  publicarComentarioDeNuevo(id: number){
-    return this.http.get(&#x60;${this.url}publicarComentarioDeNuevo.php?id&#x3D;${id}&#x60;);
+  getPilotosSeguidos(username: string | null){
+    return this.http.get(&#x60;${this.url}getPilotosSeguidos.php?username&#x3D;${username}&#x60;);
   }
 }
 </code></pre>
@@ -864,7 +586,7 @@ export class ComentarioService {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'ComentarioService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SeguimientoPilotosService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

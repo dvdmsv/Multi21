@@ -59,13 +59,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link" >AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-e5954d35d9a13a6ae9ba0ca5595e01bd76cde445d41b2ae9d84e512aee8ac5ec757654ef3e0a5158af8a813ee87d959b014446f5d14806aa4139a33c4af675fd"' : 'data-target="#xs-components-links-module-AppModule-e5954d35d9a13a6ae9ba0ca5595e01bd76cde445d41b2ae9d84e512aee8ac5ec757654ef3e0a5158af8a813ee87d959b014446f5d14806aa4139a33c4af675fd"' }>
+                                            'data-target="#components-links-module-AppModule-7b4e59a025e21e3dcab4a252942e6141297df6c3c279b80026de34b459d2816fccbff47fa1f3602fdee38fc04405400e5c79f4435edac2c5f2aa6d41808b5010"' : 'data-target="#xs-components-links-module-AppModule-7b4e59a025e21e3dcab4a252942e6141297df6c3c279b80026de34b459d2816fccbff47fa1f3602fdee38fc04405400e5c79f4435edac2c5f2aa6d41808b5010"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-e5954d35d9a13a6ae9ba0ca5595e01bd76cde445d41b2ae9d84e512aee8ac5ec757654ef3e0a5158af8a813ee87d959b014446f5d14806aa4139a33c4af675fd"' :
-                                            'id="xs-components-links-module-AppModule-e5954d35d9a13a6ae9ba0ca5595e01bd76cde445d41b2ae9d84e512aee8ac5ec757654ef3e0a5158af8a813ee87d959b014446f5d14806aa4139a33c4af675fd"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-7b4e59a025e21e3dcab4a252942e6141297df6c3c279b80026de34b459d2816fccbff47fa1f3602fdee38fc04405400e5c79f4435edac2c5f2aa6d41808b5010"' :
+                                            'id="xs-components-links-module-AppModule-7b4e59a025e21e3dcab4a252942e6141297df6c3c279b80026de34b459d2816fccbff47fa1f3602fdee38fc04405400e5c79f4435edac2c5f2aa6d41808b5010"' }>
                                             <li class="link">
                                                 <a href="components/AnadirUsuariosComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AnadirUsuariosComponent</a>
                                             </li>
@@ -76,6 +76,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                                 <a href="components/CardsInicioComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >CardsInicioComponent</a>
                                             </li>
                                             <li class="link">
+                                                <a href="components/ClasificacionActualizadaComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ClasificacionActualizadaComponent</a>
+                                            </li>
+                                            <li class="link">
                                                 <a href="components/GestionarUsuariosComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >GestionarUsuariosComponent</a>
                                             </li>
                                             <li class="link">
@@ -83,6 +86,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             </li>
                                             <li class="link">
                                                 <a href="components/NavbarComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >NavbarComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/PilotosComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >PilotosComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/PilotosSeguidosComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >PilotosSeguidosComponent</a>
                                             </li>
                                             <li class="link">
                                                 <a href="components/RegistroComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >RegistroComponent</a>
@@ -119,7 +128,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="classes/Comentario.html" data-type="entity-link" >Comentario</a>
                             </li>
                             <li class="link">
+                                <a href="classes/Piloto.html" data-type="entity-link" >Piloto</a>
+                            </li>
+                            <li class="link">
                                 <a href="classes/Resultado.html" data-type="entity-link" >Resultado</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/ResultadosPiloto.html" data-type="entity-link" >ResultadosPiloto</a>
                             </li>
                             <li class="link">
                                 <a href="classes/Usuario.html" data-type="entity-link" >Usuario</a>
@@ -139,6 +154,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                                 <li class="link">
                                     <a href="injectables/ComentarioService.html" data-type="entity-link" >ComentarioService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/SeguimientoPilotosService.html" data-type="entity-link" >SeguimientoPilotosService</a>
                                 </li>
                                 <li class="link">
                                     <a href="injectables/UsuariosService.html" data-type="entity-link" >UsuariosService</a>

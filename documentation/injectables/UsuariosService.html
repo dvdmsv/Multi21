@@ -328,14 +328,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="79"
-                            class="link-to-prism">src/app/servicios/usuariosBD/usuarios.service.ts:79</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/servicios/usuariosBD/usuarios.service.ts:83</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Función que se encarga de dar los permisos de administrador a un usuario</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -346,6 +348,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -360,6 +363,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>numero identificativo del usuario</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -583,8 +590,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="87"
-                            class="link-to-prism">src/app/servicios/usuariosBD/usuarios.service.ts:87</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">src/app/servicios/usuariosBD/usuarios.service.ts:91</a></div>
                 </td>
             </tr>
 
@@ -866,7 +873,7 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;http://localhost/TFG/Multi21/src/app/php/usuarios/&quot;</code>
+                        <i>Default value : </i><code>&quot;http://localhost/Multi21/src/assets/php/usuarios/&quot;</code>
                     </td>
                 </tr>
                     <tr>
@@ -903,7 +910,7 @@ export class UsuariosService {
   /**
    * Variable que contiene la URL donde se encuentran los archivos php que se comunican con la base de datos
    */
-  url &#x3D; &quot;http://localhost/TFG/Multi21/src/app/php/usuarios/&quot;;
+  url &#x3D; &quot;http://localhost/Multi21/src/assets/php/usuarios/&quot;;
   /**
    *
    * @param http método para obtener datos de un servidor
@@ -967,7 +974,11 @@ export class UsuariosService {
   borrarUsuario(id: number){
     return this.http.get(&#x60;${this.url}borrarUsuario.php?id&#x3D;${id}&#x60;);
   }
-
+  /**
+   * Función que se encarga de dar los permisos de administrador a un usuario
+   * @param id numero identificativo del usuario
+   * @returns
+   */
   hacerAdmin(id: number){
     return this.http.get(&#x60;${this.url}hacerAdmin.php?id&#x3D;${id}&#x60;);
   }

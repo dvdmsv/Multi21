@@ -87,6 +87,15 @@
                             <li>
                                 <a href="#clasificacion" >clasificacion</a>
                             </li>
+                            <li>
+                                <a href="#clasificacionActualizada" >clasificacionActualizada</a>
+                            </li>
+                            <li>
+                                <a href="#getPilotos" >getPilotos</a>
+                            </li>
+                            <li>
+                                <a href="#resultadosPiloto" >resultadosPiloto</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -357,6 +366,173 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clasificacionActualizada"></a>
+                    <span class="name">
+                        <span ><b>clasificacionActualizada</b></span>
+                        <a href="#clasificacionActualizada"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clasificacionActualizada()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/servicios/api-f1/api-f1.service.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Solicita al servidor la clasificación actualizada de la temporada actual</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observabe con los datos solicitados</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPilotos"></a>
+                    <span class="name">
+                        <span ><b>getPilotos</b></span>
+                        <a href="#getPilotos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPilotos()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/servicios/api-f1/api-f1.service.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Solicita al servidor los pilotos de la presente temporada de F1</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observabe con los datos solicitados</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resultadosPiloto"></a>
+                    <span class="name">
+                        <span ><b>resultadosPiloto</b></span>
+                        <a href="#resultadosPiloto"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resultadosPiloto(pilotoId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/servicios/api-f1/api-f1.service.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Solicita al servidor los resultados del piloto elegido de la presente temporada</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pilotoId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id del piloto</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observabe con los datos solicitados</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
     </div>
@@ -400,6 +576,28 @@ export class ApiF1Service {
    */
   clasificacion(numCarrera: number){
     return this.http.get(&#x60;https://ergast.com/api/f1/current/${numCarrera}/driverStandings.json&#x60;);
+  }
+  /**
+   * Solicita al servidor los pilotos de la presente temporada de F1
+   * @returns observabe con los datos solicitados
+   */
+  getPilotos(){
+    return this.http.get(&#x27;https://ergast.com/api/f1/current/drivers.json&#x27;);
+  }
+  /**
+   * Solicita al servidor los resultados del piloto elegido de la presente temporada
+   * @param pilotoId id del piloto
+   * @returns observabe con los datos solicitados
+   */
+  resultadosPiloto(pilotoId: string){
+    return this.http.get(&#x60;https://ergast.com/api/f1/current/drivers/${pilotoId}/results.json&#x60;);
+  }
+  /**
+   * Solicita al servidor la clasificación actualizada de la temporada actual
+   * @returns observabe con los datos solicitados
+   */
+  clasificacionActualizada(){
+    return this.http.get(&#x60;https://ergast.com/api/f1/current/driverStandings.json&#x60;);
   }
 }
 </code></pre>
