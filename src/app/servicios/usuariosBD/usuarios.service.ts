@@ -75,7 +75,11 @@ export class UsuariosService {
   borrarUsuario(id: number){
     return this.http.get(`${this.url}borrarUsuario.php?id=${id}`);
   }
-
+  /**
+   * Función que se encarga de dar los permisos de administrador a un usuario
+   * @param id numero identificativo del usuario
+   * @returns
+   */
   hacerAdmin(id: number){
     return this.http.get(`${this.url}hacerAdmin.php?id=${id}`);
   }

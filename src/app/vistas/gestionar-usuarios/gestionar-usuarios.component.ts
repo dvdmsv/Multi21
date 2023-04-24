@@ -75,5 +75,4 @@ export class GestionarUsuariosComponent {
     this.usuariosServicio.quitarAdmin(id).subscribe((result:any)=> console.log("Usuario no admin"));
     document.location.reload();
   }
-
 }

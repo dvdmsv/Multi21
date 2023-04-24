@@ -8,33 +8,48 @@ import { SeguimientoPilotosService } from 'src/app/servicios/seguimientoPilotosB
   templateUrl: './pilotos.component.html',
   styleUrls: ['./pilotos.component.css']
 })
+/**
+ * Componente que muestra todos los pilotos de la presente temporada
+ */
 export class PilotosComponent {
-
+  /**
+   * Variable que contiene los datos en crudo de la API
+   */
   pilotos: any;
-
+  /**
+   * Array que contiene los objetos piloto
+   */
   arrPilotos: Piloto[] = [];
-
+  /**
+   * Array que contiene los pilotos seguidos
+   */
   arrPilotosSeguidos: any = [];
-
+  /**
+   * Variable que contiene los nombres de las columnas
+   */
   columnasPiloto = ['familyName', 'seguido','seguir'];
 
+  /**
+   * Constructor de PilotosComponent
+   * @param apiF1 servicio que se comunida con la API
+   * @param seguimientoPilotosService servicio que se comunica con la base de datos
+   */
   constructor(private apiF1: ApiF1Service, private seguimientoPilotosService: SeguimientoPilotosService){}
-
+  /**
+   * Metodo que se ejecuta al cargar el componente
+   */
   ngOnInit(){
     this.pilotosInicio();
-    for (const piloto of this.arrPilotos) {
-      console.log(piloto);
-    }
   }
-
+  /**
+   * Metodo que introduce los pilotos en la tabla y comprueba los que el usuario ya ha seguido
+   */
   pilotosInicio(){
     let usuario = localStorage.getItem("username");
     //Se obtienen todos los pilotos que ya sigue el usuario
     this.seguimientoPilotosService.getPilotosSeguidos(usuario).subscribe(result=>{
       this.arrPilotosSeguidos = result;
     });
-
-    //---------------------------------------------
 
     this.apiF1.getPilotos().subscribe(result =>{
       this.pilotos = result;
@@ -59,7 +74,11 @@ export class PilotosComponent {
     });
 
   }
-
+  /**
+   * Metodo que se encarga de seguir a un piloto y reflejarlo en la base de datos
+   * @param pilotoId id del piloto
+   * @param nombrePiloto nombre del piloto
+   */
   seguir(pilotoId: string, nombrePiloto: string){
     let usuario = localStorage.getItem("username");
     this.seguimientoPilotosService.seguirPiloto(usuario, pilotoId, nombrePiloto).subscribe((result)=> console.log("Seguido"));

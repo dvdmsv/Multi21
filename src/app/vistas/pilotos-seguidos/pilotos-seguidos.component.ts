@@ -9,21 +9,40 @@ import { SeguimientoPilotosService } from 'src/app/servicios/seguimientoPilotosB
   templateUrl: './pilotos-seguidos.component.html',
   styleUrls: ['./pilotos-seguidos.component.css']
 })
+/**
+ * Componente que muestra los pilotos que sigue el usuario
+ */
 export class PilotosSeguidosComponent {
-
+  /**
+   * Datos en crudo de los pilotos
+   */
   pilotos: any;
-
+  /**
+   * Datos en crudo de los resultados
+   */
   resultados: any;
-
+  /**
+   * Array de pilotos seguidos
+   */
   arrPilotosSeguidos: any = [];
-
+  /**
+   * Array de resultados de cada piloto
+   */
   arrResultadosPiloto: ResultadosPiloto[] = [];
-
+  /**
+   * Columnas de la tabla
+   */
   columnas = ["posicionParrilla", "posicionFinal", "status", "puntos"];
 
-
+  /**
+   * Constructor de PilotosSeguidosComponent
+   * @param apiF1 servicio que se comunida con la API
+   * @param seguimientoPilotosService servicio que se comunica con la base de datos
+   */
   constructor(private apiF1: ApiF1Service, private seguimientoPilotosService: SeguimientoPilotosService){}
-
+  /**
+   * Metodo que se usa cuando se carga el componente para obtener los pilotos que sigue el usuario
+   */
   ngOnInit(){
     let usuario = localStorage.getItem("username");
     //Se obtienen todos los pilotos que ya sigue el usuario
@@ -31,7 +50,10 @@ export class PilotosSeguidosComponent {
       this.arrPilotosSeguidos = result;
     });
   }
-
+  /**
+   * Función para obtener los resultados del piloto
+   * @param pilotoId id del piloto
+   */
   resultadosPiloto(pilotoId: string){
     this.apiF1.resultadosPiloto(pilotoId).subscribe(result=>{
       this.resultados = result;
@@ -51,11 +73,13 @@ export class PilotosSeguidosComponent {
       }
     });
   }
-
+  /**
+   * Funcion para dejar de seguir a un piloto
+   * @param idSeguimiento id del seguimiento
+   */
   dejarDeSeguir(idSeguimiento: string){
     let usuario = localStorage.getItem("username");
     this.seguimientoPilotosService.dejarDeSeguir(usuario, idSeguimiento).subscribe(result=>console.log("Unfollow"));
     window.location.reload();
   }
-
 }

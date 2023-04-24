@@ -43,11 +43,18 @@ export class ApiF1Service {
   getPilotos(){
     return this.http.get('https://ergast.com/api/f1/current/drivers.json');
   }
-
+  /**
+   * Solicita al servidor los resultados del piloto elegido de la presente temporada
+   * @param pilotoId id del piloto
+   * @returns observabe con los datos solicitados
+   */
   resultadosPiloto(pilotoId: string){
     return this.http.get(`https://ergast.com/api/f1/current/drivers/${pilotoId}/results.json`);
   }
-
+  /**
+   * Solicita al servidor la clasificación actualizada de la temporada actual
+   * @returns observabe con los datos solicitados
+   */
   clasificacionActualizada(){
     return this.http.get(`https://ergast.com/api/f1/current/driverStandings.json`);
   }
