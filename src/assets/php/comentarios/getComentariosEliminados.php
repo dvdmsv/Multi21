@@ -5,7 +5,7 @@
   require("../db.php");
   $arrComentarios = [];
   $conexion = retornarConexion();
-  $registros = $conexion->query("SELECT * FROM comentarios_temporada_curso WHERE eliminado = 1");
+  $registros = $conexion->query("SELECT * FROM comentarios_temporada_curso WHERE eliminado = 1 ORDER BY id DESC");
   while($comentario = $registros->fetch()){
     $arrComentarios[] = $comentario;
   }
