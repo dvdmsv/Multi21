@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  CardsInicioComponent</li>
+  CalendarioComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/vistas/cards-inicio/cards-inicio.component.ts</code>
+    <code>src/app/vistas/calendario/calendario.component.ts</code>
 </p>
 
 
@@ -89,19 +89,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-cards-inicio</code></td>
+                <td class="col-md-9"><code>app-calendario</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./cards-inicio.component.css</code></td>
+                <td class="col-md-9"><code>./calendario.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./cards-inicio.component.html</code></td>
+                <td class="col-md-9"><code>./calendario.component.html</code></td>
             </tr>
 
 
@@ -115,187 +115,45 @@
     </table>
 </section>
 
-    <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#temporadaEnCurso" >temporadaEnCurso</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
 
 
 
 
-        </tbody>
-    </table>
-</section>
-
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/vistas/cards-inicio/cards-inicio.component.ts:12</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Constructor de CardsInicioComponent</p>
-</div>
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                                    <td>Description</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>router</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                        <td>
-                                                                <p>método para habilitar navegación</p>
-
-                                                        </td>
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
 
-
-
-
-    <section>
-    
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="temporadaEnCurso"></a>
-                    <span class="name">
-                        <span ><b>temporadaEnCurso</b></span>
-                        <a href="#temporadaEnCurso"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>temporadaEnCurso()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/app/vistas/cards-inicio/cards-inicio.component.ts:21</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Función que se encarga de redirigir la vista a /temporadaEnCurso</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-import { Router } from &#x27;@angular/router&#x27;;
 
 @Component({
-  selector: &#x27;app-cards-inicio&#x27;,
-  templateUrl: &#x27;./cards-inicio.component.html&#x27;,
-  styleUrls: [&#x27;./cards-inicio.component.css&#x27;]
+  selector: &#x27;app-calendario&#x27;,
+  templateUrl: &#x27;./calendario.component.html&#x27;,
+  styleUrls: [&#x27;./calendario.component.css&#x27;]
 })
-/**
- * Componente que contiene cartas en el inicio de la web
- */
-export class CardsInicioComponent {
-  /**
-   * Constructor de CardsInicioComponent
-   * @param router método para habilitar navegación
-   */
-  constructor(private router: Router){}
-  /**
-   * Función que se encarga de redirigir la vista a /temporadaEnCurso
-   */
-  temporadaEnCurso(){
-    this.router.navigate([&#x27;/temporadaEnCurso&#x27;]);
-  }
+export class CalendarioComponent {
+
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;contenedor&quot;&gt;
+  &lt;h3&gt;Añade la temporada a tu calendario&lt;/h3&gt;
   &lt;mat-card class&#x3D;&quot;tarjeta&quot;&gt;
-    &lt;img mat-card-image src&#x3D;&quot;/assets/img/img1.jpg&quot;&gt;
     &lt;mat-card-content&gt;
-      &lt;h3&gt;Temporada en curso&lt;/h3&gt;
-      &lt;p&gt;Busca, comenta y visualiza los resultados de las carreras de la temporada&lt;/p&gt;
-      &lt;button mat-raised-button color&#x3D;&quot;primary&quot;&gt;&lt;a href&#x3D;&quot;/#/temporadaEnCurso&quot;&gt;Acceder&lt;/a&gt;&lt;/button&gt;
+      &lt;h3&gt;Para móviles o escritorio&lt;/h3&gt;
+      &lt;p&gt;Actualizando calendario automáticamente para aplicaciones como Outlook y macOS Calendar.&lt;/p&gt;
+      &lt;button mat-raised-button color&#x3D;&quot;primary&quot;&gt;&lt;a href&#x3D;&quot;webcal://files-f1.motorsportcalendars.com/es/f1-calendar_p1_p2_p3_qualifying_sprint_gp.ics&quot;&gt;Obtener&lt;/a&gt;&lt;/button&gt;
     &lt;/mat-card-content&gt;
   &lt;/mat-card&gt;
   &lt;mat-card class&#x3D;&quot;tarjeta&quot;&gt;
-    &lt;img mat-card-image src&#x3D;&quot;/assets/img/img2.jpg&quot;&gt;
     &lt;mat-card-content&gt;
-      &lt;h3&gt;Pilotos&lt;/h3&gt;
-      &lt;p&gt;Sigue a tus pilotos favoritos.&lt;/p&gt;
-      &lt;button mat-raised-button color&#x3D;&quot;primary&quot;&gt;&lt;a href&#x3D;&quot;/#/pilotos&quot;&gt;Acceder&lt;/a&gt;&lt;/button&gt;
+      &lt;h3&gt;Para Google Calendar&lt;/h3&gt;
+      &lt;button mat-raised-button color&#x3D;&quot;primary&quot;&gt;&lt;a href&#x3D;&quot;https://www.google.com/calendar/render?cid&#x3D;webcal://files-f1.motorsportcalendars.com/es/f1-calendar_p1_p2_p3_qualifying_sprint_gp.ics&quot;&gt;Obtener&lt;/a&gt;&lt;/button&gt;
     &lt;/mat-card-content&gt;
   &lt;/mat-card&gt;
 &lt;/div&gt;
@@ -304,23 +162,11 @@ export class CardsInicioComponent {
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./cards-inicio.component.css</code>
+                    <code>./calendario.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.tarjeta {
   min-width: 400px;
   max-width: 600px;
-}
-
-.circular {
-  border-radius: 50%;
-}
-
-.contenedor {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
 }
 
 a{
@@ -328,22 +174,21 @@ a{
   color: white;
 }
 
-@media screen and (max-width: 1280px) {
-  .contenedor {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .tarjeta {
-    max-width: 100px;
-    margin: 10px;
-    text-align: center;
-  }
+.contenedor {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
+
+.tarjeta {
+  max-width: 100px;
+  margin: 10px;
+  text-align: center;
+}
+
 </code></pre>
     </div>
 
@@ -372,10 +217,10 @@ a{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="contenedor">  <mat-card class="tarjeta">    <img mat-card-image src="/assets/img/img1.jpg">    <mat-card-content>      <h3>Temporada en curso</h3>      <p>Busca, comenta y visualiza los resultados de las carreras de la temporada</p>      <button mat-raised-button color="primary"><a href="/#/temporadaEnCurso">Acceder</a></button>    </mat-card-content>  </mat-card>  <mat-card class="tarjeta">    <img mat-card-image src="/assets/img/img2.jpg">    <mat-card-content>      <h3>Pilotos</h3>      <p>Sigue a tus pilotos favoritos.</p>      <button mat-raised-button color="primary"><a href="/#/pilotos">Acceder</a></button>    </mat-card-content>  </mat-card></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="contenedor">  <h3>Añade la temporada a tu calendario</h3>  <mat-card class="tarjeta">    <mat-card-content>      <h3>Para móviles o escritorio</h3>      <p>Actualizando calendario automáticamente para aplicaciones como Outlook y macOS Calendar.</p>      <button mat-raised-button color="primary"><a href="webcal://files-f1.motorsportcalendars.com/es/f1-calendar_p1_p2_p3_qualifying_sprint_gp.ics">Obtener</a></button>    </mat-card-content>  </mat-card>  <mat-card class="tarjeta">    <mat-card-content>      <h3>Para Google Calendar</h3>      <button mat-raised-button color="primary"><a href="https://www.google.com/calendar/render?cid=webcal://files-f1.motorsportcalendars.com/es/f1-calendar_p1_p2_p3_qualifying_sprint_gp.ics">Obtener</a></button>    </mat-card-content>  </mat-card></div></div>'
     var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'ClasificacionActualizadaComponent', 'selector': 'app-clasificacion-actualizada'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PilotosComponent', 'selector': 'app-pilotos'},{'name': 'PilotosSeguidosComponent', 'selector': 'app-pilotos-seguidos'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'RevisarComentariosComponent', 'selector': 'app-revisar-comentarios'},{'name': 'RevisarComentariosEliminadosComponent', 'selector': 'app-revisar-comentarios-eliminados'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'CardsInicioComponent'};
+    var ACTUAL_COMPONENT = {'name': 'CalendarioComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -421,7 +266,7 @@ a{
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'CardsInicioComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'CalendarioComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
