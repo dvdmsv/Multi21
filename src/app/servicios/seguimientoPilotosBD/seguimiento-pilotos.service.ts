@@ -8,20 +8,14 @@ import { Injectable } from '@angular/core';
  * Clase que se comunica con la base de datos en todo lo relativo al seguimiento de pilotos
  */
 export class SeguimientoPilotosService {
-<<<<<<< HEAD
-
-  url = "/assets/php/seguimiento/";
-
-=======
   /**
    * URL donde se almacenan los php que se comunican con la base de datos
    */
-  url = "http://localhost/Multi21/src/assets/php/seguimiento/";
+  url = "/assets/php/seguimiento/";
   /**
    *
    * @param http método para obtener datos de un servidor
    */
->>>>>>> desarrollo
   constructor(private http: HttpClient) { }
   /**
    * Función que se encarga de hacer el seguimiento de un piloto y reflejarlo en la base de datos
@@ -49,3 +43,4 @@ export class SeguimientoPilotosService {
     return this.http.get(`${this.url}getPilotosSeguidos.php?username=${username}`);
   }
 }
+
