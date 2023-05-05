@@ -158,7 +158,10 @@ export class TemporadaEnCursoComponent {
       }
     });
   }
-
+  /**
+   * Funcion para eliminar un comentario publicado por el usuario
+   * @param id id del comentario
+   */
   eliminarComentario(id: number){
     this.comentarioService.eliminarComentario(id).subscribe((result)=> console.log("Elimnado"));
     window.location.reload();

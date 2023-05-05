@@ -18,6 +18,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -34,6 +35,7 @@ import { RevisarComentariosComponent } from './vistas/revisar-comentarios/revisa
 import { PilotosComponent } from './vistas/pilotos/pilotos.component';
 import { PilotosSeguidosComponent } from './vistas/pilotos-seguidos/pilotos-seguidos.component';
 import { ClasificacionActualizadaComponent } from './vistas/clasificacion-actualizada/clasificacion-actualizada.component';
+import { CalendarioComponent } from './vistas/calendario/calendario.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { ClasificacionActualizadaComponent } from './vistas/clasificacion-actual
     PilotosComponent,
     PilotosSeguidosComponent,
     ClasificacionActualizadaComponent,
+    CalendarioComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,8 @@ import { ClasificacionActualizadaComponent } from './vistas/clasificacion-actual
     MatSnackBarModule,
     MatCheckboxModule,
     MatExpansionModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

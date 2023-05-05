@@ -11,6 +11,7 @@ import { TemporadaEnCursoComponent } from './vistas/temporada-en-curso/temporada
 import { PilotosComponent } from './vistas/pilotos/pilotos.component';
 import { PilotosSeguidosComponent } from './vistas/pilotos-seguidos/pilotos-seguidos.component';
 import { ClasificacionActualizadaComponent } from './vistas/clasificacion-actualizada/clasificacion-actualizada.component';
+import { CalendarioComponent } from './vistas/calendario/calendario.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'clasificacion-actualizada',
     component: ClasificacionActualizadaComponent
+  },
+  {
+    path: 'calendario',
+    component: CalendarioComponent
   }
 ];
 

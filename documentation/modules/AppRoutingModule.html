@@ -82,6 +82,9 @@ import { RegistroComponent } from &#x27;./vistas/registro/registro.component&#x2
 import { RevisarComentariosEliminadosComponent } from &#x27;./vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component&#x27;;
 import { RevisarComentariosComponent } from &#x27;./vistas/revisar-comentarios/revisar-comentarios.component&#x27;;
 import { TemporadaEnCursoComponent } from &#x27;./vistas/temporada-en-curso/temporada-en-curso.component&#x27;;
+import { PilotosComponent } from &#x27;./vistas/pilotos/pilotos.component&#x27;;
+import { PilotosSeguidosComponent } from &#x27;./vistas/pilotos-seguidos/pilotos-seguidos.component&#x27;;
+import { ClasificacionActualizadaComponent } from &#x27;./vistas/clasificacion-actualizada/clasificacion-actualizada.component&#x27;;
 
 const routes: Routes &#x3D; [
   {
@@ -120,6 +123,18 @@ const routes: Routes &#x3D; [
   {
     path: &#x27;revisar-comentarios&#x27;,
     component: RevisarComentariosComponent
+  },
+  {
+    path: &#x27;pilotos&#x27;,
+    component: PilotosComponent
+  },
+  {
+    path: &#x27;pilotos-seguidos&#x27;,
+    component: PilotosSeguidosComponent
+  },
+  {
+    path: &#x27;clasificacion-actualizada&#x27;,
+    component: ClasificacionActualizadaComponent
   }
 ];
 

@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  RevisarComentariosEliminadosComponent</li>
+  PilotosComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component.ts</code>
+    <code>src/app/vistas/pilotos/pilotos.component.ts</code>
 </p>
 
 
@@ -89,19 +89,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-revisar-comentarios-eliminados</code></td>
+                <td class="col-md-9"><code>app-pilotos</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./revisar-comentarios-eliminados.component.css</code></td>
+                <td class="col-md-9"><code>./pilotos.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./revisar-comentarios-eliminados.component.html</code></td>
+                <td class="col-md-9"><code>./pilotos.component.html</code></td>
             </tr>
 
 
@@ -128,13 +128,16 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#arrComentarios" >arrComentarios</a>
+                                <a href="#arrPilotos" >arrPilotos</a>
                             </li>
                             <li>
-                                <a href="#columnasComentario" >columnasComentario</a>
+                                <a href="#arrPilotosSeguidos" >arrPilotosSeguidos</a>
                             </li>
                             <li>
-                                <a href="#comentarios" >comentarios</a>
+                                <a href="#columnasPiloto" >columnasPiloto</a>
+                            </li>
+                            <li>
+                                <a href="#pilotos" >pilotos</a>
                             </li>
                         </ul>
                     </td>
@@ -149,13 +152,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#eliminarComentarioDefinitivamente" >eliminarComentarioDefinitivamente</a>
-                            </li>
-                            <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
-                                <a href="#publicarComentarioDeNuevo" >publicarComentarioDeNuevo</a>
+                                <a href="#pilotosInicio" >pilotosInicio</a>
+                            </li>
+                            <li>
+                                <a href="#seguir" >seguir</a>
                             </li>
                         </ul>
                     </td>
@@ -175,18 +178,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(comentariosService: <a href="../injectables/ComentarioService.html" target="_self">ComentarioService</a>)</code>
+<code>constructor(apiF1: <a href="../injectables/ApiF1Service.html" target="_self">ApiF1Service</a>, seguimientoPilotosService: <a href="../injectables/SeguimientoPilotosService.html" target="_self">SeguimientoPilotosService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/vistas/pilotos/pilotos.component.ts:30</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Constructor de RevisarComentariosComponent</p>
+                            <div class="io-description"><p>Constructor de PilotosComponent</p>
 </div>
                             <div>
                                     <b>Parameters :</b>
@@ -201,10 +204,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>comentariosService</td>
+                                                        <td>apiF1</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/ComentarioService.html" target="_self" >ComentarioService</a></code>
+                                                                        <code><a href="../injectables/ApiF1Service.html" target="_self" >ApiF1Service</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -212,7 +215,23 @@
                                                     </td>
                                                     
                                                         <td>
-                                                                <p>servicio que contiene los métodos para conectarse con la base de datos en lo relativo a comentarios</p>
+                                                                <p>servicio que se comunida con la API</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>seguimientoPilotosService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SeguimientoPilotosService.html" target="_self" >SeguimientoPilotosService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>servicio que se comunica con la base de datos</p>
 
                                                         </td>
                                                 </tr>
@@ -238,82 +257,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="eliminarComentarioDefinitivamente"></a>
-                    <span class="name">
-                        <span ><b>eliminarComentarioDefinitivamente</b></span>
-                        <a href="#eliminarComentarioDefinitivamente"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>eliminarComentarioDefinitivamente(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="58"
-                            class="link-to-prism">src/app/vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component.ts:58</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Función que elimina definitivamente de la base de datos un comentario</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>id</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>numero identificativo del comentario</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <span ><b>ngOnInit</b></span>
@@ -330,15 +273,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/vistas/pilotos/pilotos.component.ts:41</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Metodo que se ejcuta cuando se carga la vista</p>
+                    <div class="io-description"><p>Metodo que se ejecuta al cargar el componente</p>
 </div>
 
                     <div class="io-description">
@@ -353,31 +296,70 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="publicarComentarioDeNuevo"></a>
+                    <a name="pilotosInicio"></a>
                     <span class="name">
-                        <span ><b>publicarComentarioDeNuevo</b></span>
-                        <a href="#publicarComentarioDeNuevo"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>pilotosInicio</b></span>
+                        <a href="#pilotosInicio"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>publicarComentarioDeNuevo(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+<code>pilotosInicio()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="66"
-                            class="link-to-prism">src/app/vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component.ts:66</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/vistas/pilotos/pilotos.component.ts:47</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Función que publica de nuevo un comentario marcado como eliminado por un usuario</p>
+                    <div class="io-description"><p>Metodo que introduce los pilotos en la tabla y comprueba los que el usuario ya ha seguido</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="seguir"></a>
+                    <span class="name">
+                        <span ><b>seguir</b></span>
+                        <a href="#seguir"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>seguir(pilotoId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, nombrePiloto: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/vistas/pilotos/pilotos.component.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Metodo que se encarga de seguir a un piloto y reflejarlo en la base de datos</p>
 </div>
 
                     <div class="io-description">
@@ -394,9 +376,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>id</td>
+                                    <td>pilotoId</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
 
                                     <td>
@@ -405,7 +387,23 @@
 
 
                                     <td>
-                                        <p>numero identificativo del comentario</p>
+                                        <p>id del piloto</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>nombrePiloto</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>nombre del piloto</p>
 
                                     </td>
                                 </tr>
@@ -435,16 +433,16 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="arrComentarios"></a>
+                    <a name="arrPilotos"></a>
                     <span class="name">
-                        <span ><b>arrComentarios</b></span>
-                        <a href="#arrComentarios"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>arrPilotos</b></span>
+                        <a href="#arrPilotos"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="../classes/Comentario.html" target="_self" >Comentario[]</a></code>
+                        <i>Type : </i>        <code><a href="../classes/Piloto.html" target="_self" >Piloto[]</a></code>
 
                     </td>
                 </tr>
@@ -455,13 +453,13 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/vistas/pilotos/pilotos.component.ts:22</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Variable con un array de objetos Comentario</p>
+                    <div class="io-description"><p>Array que contiene los objetos piloto</p>
 </div>
                 </td>
             </tr>
@@ -472,33 +470,33 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="columnasComentario"></a>
+                    <a name="arrPilotosSeguidos"></a>
                     <span class="name">
-                        <span ><b>columnasComentario</b></span>
-                        <a href="#columnasComentario"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>arrPilotosSeguidos</b></span>
+                        <a href="#arrPilotosSeguidos"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>string[]</code>
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>[&#x27;id&#x27;, &#x27;username&#x27;, &#x27;texto&#x27;, &#x27;fecha&#x27;, &#x27;borrar&#x27;, &#x27;publicar&#x27;]</code>
+                        <i>Default value : </i><code>[]</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/vistas/pilotos/pilotos.component.ts:26</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Variable con las columnas de la tabla</p>
+                    <div class="io-description"><p>Array que contiene los pilotos seguidos</p>
 </div>
                 </td>
             </tr>
@@ -509,10 +507,47 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="comentarios"></a>
+                    <a name="columnasPiloto"></a>
                     <span class="name">
-                        <span ><b>comentarios</b></span>
-                        <a href="#comentarios"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>columnasPiloto</b></span>
+                        <a href="#columnasPiloto"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&#x27;familyName&#x27;, &#x27;seguido&#x27;,&#x27;seguir&#x27;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/vistas/pilotos/pilotos.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable que contiene los nombres de las columnas</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pilotos"></a>
+                    <span class="name">
+                        <span ><b>pilotos</b></span>
+                        <a href="#pilotos"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
@@ -524,13 +559,13 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/vistas/revisar-comentarios-eliminados/revisar-comentarios-eliminados.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/vistas/pilotos/pilotos.component.ts:18</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Variable que contiene todos los comentarios de la base de datos</p>
+                    <div class="io-description"><p>Variable que contiene los datos en crudo de la API</p>
 </div>
                 </td>
             </tr>
@@ -544,107 +579,122 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-import { Comentario } from &#x27;src/app/clases/comentario/comentario&#x27;;
-import { ComentarioService } from &#x27;src/app/servicios/comentarioBD/comentario.service&#x27;;
+import { Piloto } from &#x27;src/app/clases/piloto/piloto&#x27;;
+import { ApiF1Service } from &#x27;src/app/servicios/api-f1/api-f1.service&#x27;;
+import { SeguimientoPilotosService } from &#x27;src/app/servicios/seguimientoPilotosBD/seguimiento-pilotos.service&#x27;;
 
 @Component({
-  selector: &#x27;app-revisar-comentarios-eliminados&#x27;,
-  templateUrl: &#x27;./revisar-comentarios-eliminados.component.html&#x27;,
-  styleUrls: [&#x27;./revisar-comentarios-eliminados.component.css&#x27;]
+  selector: &#x27;app-pilotos&#x27;,
+  templateUrl: &#x27;./pilotos.component.html&#x27;,
+  styleUrls: [&#x27;./pilotos.component.css&#x27;]
 })
 /**
- * Componente que permite a los usuarios administradores revisar los comentarios eliminados
+ * Componente que muestra todos los pilotos de la presente temporada
  */
-export class RevisarComentariosEliminadosComponent {
+export class PilotosComponent {
   /**
-     * Variable que contiene todos los comentarios de la base de datos
-     */
-  comentarios: any;
+   * Variable que contiene los datos en crudo de la API
+   */
+  pilotos: any;
+  /**
+   * Array que contiene los objetos piloto
+   */
+  arrPilotos: Piloto[] &#x3D; [];
+  /**
+   * Array que contiene los pilotos seguidos
+   */
+  arrPilotosSeguidos: any &#x3D; [];
+  /**
+   * Variable que contiene los nombres de las columnas
+   */
+  columnasPiloto &#x3D; [&#x27;familyName&#x27;, &#x27;seguido&#x27;,&#x27;seguir&#x27;];
 
   /**
-   * Variable con un array de objetos Comentario
+   * Constructor de PilotosComponent
+   * @param apiF1 servicio que se comunida con la API
+   * @param seguimientoPilotosService servicio que se comunica con la base de datos
    */
-  arrComentarios: Comentario[] &#x3D; [];
-
+  constructor(private apiF1: ApiF1Service, private seguimientoPilotosService: SeguimientoPilotosService){}
   /**
-   * Variable con las columnas de la tabla
-   */
-  columnasComentario: string[] &#x3D; [&#x27;id&#x27;, &#x27;username&#x27;, &#x27;texto&#x27;, &#x27;fecha&#x27;, &#x27;borrar&#x27;, &#x27;publicar&#x27;];
-  /**
-   * Constructor de RevisarComentariosComponent
-   * @param comentariosService servicio que contiene los métodos para conectarse con la base de datos en lo relativo a comentarios
-   */
-  constructor(private comentariosService: ComentarioService){}
-  /**
-   * Metodo que se ejcuta cuando se carga la vista
+   * Metodo que se ejecuta al cargar el componente
    */
   ngOnInit(){
-    this.comentariosService.getComentariosEliminados().subscribe(result&#x3D;&gt;{ //Solicita los comentarios elininados al servicio
-      this.comentarios &#x3D; result;
-      this.arrComentarios &#x3D; []; //Vacia el array antes de usarlo
-      for(const comentario of this.comentarios){ //Se recorren los resultados obtenidos
-        this.arrComentarios.push( //En cada vuelta se introduce en el array un objeto Comentario
-          new Comentario(
-            comentario.id,
-            comentario.username,
-            comentario.carrera,
-            comentario.texto,
-            comentario.fecha,
-            comentario.eliminado
-          )
-        );
+    this.pilotosInicio();
+  }
+  /**
+   * Metodo que introduce los pilotos en la tabla y comprueba los que el usuario ya ha seguido
+   */
+  pilotosInicio(){
+    let usuario &#x3D; localStorage.getItem(&quot;username&quot;);
+    //Se obtienen todos los pilotos que ya sigue el usuario
+    this.seguimientoPilotosService.getPilotosSeguidos(usuario).subscribe(result&#x3D;&gt;{
+      this.arrPilotosSeguidos &#x3D; result;
+    });
+
+    this.apiF1.getPilotos().subscribe(result &#x3D;&gt;{
+      this.pilotos &#x3D; result;
+      this.arrPilotos &#x3D; [];
+      let seguido: boolean &#x3D; false;
+      for(const piloto of this.pilotos.MRData.DriverTable.Drivers){ //Se recorren los pilotos de la API
+        seguido &#x3D; false; //Antes de comprobar un piloto seguido se stablece en false
+        for (const pilotoSeguido of this.arrPilotosSeguidos) { //Se recorren los pilotos que sigue el usuario
+          if(pilotoSeguido.piloto &#x3D;&#x3D; piloto.driverId){ //Se encuentra en el array de seguidos
+            seguido &#x3D; true;
+          }
+        }
+        this.arrPilotos.push(
+        new Piloto(
+          piloto.driverId,
+          piloto.familyName,
+          piloto.nationality,
+          piloto.url,
+          seguido
+        ));
       }
     });
+
   }
   /**
-   * Función que elimina definitivamente de la base de datos un comentario
-   * @param id numero identificativo del comentario
+   * Metodo que se encarga de seguir a un piloto y reflejarlo en la base de datos
+   * @param pilotoId id del piloto
+   * @param nombrePiloto nombre del piloto
    */
-  eliminarComentarioDefinitivamente(id: number){
-    this.comentariosService.eliminarComentarioDefinitivamente(id).subscribe((result) &#x3D;&gt; console.log(&quot;Eliminado&quot;));
-    window.location.reload();
-  }
-  /**
-   * Función que publica de nuevo un comentario marcado como eliminado por un usuario
-   * @param id numero identificativo del comentario
-   */
-  publicarComentarioDeNuevo(id: number){
-    this.comentariosService.publicarComentarioDeNuevo(id).subscribe((result) &#x3D;&gt; console.log(&quot;Publicado&quot;));
-    window.location.reload();
+  seguir(pilotoId: string, nombrePiloto: string){
+    let usuario &#x3D; localStorage.getItem(&quot;username&quot;);
+    this.seguimientoPilotosService.seguirPiloto(usuario, pilotoId, nombrePiloto).subscribe((result)&#x3D;&gt; console.log(&quot;Seguido&quot;));
+    setTimeout(()&#x3D;&gt;{ //Se ejecuta el refresco de página un poco mas tarde para dar tiempo a que se guarde el piloto
+      document.location.reload();
+    }, 1000);
   }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;contenedorTabla&quot;&gt;
-  &lt;table mat-table [dataSource]&#x3D;&quot;arrComentarios&quot; class&#x3D;&quot;mat-elevation-z8&quot;&gt;
-    &lt;ng-container matColumnDef&#x3D;&quot;id&quot;&gt;
-      &lt;th mat-header-cell *matHeaderCellDef&gt; id &lt;/th&gt;
-      &lt;td mat-cell *matCellDef&#x3D;&quot;let comentario&quot;&gt; {{comentario.id}} &lt;/td&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;h1&gt;Todos los pilotos de la presente temporada de F1&lt;/h1&gt;
+&lt;h3&gt;Sigue a tus pilotos favoritos y visualiza la progresión de su temporada&lt;/h3&gt;
+&lt;div class&#x3D;&quot;contenedorTabla&quot;&gt;
+  &lt;table mat-table [dataSource]&#x3D;&quot;arrPilotos&quot; class&#x3D;&quot;mat-elevation-z8&quot;&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;familyName&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; Nombre &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let piloto&quot;&gt;&lt;a href&#x3D;{{piloto.url}} target&#x3D;&quot;_blank&quot;&gt; {{piloto.nombre}} &lt;/a&gt;&lt;/td&gt;
     &lt;/ng-container&gt;
-    &lt;ng-container matColumnDef&#x3D;&quot;username&quot;&gt;
-      &lt;th mat-header-cell *matHeaderCellDef&gt; Username &lt;/th&gt;
-      &lt;td mat-cell *matCellDef&#x3D;&quot;let comentario&quot;&gt; {{comentario.username}} &lt;/td&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;seguido&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; Seguido &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let piloto&quot;&gt;
+        &lt;p *ngIf&#x3D;&quot;piloto.seguido &#x3D;&#x3D; true&quot;&gt; Si &lt;/p&gt;
+        &lt;p *ngIf&#x3D;&quot;piloto.seguido &#x3D;&#x3D; false&quot;&gt; No &lt;/p&gt;
+      &lt;/td&gt;
     &lt;/ng-container&gt;
-    &lt;ng-container matColumnDef&#x3D;&quot;texto&quot;&gt;
-      &lt;th mat-header-cell *matHeaderCellDef&gt; Texto &lt;/th&gt;
-      &lt;td mat-cell *matCellDef&#x3D;&quot;let comentario&quot;&gt; {{comentario.texto}} &lt;/td&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;seguir&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; Seguir piloto &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let piloto&quot;&gt;
+        &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;seguir(piloto.id, piloto.nombre)&quot; *ngIf&#x3D;&quot;piloto.seguido &#x3D;&#x3D; false&quot; &gt;Seguir&lt;/button&gt;
+        &lt;button mat-raised-button color&#x3D;&quot;primary&quot;  *ngIf&#x3D;&quot;piloto.seguido &#x3D;&#x3D; true&quot; [disabled]&#x3D;&quot;true&quot;&gt;Seguir&lt;/button&gt;
+      &lt;/td&gt;
     &lt;/ng-container&gt;
-    &lt;ng-container matColumnDef&#x3D;&quot;fecha&quot;&gt;
-      &lt;th mat-header-cell *matHeaderCellDef&gt; Fecha &lt;/th&gt;
-      &lt;td mat-cell *matCellDef&#x3D;&quot;let comentario&quot;&gt; {{comentario.fecha}} &lt;/td&gt;
-    &lt;/ng-container&gt;
-    &lt;ng-container matColumnDef&#x3D;&quot;borrar&quot;&gt;
-      &lt;th mat-header-cell *matHeaderCellDef&gt; Borrar definitivamente &lt;/th&gt;
-      &lt;td mat-cell *matCellDef&#x3D;&quot;let comentario&quot;&gt;&lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;eliminarComentarioDefinitivamente(comentario.id)&quot;&gt; Borrar &lt;/button&gt; &lt;/td&gt;
-    &lt;/ng-container&gt;
-    &lt;ng-container matColumnDef&#x3D;&quot;publicar&quot;&gt;
-      &lt;th mat-header-cell *matHeaderCellDef&gt; Publicar de nuevo &lt;/th&gt;
-      &lt;td mat-cell *matCellDef&#x3D;&quot;let comentario&quot;&gt;&lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;publicarComentarioDeNuevo(comentario.id)&quot;&gt; Publicar &lt;/button&gt; &lt;/td&gt;
-    &lt;/ng-container&gt;
-    &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;columnasComentario&quot;&gt;&lt;/tr&gt;
-    &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: columnasComentario;&quot;&gt;&lt;/tr&gt;
+    &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;columnasPiloto&quot;&gt;&lt;/tr&gt;
+    &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: columnasPiloto;&quot;&gt;&lt;/tr&gt;
   &lt;/table&gt;
 &lt;/div&gt;
 </code></pre>
@@ -652,22 +702,15 @@ export class RevisarComentariosEliminadosComponent {
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./revisar-comentarios-eliminados.component.css</code>
+                    <code>./pilotos.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.contendorSelector{
-  margin: 50px;
-  margin-bottom: 0px;
-  width: 400px;
-}
-
-table {
+                <pre class="line-numbers"><code class="language-scss">table {
   width: 100%;
   margin:1rem auto;
 }
 
-caption{
-  margin-bottom: 20px;
-  font-weight: bold;
+h1, h3{
+  text-align: center;
 }
 
 .contenedorTabla {
@@ -719,10 +762,10 @@ th, td{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="contenedorTabla">  <table mat-table [dataSource]="arrComentarios" class="mat-elevation-z8">    <ng-container matColumnDef="id">      <th mat-header-cell *matHeaderCellDef> id </th>      <td mat-cell *matCellDef="let comentario"> {{comentario.id}} </td>    </ng-container>    <ng-container matColumnDef="username">      <th mat-header-cell *matHeaderCellDef> Username </th>      <td mat-cell *matCellDef="let comentario"> {{comentario.username}} </td>    </ng-container>    <ng-container matColumnDef="texto">      <th mat-header-cell *matHeaderCellDef> Texto </th>      <td mat-cell *matCellDef="let comentario"> {{comentario.texto}} </td>    </ng-container>    <ng-container matColumnDef="fecha">      <th mat-header-cell *matHeaderCellDef> Fecha </th>      <td mat-cell *matCellDef="let comentario"> {{comentario.fecha}} </td>    </ng-container>    <ng-container matColumnDef="borrar">      <th mat-header-cell *matHeaderCellDef> Borrar definitivamente </th>      <td mat-cell *matCellDef="let comentario"><button mat-raised-button color="primary" (click)="eliminarComentarioDefinitivamente(comentario.id)"> Borrar </button> </td>    </ng-container>    <ng-container matColumnDef="publicar">      <th mat-header-cell *matHeaderCellDef> Publicar de nuevo </th>      <td mat-cell *matCellDef="let comentario"><button mat-raised-button color="primary" (click)="publicarComentarioDeNuevo(comentario.id)"> Publicar </button> </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="columnasComentario"></tr>    <tr mat-row *matRowDef="let row; columns: columnasComentario;"></tr>  </table></div></div>'
+        var COMPONENT_TEMPLATE = '<div><h1>Todos los pilotos de la presente temporada de F1</h1><h3>Sigue a tus pilotos favoritos y visualiza la progresión de su temporada</h3><div class="contenedorTabla">  <table mat-table [dataSource]="arrPilotos" class="mat-elevation-z8">    <ng-container matColumnDef="familyName">      <th mat-header-cell *matHeaderCellDef> Nombre </th>      <td mat-cell *matCellDef="let piloto"><a href={{piloto.url}} target="_blank"> {{piloto.nombre}} </a></td>    </ng-container>    <ng-container matColumnDef="seguido">      <th mat-header-cell *matHeaderCellDef> Seguido </th>      <td mat-cell *matCellDef="let piloto">        <p *ngIf="piloto.seguido == true"> Si </p>        <p *ngIf="piloto.seguido == false"> No </p>      </td>    </ng-container>    <ng-container matColumnDef="seguir">      <th mat-header-cell *matHeaderCellDef> Seguir piloto </th>      <td mat-cell *matCellDef="let piloto">        <button mat-raised-button color="primary" (click)="seguir(piloto.id, piloto.nombre)" *ngIf="piloto.seguido == false" >Seguir</button>        <button mat-raised-button color="primary"  *ngIf="piloto.seguido == true" [disabled]="true">Seguir</button>      </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="columnasPiloto"></tr>    <tr mat-row *matRowDef="let row; columns: columnasPiloto;"></tr>  </table></div></div>'
     var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'ClasificacionActualizadaComponent', 'selector': 'app-clasificacion-actualizada'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PilotosComponent', 'selector': 'app-pilotos'},{'name': 'PilotosSeguidosComponent', 'selector': 'app-pilotos-seguidos'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'RevisarComentariosComponent', 'selector': 'app-revisar-comentarios'},{'name': 'RevisarComentariosEliminadosComponent', 'selector': 'app-revisar-comentarios-eliminados'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'RevisarComentariosEliminadosComponent'};
+    var ACTUAL_COMPONENT = {'name': 'PilotosComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -768,7 +811,7 @@ th, td{
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'RevisarComentariosEliminadosComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'PilotosComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

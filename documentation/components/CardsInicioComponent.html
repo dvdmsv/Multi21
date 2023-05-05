@@ -287,6 +287,15 @@ export class CardsInicioComponent {
     &lt;mat-card-content&gt;
       &lt;h3&gt;Temporada en curso&lt;/h3&gt;
       &lt;p&gt;Busca, comenta y visualiza los resultados de las carreras de la temporada&lt;/p&gt;
+      &lt;button mat-raised-button color&#x3D;&quot;primary&quot;&gt;&lt;a href&#x3D;&quot;/#/temporadaEnCurso&quot;&gt;Acceder&lt;/a&gt;&lt;/button&gt;
+    &lt;/mat-card-content&gt;
+  &lt;/mat-card&gt;
+  &lt;mat-card class&#x3D;&quot;tarjeta&quot;&gt;
+    &lt;img mat-card-image src&#x3D;&quot;/assets/img/img2.jpg&quot;&gt;
+    &lt;mat-card-content&gt;
+      &lt;h3&gt;Pilotos&lt;/h3&gt;
+      &lt;p&gt;Sigue a tus pilotos favoritos.&lt;/p&gt;
+      &lt;button mat-raised-button color&#x3D;&quot;primary&quot;&gt;&lt;a href&#x3D;&quot;/#/pilotos&quot;&gt;Acceder&lt;/a&gt;&lt;/button&gt;
     &lt;/mat-card-content&gt;
   &lt;/mat-card&gt;
 &lt;/div&gt;
@@ -311,6 +320,29 @@ export class CardsInicioComponent {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 1280px) {
+  .contenedor {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .tarjeta {
+    max-width: 100px;
+    margin: 10px;
+    text-align: center;
+  }
 }
 </code></pre>
     </div>
@@ -340,8 +372,8 @@ export class CardsInicioComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="contenedor">  <mat-card class="tarjeta">    <img mat-card-image src="/assets/img/img1.jpg">    <mat-card-content>      <h3>Temporada en curso</h3>      <p>Busca, comenta y visualiza los resultados de las carreras de la temporada</p>    </mat-card-content>  </mat-card></div></div>'
-    var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'RevisarComentariosComponent', 'selector': 'app-revisar-comentarios'},{'name': 'RevisarComentariosEliminadosComponent', 'selector': 'app-revisar-comentarios-eliminados'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
+        var COMPONENT_TEMPLATE = '<div><div class="contenedor">  <mat-card class="tarjeta">    <img mat-card-image src="/assets/img/img1.jpg">    <mat-card-content>      <h3>Temporada en curso</h3>      <p>Busca, comenta y visualiza los resultados de las carreras de la temporada</p>      <button mat-raised-button color="primary"><a href="/#/temporadaEnCurso">Acceder</a></button>    </mat-card-content>  </mat-card>  <mat-card class="tarjeta">    <img mat-card-image src="/assets/img/img2.jpg">    <mat-card-content>      <h3>Pilotos</h3>      <p>Sigue a tus pilotos favoritos.</p>      <button mat-raised-button color="primary"><a href="/#/pilotos">Acceder</a></button>    </mat-card-content>  </mat-card></div></div>'
+    var COMPONENTS = [{'name': 'AnadirUsuariosComponent', 'selector': 'app-anadir-usuarios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardsInicioComponent', 'selector': 'app-cards-inicio'},{'name': 'ClasificacionActualizadaComponent', 'selector': 'app-clasificacion-actualizada'},{'name': 'GestionarUsuariosComponent', 'selector': 'app-gestionar-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PilotosComponent', 'selector': 'app-pilotos'},{'name': 'PilotosSeguidosComponent', 'selector': 'app-pilotos-seguidos'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'RevisarComentariosComponent', 'selector': 'app-revisar-comentarios'},{'name': 'RevisarComentariosEliminadosComponent', 'selector': 'app-revisar-comentarios-eliminados'},{'name': 'TemporadaEnCursoComponent', 'selector': 'app-temporada-en-curso'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CardsInicioComponent'};
 </script>
