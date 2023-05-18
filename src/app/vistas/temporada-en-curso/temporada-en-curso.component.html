@@ -8,6 +8,31 @@
   </mat-select>
 </mat-form-field>
 
+<form *ngIf="round.value>0" #textoForm="ngForm" class="campoComentario">
+  <h4>¿Que te ha parecido este Gran Premio? Comparte con otros usuarios tus opiniones. ¡Siempre con respeto!</h4>
+  <textarea matInput [(ngModel)]="comentario" cdkTextareaAutosize minlength="1" maxlength="200" name="texto" cdkAutosizeMinRows="10"  cdkAutosizeMaxRows="10" placeholder="Máximo 200 caracteres." required #texto="ngModel"></textarea>
+  <button mat-raised-button color="primary" (click)="publicar(round.value)" [disabled]="!textoForm.form.valid"><mat-icon>send</mat-icon></button>
+</form>
+
+<div class="panelComentarios" *ngIf="arrComentSelec.length">
+  <mat-accordion>
+      <mat-expansion-panel>
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+                  <h2>Comentarios</h2>
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngFor="let comentario of arrComentSelec" class="comentario">
+            <h3> {{ comentario.username }}</h3>
+            <p *ngIf="comentario.eliminado == 0; else borrado"> {{ comentario.texto }}</p>
+            <ng-template #borrado ><p style="font-style: italic;">El usuario ha eliminado el comentario</p></ng-template>
+            <p> {{ comentario.fecha }}</p>
+            <button mat-raised-button color="primary" *ngIf="comentario.username == nombreUsuarioLogueado && comentario.eliminado == 0" (click)="eliminarComentario(comentario.id)" >Eliminar</button>
+          </div>
+      </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
 <div class="contenedorTabla">
   <table mat-table [dataSource]="arrCarrSelec" class="mat-elevation-z8">
     <caption>Resultado de carrera</caption>
@@ -66,27 +91,5 @@
   </table>
 </div>
 
-<form *ngIf="round.value>0" #textoForm="ngForm" class="campoComentario">
-  <textarea matInput [(ngModel)]="comentario" cdkTextareaAutosize minlength="1" maxlength="200" name="texto" cdkAutosizeMinRows="10"  cdkAutosizeMaxRows="10" placeholder="Máximo 200 caracteres" required #texto="ngModel"></textarea>
-  <button mat-raised-button color="primary" (click)="publicar(round.value)" [disabled]="!textoForm.form.valid"><mat-icon>send</mat-icon></button>
-</form>
 
-<div class="panelComentarios" *ngIf="arrComentSelec.length">
-  <mat-accordion>
-      <mat-expansion-panel>
-          <mat-expansion-panel-header>
-              <mat-panel-title>
-                  <h2>Comentarios</h2>
-              </mat-panel-title>
-          </mat-expansion-panel-header>
-          <div *ngFor="let comentario of arrComentSelec" class="comentario">
-            <h3> {{ comentario.username }}</h3>
-            <p *ngIf="comentario.eliminado == 0; else borrado"> {{ comentario.texto }}</p>
-            <ng-template #borrado ><p style="font-style: italic;">El usuario ha eliminado el comentario</p></ng-template>
-            <p> {{ comentario.fecha }}</p>
-            <button mat-raised-button color="primary" *ngIf="comentario.username == nombreUsuarioLogueado && comentario.eliminado == 0" (click)="eliminarComentario(comentario.id)" >Eliminar</button>
-          </div>
-      </mat-expansion-panel>
-  </mat-accordion>
-</div>
 
